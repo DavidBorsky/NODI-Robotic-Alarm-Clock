@@ -1,0 +1,8 @@
+* text=auto
+*.csv text eol=lf
+*.step binary
+*.stl binary
+*.blend binary
+*.pdf binary
+*.png binary
+*.gif binary

@@ -1,0 +1,41 @@
+# Requirements and verification plan — revision A
+
+NODI is a **digital engineering proof of concept** for a supervised indoor desktop prototype. No physical prototype was built or tested for this submission. Numerical checks and CAD inspection do not establish product reliability, acoustic output, electrical safety, or manufacturability.
+
+**Evidence terms:** `CAD` = regenerated solid geometry or computed interference check; `CALC` = first-principles model with stated assumptions; `SIM` = executed software behavior; `TEST REQUIRED` = future bench measurement. A target remains open until its specified acceptance method is completed. See [analysis results](../Analysis/engineering_analysis.md), [CAD validation](../CAD/README.md), and the firmware validation record for the actual completed checks.
+
+| ID | Priority | Measurable requirement | Acceptance method | Submission evidence / remaining work |
+|---|---|---|---|---|
+| R01 | Mandatory | At least one actuated physical DOF; implement yaw ±30° and pitch −15° to +25° | CAD configurations at travel limits; mark shaft positions and measure physical travel to ±2° | CAD and control targets; physical travel test required |
+| R02 | Mandatory | Nominal base 120 × 100 mm; neutral assembly no more than 140 mm wide × 130 mm deep × 130 mm high | CAD bounding box plus calipers on assembly | CAD check; printed parts and full travel envelope require inspection |
+| R03 | Mandatory | Total prototype mass ≤0.50 kg; pitch head subassembly within calculation budget | CAD volume × stated density plus weighed purchased parts | Calculated mass budget; weigh prototype and update model before powered motion |
+| R04 | Mandatory | Indoor use at 15–30 °C, non-condensing, level desk; no unattended endurance operation before thermal test | Environmental review and 30 °C thermal soak | Operating envelope is a design assumption |
+| R05 | Mandatory | Commanded peak speed ≤60°/s and peak acceleration ≤180°/s² on both axes | Differentiate generated motion profile; log encoder or video tracking during test | Calculation and software check possible; loaded actuator behavior unmeasured |
+| R06 | Mandatory | Alarm activates within 1 s of selected minute while clock is configured and powered; visible time remains readable | RTC comparison for 24 h; alarm scheduling test at minute boundary | Firmware logic review/simulation; hardware and RTC drift test required |
+| R07 | Mandatory | Short snooze press pauses audible alarm and motion for 5 min; held dismiss press ≥1.5 s cancels current alarm | Timed button sequence including bounce, held-button and repeated press cases | Software state test possible; button integration test required |
+| R08 | Mandatory | Audible alarm ≥60 dBA at 0.5 m, with user control to stop it | Calibrated sound meter, quiet room, three repeats | Test required; no loudness claim from buzzer selection |
+| R09 | Mandatory | At least idle, prewake, alarm, snooze and dismissed expressive states; motions remain within R01/R05 | Firmware state traces plus video of complete alarm cycle | Software behavior available; physical character evaluation required |
+| R10 | Mandatory | Factored torque demand ≤25% of manufacturer 4.8 V stall torque; minimum reserve ratio 1.0 in analysis | Reproduce torque script using actual weighed moving assembly and measured cable drag | Analytical sizing only; 25% is a designer budget, not a continuous torque specification |
+| R11 | Mandatory | Structural model stress ≤10 MPa and bracket displacement ≤0.5 mm in specified 3 g proof-load case | Analytical beam and bearing checks; then apply proof load with motors unpowered | Analysis with reduced printed-material properties; coupon and assembled proof test required |
+| R12 | Mandatory | No unintended hard contact during normal travel; sampled non-bearing moving clearance ≥0.5 mm after allocating print tolerances where modeled | CAD interference sweep; feeler gauge and manual unpowered motion with all cables installed; inspect intended bearing/fastener interfaces separately | CAD coverage and exclusions recorded separately; physical test required |
+| R13 | Mandatory | No tip at 10° desk inclination in worst static pose; withstand 1 N horizontal push at 100 mm height on level desk | Weigh assembly, establish CG, reproduce balance, then tilt table and force gauge | Calculation assumes ≥301 g as-built stabilizing mass and stated CG bounds; infill can invalidate that assumption; foot friction/cable pull require test |
+| R14 | Mandatory | No brownout during simultaneous motion and alarm; power input ≤rated adapter current; connector rise <20 K | Scope 5 V/3.3 V rails; current probe; jam one servo briefly under current limit | Estimated electrical budget; measured stall current and transient test required |
+| R15 | Mandatory | External surface ≤45 °C at 30 °C ambient under worst repeatable alarm duty | 2 h thermal soak, thermocouples on housing/servo/controller, scope supply | Lumped thermal sensitivity only; no measured thermal compliance |
+| R16 | Mandatory | Hand assembly ≤30 min excluding printing, soldering and programming; serviceable without adhesive on structural parts | Time one first-time builder with instructions; record tools and corrections | Assembly sequence supplied; time is a target |
+| R17 | Mandatory | Custom CAD regenerates; all exported solids are valid and editable; drawing revision agrees with model | Run CAD regeneration, STEP reimport and geometry checks | Execute and retain machine-readable validation record |
+| R18 | Mandatory | No exposed mains; protected external low-voltage supply; cables clear every joint throughout travel | Electrical review, continuity, polarity and strain relief inspection | Architecture proposal; purchased supply certification and bench checks required |
+| R19 | Mandatory | 10,000 commanded alarm cycles without loose joints, cable abrasion or missed motion; inspect at 100/1,000/10,000 cycles | Loaded motion cycling with power/current log and repeatability check | Future reliability test; not a service-life claim |
+| R20 | Mandatory | Head pointing repeatability ≤3° and no growing vibration after 100 cycles | Fixed camera/encoder measurement, 10 approaches each direction | Test required; hobby servo backlash is uncharacterized |
+| R21 | Nice to have | 3-year design-life assumption at 2 wake events/day, 10 gestures/event: 21,900 gestures | Translate use cases into separate actuator/cable/endurance qualification | Planning assumption; 10,000-cycle EVT is only an early screen |
+| R22 | Nice to have | Quiet idle without visible hunting; alert motion noise ≤45 dBA at 0.5 m excluding buzzer | Acoustic measurement and current trace in each state | Test required; cannot infer noise from CAD |
+
+## Bench sequence and stop conditions
+
+1. Inspect printed coupons and mating fits before completing the assembly. Confirm vendor servo dimensions, horn spline fit, fastener engagement, polarity, and cable exits against the purchased lot.
+2. Power logic alone from a current-limited supply. Set the RTC, verify the display, and run scheduling/button tests with actuators disconnected.
+3. Center servos **before** attaching horns. With power off, sweep each mechanical axis manually. Fit the cable service loops; repeat at all combined travel corners. Servo internal stops and printed stops must remain beyond commanded travel.
+4. Test one axis at a time at 25% speed with current limiting. Record unloaded and loaded current, pointing angle, supply droop, and audible hunting. Increase to the specified motion profile only after this passes.
+5. Run simultaneous motion, alarm, snooze and dismiss tests. Stop for unexpected contact, repeated brownout, sustained stall, a servo case above 50 °C, or surface above 45 °C. These are provisional test stop limits, not certified component ratings.
+6. Complete proof-load, tipping and temperature tests before endurance. Mark screw heads and inspect cable wear at each endurance checkpoint. Any missing motion, loosening, deformation or insulation damage fails the gate.
+
+Physical reliability, user finger clearance, pinch protection, EMC, consumer-product compliance and production tooling remain future engineering work. This is a portfolio prototype package, not a released consumer appliance.

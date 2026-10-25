@@ -1,0 +1,233 @@
+{
+  "evidence_type": "Analytical screening; no physical test or FEA",
+  "input_revision": "A",
+  "cad_manifest_sha256": "f9a0f2e3fecc2c5e817b116a7512bfff4b53791ab7bcd9cdd4c124194372d7d3",
+  "cad_parameters_sha256": "e4786f04d06eae90b459cc7041acee2fbb770209fd61b247da94f6b6d0c31a2b",
+  "analysis_inputs_sha256": "911451e0117a67c42992930171ae539fc6df2d5d1580dc648d31d5b1c1842c7b",
+  "shared_cad_dimensions_checked": [
+    "head width",
+    "yoke gap",
+    "pan pilot",
+    "pan bore",
+    "arm thickness",
+    "arm depth",
+    "arm free length",
+    "base width",
+    "base depth",
+    "base height",
+    "foot count",
+    "foot diameter",
+    "foot support half-span"
+  ],
+  "cad_parts": {
+    "total_count": 64,
+    "pitch_ids": [
+      "head_shell",
+      "front_bezel",
+      "tilt_servo",
+      "oled_pcb",
+      "oled_panel",
+      "oled_active",
+      "bezel_screw_1",
+      "bezel_screw_2",
+      "bezel_screw_3",
+      "bezel_screw_4",
+      "oled_screw_1",
+      "oled_screw_2",
+      "oled_screw_3",
+      "oled_screw_4",
+      "tilt_mount_screw_1",
+      "tilt_mount_screw_2"
+    ],
+    "yaw_ids": [
+      "yoke",
+      "pan_horn",
+      "tilt_horn",
+      "pan_retaining_screw",
+      "tilt_retaining_screw",
+      "pitch_sleeve",
+      "pitch_washer",
+      "pitch_bolt",
+      "pitch_nut",
+      "pan_horn_screw_1",
+      "pan_horn_screw_2",
+      "tilt_horn_screw_1",
+      "tilt_horn_screw_2"
+    ]
+  },
+  "mass": {
+    "cad_total_kg": 0.30455419671200085,
+    "cad_head_kg": 0.09258463762944162,
+    "cad_yaw_only_kg": 0.03749695738003826,
+    "head_design_budget_kg": 0.12073079703680203,
+    "yaw_design_budget_kg": 0.16760199376184987,
+    "total_design_budget_kg": 0.4006927458900011,
+    "head_cad_com_mm": [
+      3.7113709830422024,
+      -1.3440283179933006,
+      88.23086854660352
+    ],
+    "total_cad_com_mm": [
+      0.3292720568679536,
+      0.2627856826799065,
+      42.037686028209166
+    ],
+    "head_cad_cg_radius_mm": 1.3637127283188057,
+    "head_design_cg_offset_mm": 10.0
+  },
+  "motor": {
+    "stall_torque_Nm": 0.1765197,
+    "assumed_operating_budget_Nm": 0.044129925,
+    "pitch_gravity_Nm": 0.011839646707609546,
+    "pitch_inertia_upper_bound_kg_m2": 0.00016103153988605663,
+    "pitch_inertial_Nm": 0.0005058955027022873,
+    "pitch_unfactored_Nm": 0.017345542210311836,
+    "pitch_factored_required_Nm": 0.03469108442062367,
+    "pitch_budget_reserve_ratio": 1.2720826038451825,
+    "yaw_inertia_upper_bound_kg_m2": 0.0005621878149867376,
+    "yaw_inertial_Nm": 0.0017661651095000326,
+    "yaw_unfactored_Nm": 0.0067661651095000325,
+    "yaw_factored_required_Nm": 0.013532330219000065,
+    "yaw_budget_reserve_ratio": 3.261073613030769
+  },
+  "motion": {
+    "pitch_full_travel": {
+      "distance_deg": 40,
+      "duration_s": 1.25,
+      "peak_speed_deg_s": 60.0,
+      "peak_acceleration_deg_s2": 147.80166891254422
+    },
+    "yaw_full_travel": {
+      "distance_deg": 60,
+      "duration_s": 1.875,
+      "peak_speed_deg_s": 60.0,
+      "peak_acceleration_deg_s2": 98.53444594169615
+    }
+  },
+  "structure": {
+    "vertical_proof_force_each_arm_N": 1.775947006141432,
+    "driven_arm_pitch_moment_Nm": 0.04653073112823321,
+    "axial_stress_MPa": 0.03699889596127984,
+    "pitch_bending_stress_MPa": 0.4846951159190959,
+    "lateral_dynamic_bending_stress_MPa": 0.023290305646162326,
+    "combined_screen_stress_MPa": 0.5449843175265382,
+    "screening_allowable_MPa": 10.0,
+    "screening_margin": 18.34915185337062,
+    "combined_arm_deflection_mm": 0.11253238796710996,
+    "pivot_shear_MPa": 0.2512539557249153,
+    "printed_pivot_bearing_MPa": 0.1480007965295192,
+    "base_boss_average_bearing_MPa": 0.0715551431118958,
+    "foot_contact_pressure_MPa": 0.008685999316638462,
+    "idealized_arm_bending_mode_Hz": 25.38760329538717
+  },
+  "dynamics": {
+    "pitch_stop_kinetic_energy_J": 8.829542193186782e-05,
+    "stop_average_inertial_torque_Nm": 0.0025294775135114357,
+    "stop_average_force_including_stall_N": 8.952458875675571,
+    "horizontal_inertial_reaction_N": 0.04138531550777487,
+    "dynamic_overturning_moment_Nm": 0.004147803267386476
+  },
+  "stability": {
+    "minimum_total_mass_kg": 0.2436433573696007,
+    "conservative_cg_height_mm": 60.0,
+    "conservative_cg_y_offset_mm": 5.218011974922159,
+    "support_lever_mm": 34.781988025077844,
+    "static_tip_angle_deg": 30.1008609495263,
+    "restoring_moment_Nm": 0.08310547807875877,
+    "one_newton_push_moment_Nm": 0.1,
+    "push_with_dynamic_margin_ratio": 0.7979570905148698,
+    "assumed_sliding_threshold_N": 0.9557300522194379
+  },
+  "tolerance": {
+    "head_yoke_total_nominal_gap_mm": 2.0,
+    "head_yoke_total_worst_gap_mm": 1.6,
+    "head_yoke_worst_gap_after_one_washer_mm": 1.0,
+    "pan_pilot_nominal_diametral_clearance_mm": 0.3999999999999986,
+    "pan_pilot_worst_as_printed_clearance_mm": -1.4432899320127035e-15,
+    "pan_pilot_finished_minimum_clearance_mm": 0.2999999999999986,
+    "m3_minimum_diametral_hole_clearance_mm": 0.09999999999999964
+  },
+  "thermal_and_power": {
+    "estimated_heat_W": 1.3,
+    "effective_exposed_area_m2": 0.01956,
+    "estimated_surface_low_C": 36.646216768916155,
+    "estimated_surface_high_C": 46.61554192229039,
+    "assumed_peak_current_A": 2.15,
+    "supply_current_reserve_A": 0.8500000000000001,
+    "illustrative_capacitor_only_voltage_droop_V": 1.0
+  },
+  "decision_matrix": {
+    "weights": [
+      0.4,
+      0.1,
+      0.08,
+      0.05,
+      0.07,
+      0.05,
+      0.1,
+      0.15
+    ],
+    "scores": {
+      "A_pan_tilt": [
+        5,
+        3,
+        4,
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "B_single_nod": [
+        3,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4,
+        5
+      ],
+      "C_eyelids": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        4,
+        3
+      ]
+    },
+    "weighted_scores": {
+      "A_pan_tilt": 4.129999999999999,
+      "B_single_nod": 3.93,
+      "C_eyelids": 3.05
+    },
+    "equal_weight_scores": {
+      "A_pan_tilt": 3.625,
+      "B_single_nod": 4.25,
+      "C_eyelids": 3.0
+    },
+    "expressiveness_weight_transfer_to_simplicity_for_A_B_tie": 0.04999999999999971
+  },
+  "analytical_checks_only": {
+    "pitch_torque_within_assumed_operating_budget": true,
+    "yaw_torque_within_assumed_operating_budget": true,
+    "mass_budget_below_0_50kg": true,
+    "arm_stress_below_screening_allowable": true,
+    "arm_displacement_below_0_5mm": true,
+    "static_tip_angle_at_least_10deg": true,
+    "one_newton_push_tip_screen": false,
+    "pan_pilot_has_positive_worst_case_clearance_as_printed": false,
+    "pan_pilot_has_positive_clearance_after_specified_finishing": true,
+    "thermal_low_h_below_surface_target": false,
+    "assumed_peak_current_below_supply_rating": true
+  },
+  "limitations": [
+    "No physical test, FEA, creep, fatigue, servo continuous-rating, thermal, acoustic or electrical validation.",
+    "Bounding-box inertia and assumed mass/CG margins are screens; replace them with measured prototype properties.",
+    "Motor stall torque is not safe continuous torque. Reserve ratio compares to an assumed 25%-stall operating budget.",
+    "A failed screen is retained in this record and requires finishing, redesign or a physical test before acceptance."
+  ]
+}

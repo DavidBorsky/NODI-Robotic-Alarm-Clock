@@ -1,0 +1,846 @@
+{
+  "manifest_sha256": "b05628be6550c67d31df0fd3e3e9960db439457ece43a2a966d2dfb6129fc9d2",
+  "source_sha256": "75f23180ef522378e5758eca7784d90093cc1435d6a59dfe7081d748cc33c786",
+  "parameters_sha256": "e4786f04d06eae90b459cc7041acee2fbb770209fd61b247da94f6b6d0c31a2b",
+  "assemblies": [
+    {
+      "file": "CAD/exports/NODI_Assembly_RevA.step",
+      "valid": true,
+      "solid_count": 67,
+      "expected_solids": 67
+    },
+    {
+      "file": "CAD/exports/NODI_Exploded_RevA.step",
+      "valid": true,
+      "solid_count": 67,
+      "expected_solids": 67
+    }
+  ],
+  "meshes": [
+    {
+      "file": "CAD/exports/STL/NODI-P01_base_cup.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 7088,
+      "triangles": 14196,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P02_base_deck.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2360,
+      "triangles": 4744,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P03_yoke.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2606,
+      "triangles": 5236,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P04_head_shell.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2751,
+      "triangles": 5538,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P05_front_bezel.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2374,
+      "triangles": 4764,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P06_rear_carrier.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 1352,
+      "triangles": 2716,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P07_power_carrier.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 1024,
+      "triangles": 2060,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P08_switch_carrier.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 344,
+      "triangles": 692,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/STL/NODI-P09_snooze_cap.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/ballast.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 344,
+      "triangles": 692,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/ballast_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/ballast_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/base_cup.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 7088,
+      "triangles": 14196,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/base_deck.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2360,
+      "triangles": 4744,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/bezel_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/bezel_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/bezel_screw_3.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/bezel_screw_4.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/buffer_ic.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 8,
+      "triangles": 12,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/capacitor.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 168,
+      "triangles": 332,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/deck_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/deck_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/deck_screw_3.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/deck_screw_4.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/foot_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 168,
+      "triangles": 332,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/foot_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 168,
+      "triangles": 332,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/foot_3.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 168,
+      "triangles": 332,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/foot_4.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 168,
+      "triangles": 332,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/front_bezel.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2374,
+      "triangles": 4764,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/head_shell.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2751,
+      "triangles": 5538,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_active.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 8,
+      "triangles": 12,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_panel.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 8,
+      "triangles": 12,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_pcb.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 680,
+      "triangles": 1372,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_screw_3.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/oled_screw_4.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_horn.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 1008,
+      "triangles": 2024,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_horn_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_horn_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_mount_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_mount_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_retaining_screw.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pan_servo.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 864,
+      "triangles": 1732,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pico.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 8,
+      "triangles": 12,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/piezo.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 168,
+      "triangles": 332,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pitch_bolt.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pitch_nut.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 672,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pitch_sleeve.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 672,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/pitch_washer.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 672,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/power_carrier.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 1024,
+      "triangles": 2060,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/power_perfboard.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 8,
+      "triangles": 12,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/power_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/power_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/power_screw_3.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/power_screw_4.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/rear_carrier.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 1352,
+      "triangles": 2716,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/rear_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/rear_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/rear_screw_3.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/rear_screw_4.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/rtc.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 8,
+      "triangles": 12,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/snooze_cap.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/snooze_switch.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 176,
+      "triangles": 348,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/switch_carrier.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 344,
+      "triangles": 692,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/switch_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/switch_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/thrust_washer.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 672,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_horn.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 1008,
+      "triangles": 2024,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_horn_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_horn_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_mount_screw_1.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_mount_screw_2.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_retaining_screw.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 336,
+      "triangles": 668,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/tilt_servo.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 864,
+      "triangles": 1732,
+      "positive_volume": true
+    },
+    {
+      "file": "CAD/exports/meshes/yoke.stl",
+      "watertight": true,
+      "winding_consistent": true,
+      "vertices": 2606,
+      "triangles": 5236,
+      "positive_volume": true
+    }
+  ],
+  "stl_file_count": 76,
+  "neutral_audit_nonexcluded_intersections": [],
+  "neutral_audit_explicit_thread_engagements": [
+    {
+      "a": "base_cup",
+      "b": "ballast_screw_1",
+      "intersection_mm3": 7.386669726753167,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "ballast_screw_2",
+      "intersection_mm3": 7.38666972675315,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "deck_screw_1",
+      "intersection_mm3": 12.087277734686957,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "deck_screw_2",
+      "intersection_mm3": 12.087277734686957,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "deck_screw_3",
+      "intersection_mm3": 12.087277734686957,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "deck_screw_4",
+      "intersection_mm3": 12.087277734686957,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "pan_mount_screw_1",
+      "intersection_mm3": 3.5814156250924385,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "pan_mount_screw_2",
+      "intersection_mm3": 3.5814156250924563,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "rear_screw_1",
+      "intersection_mm3": 6.98376046893024,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "rear_screw_2",
+      "intersection_mm3": 6.983760468930236,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "rear_screw_3",
+      "intersection_mm3": 6.98376046893024,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "rear_screw_4",
+      "intersection_mm3": 6.983760468930236,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "power_screw_1",
+      "intersection_mm3": 5.640729609520579,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "power_screw_2",
+      "intersection_mm3": 5.640729609520579,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "power_screw_3",
+      "intersection_mm3": 5.640729609520579,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "power_screw_4",
+      "intersection_mm3": 5.640729609520579,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "switch_screw_1",
+      "intersection_mm3": 5.909335781402526,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "base_cup",
+      "b": "switch_screw_2",
+      "intersection_mm3": 5.909335781402526,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "head_shell",
+      "b": "bezel_screw_1",
+      "intersection_mm3": 3.342654583419504,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "head_shell",
+      "b": "bezel_screw_2",
+      "intersection_mm3": 3.3426545834195376,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "head_shell",
+      "b": "bezel_screw_3",
+      "intersection_mm3": 3.342654583419504,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "head_shell",
+      "b": "bezel_screw_4",
+      "intersection_mm3": 3.3426545834195376,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "head_shell",
+      "b": "tilt_mount_screw_1",
+      "intersection_mm3": 2.7457519792374843,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "head_shell",
+      "b": "tilt_mount_screw_2",
+      "intersection_mm3": 3.581415625092399,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "front_bezel",
+      "b": "oled_screw_1",
+      "intersection_mm3": 2.0294688542190293,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "front_bezel",
+      "b": "oled_screw_2",
+      "intersection_mm3": 2.0294688542190293,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "front_bezel",
+      "b": "oled_screw_3",
+      "intersection_mm3": 2.029468854219024,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "front_bezel",
+      "b": "oled_screw_4",
+      "intersection_mm3": 2.029468854219024,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "pan_servo",
+      "b": "pan_retaining_screw",
+      "intersection_mm3": 5.529203070318159,
+      "exclusion": "Nominal smooth shank in simplified nut/motor threaded bore; thread geometry omitted."
+    },
+    {
+      "a": "tilt_servo",
+      "b": "tilt_retaining_screw",
+      "intersection_mm3": 4.775220833456563,
+      "exclusion": "Nominal smooth shank in simplified nut/motor threaded bore; thread geometry omitted."
+    },
+    {
+      "a": "pan_horn",
+      "b": "pan_horn_screw_1",
+      "intersection_mm3": 0.9550441666913194,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "pan_horn",
+      "b": "pan_horn_screw_2",
+      "intersection_mm3": 0.9550441666913194,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "tilt_horn",
+      "b": "tilt_horn_screw_1",
+      "intersection_mm3": 1.193805208364133,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "tilt_horn",
+      "b": "tilt_horn_screw_2",
+      "intersection_mm3": 1.193805208364133,
+      "exclusion": "Nominal smooth shank in smaller thread pilot; thread geometry omitted."
+    },
+    {
+      "a": "pitch_bolt",
+      "b": "pitch_nut",
+      "intersection_mm3": 7.037167544041317,
+      "exclusion": "Nominal smooth shank in simplified nut/motor threaded bore; thread geometry omitted."
+    }
+  ],
+  "pass_neutral_all_body_audit": true,
+  "pass_assemblies": true,
+  "pass_stl_readback": true
+}

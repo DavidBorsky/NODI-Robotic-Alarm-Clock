@@ -1,0 +1,577 @@
+{
+  "revision": "A",
+  "geometry_engine": "CadQuery2.6.1/OpenCASCADE7.8",
+  "body_checks": [
+    {
+      "id": "base_cup",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 64503.82085332646,
+      "step_volume_relative_error": 1.387426007801225e-14
+    },
+    {
+      "id": "base_deck",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 27121.90103442774,
+      "step_volume_relative_error": 1.006007691664138e-14
+    },
+    {
+      "id": "thrust_washer",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 1531.5264186250238,
+      "step_volume_relative_error": 2.2269319615853964e-14
+    },
+    {
+      "id": "yoke",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 23589.16971461486,
+      "step_volume_relative_error": 1.2954683165739953e-13
+    },
+    {
+      "id": "head_shell",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 42862.91392126875,
+      "step_volume_relative_error": 2.682041881596259e-14
+    },
+    {
+      "id": "front_bezel",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 10378.306162838622,
+      "step_volume_relative_error": 5.78385811472294e-15
+    },
+    {
+      "id": "pan_servo",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 6822.864308259607,
+      "step_volume_relative_error": 1.3330100976387794e-16
+    },
+    {
+      "id": "tilt_servo",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 6822.864308259602,
+      "step_volume_relative_error": 2.6660201952775612e-16
+    },
+    {
+      "id": "pan_horn",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 474.9711101109338,
+      "step_volume_relative_error": 3.339005999430439e-14
+    },
+    {
+      "id": "tilt_horn",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 637.7935741611857,
+      "step_volume_relative_error": 3.36892894501869e-14
+    },
+    {
+      "id": "pan_retaining_screw",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 43.58959806855839,
+      "step_volume_relative_error": 5.379244434234992e-15
+    },
+    {
+      "id": "tilt_retaining_screw",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 43.58959806855836,
+      "step_volume_relative_error": 7.498340726509387e-15
+    },
+    {
+      "id": "pitch_sleeve",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 64.2392865806044,
+      "step_volume_relative_error": 2.167931551267071e-14
+    },
+    {
+      "id": "pitch_washer",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 35.74347041621786,
+      "step_volume_relative_error": 2.2065636814489444e-14
+    },
+    {
+      "id": "pitch_bolt",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 188.8882582970863,
+      "step_volume_relative_error": 1.1134659807926979e-14
+    },
+    {
+      "id": "pitch_nut",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 73.79601143282424,
+      "step_volume_relative_error": 2.1760343840257463e-14
+    },
+    {
+      "id": "oled_pcb",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 1848.2640734641031,
+      "step_volume_relative_error": 2.214362231424754e-15
+    },
+    {
+      "id": "oled_panel",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 3253.3500000000004,
+      "step_volume_relative_error": 2.7955636552259305e-16
+    },
+    {
+      "id": "oled_active",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 12.974220000000152,
+      "step_volume_relative_error": 2.5466068259089388e-14
+    },
+    {
+      "id": "rear_carrier",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 4167.44426074168,
+      "step_volume_relative_error": 8.729520011490835e-16
+    },
+    {
+      "id": "power_carrier",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 1832.4785570592203,
+      "step_volume_relative_error": 7.444791358698033e-16
+    },
+    {
+      "id": "pico",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 4069.8000000000006,
+      "step_volume_relative_error": 0.0
+    },
+    {
+      "id": "rtc",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 2914.5599999999995,
+      "step_volume_relative_error": 1.5602607285026357e-16
+    },
+    {
+      "id": "power_perfboard",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 1190.3999999999996,
+      "step_volume_relative_error": 0.0
+    },
+    {
+      "id": "capacitor",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 1256.6370614359175,
+      "step_volume_relative_error": 0.0
+    },
+    {
+      "id": "buffer_ic",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 501.8,
+      "step_volume_relative_error": 1.1327903320208851e-16
+    },
+    {
+      "id": "switch_carrier",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 806.2640729817931,
+      "step_volume_relative_error": 9.870312850579948e-16
+    },
+    {
+      "id": "snooze_switch",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 528.0528187540468,
+      "step_volume_relative_error": 1.7223555475357609e-15
+    },
+    {
+      "id": "snooze_cap",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 792.2311274190059,
+      "step_volume_relative_error": 7.749113894284465e-15
+    },
+    {
+      "id": "piezo",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 860.3597057047544,
+      "step_volume_relative_error": 3.9641618604798794e-16
+    },
+    {
+      "id": "foot_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 339.29200658769764,
+      "step_volume_relative_error": 1.6753539062853094e-16
+    },
+    {
+      "id": "foot_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 339.29200658769764,
+      "step_volume_relative_error": 1.6753539062853094e-16
+    },
+    {
+      "id": "foot_3",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 339.2920065876976,
+      "step_volume_relative_error": 3.3507078125706193e-16
+    },
+    {
+      "id": "foot_4",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 339.2920065876976,
+      "step_volume_relative_error": 3.3507078125706193e-16
+    },
+    {
+      "id": "ballast",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 8773.019930778135,
+      "step_volume_relative_error": 6.22017076638917e-16
+    },
+    {
+      "id": "ballast_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 154.71715500399011,
+      "step_volume_relative_error": 1.2124271690222634e-14
+    },
+    {
+      "id": "ballast_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 154.71715500399011,
+      "step_volume_relative_error": 1.2124271690222634e-14
+    },
+    {
+      "id": "deck_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 100.24193839074312,
+      "step_volume_relative_error": 1.049065157564889e-14
+    },
+    {
+      "id": "deck_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 100.24193839074312,
+      "step_volume_relative_error": 1.049065157564889e-14
+    },
+    {
+      "id": "deck_screw_3",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 100.24193839074312,
+      "step_volume_relative_error": 1.049065157564889e-14
+    },
+    {
+      "id": "deck_screw_4",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 100.24193839074312,
+      "step_volume_relative_error": 1.049065157564889e-14
+    },
+    {
+      "id": "bezel_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 37.34725346587547,
+      "step_volume_relative_error": 9.512650460486066e-15
+    },
+    {
+      "id": "bezel_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 37.34725346587548,
+      "step_volume_relative_error": 9.893156478905505e-15
+    },
+    {
+      "id": "bezel_screw_3",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 37.34725346587547,
+      "step_volume_relative_error": 9.512650460486066e-15
+    },
+    {
+      "id": "bezel_screw_4",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 37.34725346587548,
+      "step_volume_relative_error": 9.893156478905505e-15
+    },
+    {
+      "id": "oled_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 26.603006590598376,
+      "step_volume_relative_error": 5.6089139399136165e-15
+    },
+    {
+      "id": "oled_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 26.603006590598376,
+      "step_volume_relative_error": 5.6089139399136165e-15
+    },
+    {
+      "id": "oled_screw_3",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 26.603006590598376,
+      "step_volume_relative_error": 5.6089139399136165e-15
+    },
+    {
+      "id": "oled_screw_4",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 26.603006590598376,
+      "step_volume_relative_error": 5.6089139399136165e-15
+    },
+    {
+      "id": "pan_mount_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 36.02778455136774,
+      "step_volume_relative_error": 7.888830741141151e-15
+    },
+    {
+      "id": "pan_mount_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 36.027784551367745,
+      "step_volume_relative_error": 8.086051509669678e-15
+    },
+    {
+      "id": "tilt_mount_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 36.02778455136778,
+      "step_volume_relative_error": 9.6638176578979e-15
+    },
+    {
+      "id": "tilt_mount_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 36.02778455136778,
+      "step_volume_relative_error": 9.861038426426428e-15
+    },
+    {
+      "id": "pan_horn_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 29.744599244188162,
+      "step_volume_relative_error": 5.733150249645545e-15
+    },
+    {
+      "id": "pan_horn_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 29.744599244188162,
+      "step_volume_relative_error": 5.4942689892436475e-15
+    },
+    {
+      "id": "tilt_horn_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 29.744599244188187,
+      "step_volume_relative_error": 5.852590879846489e-15
+    },
+    {
+      "id": "tilt_horn_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 29.744599244188183,
+      "step_volume_relative_error": 5.733150249645541e-15
+    },
+    {
+      "id": "rear_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 69.8941533570657,
+      "step_volume_relative_error": 6.302909113452014e-15
+    },
+    {
+      "id": "rear_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 69.89415335706573,
+      "step_volume_relative_error": 6.7095484110940765e-15
+    },
+    {
+      "id": "rear_screw_3",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 69.8941533570657,
+      "step_volume_relative_error": 6.0995894646309814e-15
+    },
+    {
+      "id": "rear_screw_4",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 69.89415335706573,
+      "step_volume_relative_error": 6.7095484110940765e-15
+    },
+    {
+      "id": "power_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 62.82556988648869,
+      "step_volume_relative_error": 4.9762987315405225e-15
+    },
+    {
+      "id": "power_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 62.82556988648869,
+      "step_volume_relative_error": 4.9762987315405225e-15
+    },
+    {
+      "id": "power_screw_3",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 62.82556988648868,
+      "step_volume_relative_error": 5.315591826872831e-15
+    },
+    {
+      "id": "power_screw_4",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 62.82556988648868,
+      "step_volume_relative_error": 5.315591826872831e-15
+    },
+    {
+      "id": "switch_screw_1",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 69.89415335706572,
+      "step_volume_relative_error": 7.116187708736143e-15
+    },
+    {
+      "id": "switch_screw_2",
+      "valid": true,
+      "solids": 1,
+      "step_valid": true,
+      "volume_mm3": 69.89415335706572,
+      "step_volume_relative_error": 6.912868059915111e-15
+    }
+  ],
+  "pose_samples": [
+    {
+      "yaw_deg": -30,
+      "pitch_deg": -15
+    },
+    {
+      "yaw_deg": -30,
+      "pitch_deg": 25
+    },
+    {
+      "yaw_deg": 0,
+      "pitch_deg": -15
+    },
+    {
+      "yaw_deg": 0,
+      "pitch_deg": 0
+    },
+    {
+      "yaw_deg": 0,
+      "pitch_deg": 25
+    },
+    {
+      "yaw_deg": 30,
+      "pitch_deg": -15
+    },
+    {
+      "yaw_deg": 30,
+      "pitch_deg": 25
+    }
+  ],
+  "non_excluded_intersections": [],
+  "exclusions": [],
+  "note": "Exact B-rep intersections at sampled poses; not continuous motion proof. Screw threads intentionally omitted. Flexible cables/electrical leads not modeled. Fit/stops and incoming purchased hardware require prototype measurement.",
+  "all_bodies_valid": true,
+  "all_step_volumes_match": true
+}

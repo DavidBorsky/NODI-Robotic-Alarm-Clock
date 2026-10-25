@@ -1,0 +1,19 @@
+{
+  "geometry_source": "CAD/build_nodi.py and CAD/parameters.json",
+  "cad_manifest_sha256": "b05628be6550c67d31df0fd3e3e9960db439457ece43a2a966d2dfb6129fc9d2",
+  "render_source": "tools/render_cad.py",
+  "render_source_sha256": "9b468c7e5845eb57ad11202ab295bac2f5d02e27a1c094960da141451eb18492",
+  "renderer": "Blender 4.5.3 LTS, Cycles CPU",
+  "evidence": "Actual exported CAD meshes, studio lighting and illustrative OLED artwork; no hardware photograph. Cutaway hides named covers/shells. GIF holds discrete CAD key poses; not a measured or time-accurate motion trajectory.",
+  "render_files_sha256": {
+    "Images/nodi_hero.png": "b4c643576232d7ed32f96e04d55ba228c2b88c85d4bbcf79d531e7d8080fa578",
+    "Images/nodi_exploded.png": "9d1e21c7747431d1876d61971d4e7dc7621b11bd6db1fac2d35d8d889e2bdffd",
+    "Images/nodi_front.png": "024b9fb7e965e29a57102f83ba5a4af660c9b306ed10d17a9a0b24614736dbf6",
+    "Images/nodi_side.png": "f59351e416376591612fa313a95246daf5abcbd9991bbd16e599f2b694e044a8",
+    "Images/nodi_top.png": "fac21639433231a0e96f918ee2070fa66342abd7430eedf5177db5abaa4d594f",
+    "Images/nodi_cutaway.png": "34175b4c89843a695ce94a82877466a3da67d4dc469223285e37139e8ddb675a",
+    "Images/nodi_sleepy.png": "4f996dc22fc7da62132b8f48e8b948f404d4d5ae8264f2e5a0a36e9d2fceefd1",
+    "Images/nodi_awake.png": "add4bcb0550ea2a73b59fc97f2bdd49bbe830905a03bd2b0ce74feca2f4ecc1e",
+    "Images/nodi_cheerful.png": "690e79ca8b590d643abe19d098435afdce214fba7063c3a50000a201e5ce6778"
+  }
+}

@@ -1,0 +1,3085 @@
+{
+  "revision": "A",
+  "units": "mm",
+  "coordinates": "X right; Y rear; Z up; face points-Y",
+  "instances": [
+    {
+      "id": "base_cup",
+      "part_number": "NODI-P01",
+      "name": "Base cup and integral mounting bosses",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.89,
+        0.82
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 64503.82085332646,
+      "mass_g": 81.91985248372461,
+      "com_mm": [
+        0.006427314569986323,
+        -0.5483562148983102,
+        9.123675568931981
+      ],
+      "bbox_mm": {
+        "min": [
+          -60.0,
+          -50.0,
+          0.0
+        ],
+        "max": [
+          60.0,
+          50.0,
+          29.6
+        ]
+      },
+      "stl": "CAD/exports/meshes/base_cup.stl",
+      "step": "CAD/exports/STEP/base_cup.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "base_deck",
+      "part_number": "NODI-P02",
+      "name": "Removable base deck with yaw stops",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.89,
+        0.82
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        0,
+        25
+      ],
+      "notes": "",
+      "volume_mm3": 27121.90103442774,
+      "mass_g": 34.44481431372323,
+      "com_mm": [
+        0.23708424227152386,
+        -0.09178367512152513,
+        30.821117968976868
+      ],
+      "bbox_mm": {
+        "min": [
+          -60.0,
+          -50.0,
+          29.6
+        ],
+        "max": [
+          60.0,
+          50.0,
+          38.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/base_deck.stl",
+      "step": "CAD/exports/STEP/base_deck.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "thrust_washer",
+      "part_number": "NODI-C01",
+      "name": "PTFE annular thrust washer",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.94,
+        0.95
+      ],
+      "material": "PTFE",
+      "density_g_cm3": 2.2,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        42
+      ],
+      "notes": "",
+      "volume_mm3": 1531.5264186250238,
+      "mass_g": 3.3693581209750523,
+      "com_mm": [
+        -1.187697046178878e-15,
+        -1.0513906927818158e-15,
+        33.0
+      ],
+      "bbox_mm": {
+        "min": [
+          -20.0,
+          -20.0,
+          32.0
+        ],
+        "max": [
+          20.0,
+          20.0,
+          34.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/thrust_washer.stl",
+      "step": "CAD/exports/STEP/thrust_washer.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "yoke",
+      "part_number": "NODI-P03",
+      "name": "One-piece pan and tilt yoke",
+      "group": "yaw",
+      "color": [
+        0.91,
+        0.4,
+        0.2
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 23589.16971461486,
+      "mass_g": 29.958245537560874,
+      "com_mm": [
+        0.976097099756481,
+        -0.0006784600421091875,
+        48.32586980052575
+      ],
+      "bbox_mm": {
+        "min": [
+          -48.0,
+          -20.0,
+          29.0
+        ],
+        "max": [
+          57.0,
+          20.0,
+          102.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/yoke.stl",
+      "step": "CAD/exports/STEP/yoke.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "head_shell",
+      "part_number": "NODI-P04",
+      "name": "Head shell with servo cradle and passive pivot",
+      "group": "pitch",
+      "color": [
+        0.91,
+        0.89,
+        0.82
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        0,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 42862.91392126875,
+      "mass_g": 54.435900680011315,
+      "com_mm": [
+        -0.3511751099831785,
+        5.830797995252531,
+        88.12091717234357
+      ],
+      "bbox_mm": {
+        "min": [
+          -44.4,
+          -21.6,
+          58.0
+        ],
+        "max": [
+          43.0,
+          24.0,
+          118.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/head_shell.stl",
+      "step": "CAD/exports/STEP/head_shell.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "front_bezel",
+      "part_number": "NODI-P05",
+      "name": "Front bezel and OLED mounting spacers",
+      "group": "pitch",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        -50,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 10378.306162838622,
+      "mass_g": 13.180448826805051,
+      "com_mm": [
+        3.0945831769114214e-16,
+        -22.755335607552222,
+        87.63480847983598
+      ],
+      "bbox_mm": {
+        "min": [
+          -43.0,
+          -24.0,
+          58.0
+        ],
+        "max": [
+          43.0,
+          -18.900000000000002,
+          118.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/front_bezel.stl",
+      "step": "CAD/exports/STEP/front_bezel.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pan_servo",
+      "part_number": "NODI-C02",
+      "name": "TowerPro MG90S yaw servo envelope",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "MG90S assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "Manufacturer envelope22.8x12.2x28.5mm; flange/horn pattern is a design interface assumption requiring incoming sample check.",
+      "volume_mm3": 6822.864308259607,
+      "mass_g": 13.4,
+      "com_mm": [
+        5.221705898566996,
+        -1.1906664025220095e-16,
+        16.131864357085835
+      ],
+      "bbox_mm": {
+        "min": [
+          -10.7,
+          -6.1,
+          3.9000000000000004
+        ],
+        "max": [
+          21.7,
+          6.1,
+          32.4
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_servo.stl",
+      "step": "CAD/exports/STEP/pan_servo.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "tilt_servo",
+      "part_number": "NODI-C02",
+      "name": "TowerPro MG90S pitch servo envelope",
+      "group": "pitch",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "MG90S assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        30,
+        0,
+        100
+      ],
+      "notes": "Servo case is fixed to head; output horn is fixed to yoke. Neutral shafttipX41.8.",
+      "volume_mm3": 6822.864308259602,
+      "mass_g": 13.4,
+      "com_mm": [
+        25.531864357085848,
+        5.221705898566998,
+        88.00000000000001
+      ],
+      "bbox_mm": {
+        "min": [
+          13.3,
+          -10.700000000000003,
+          81.89999999999999
+        ],
+        "max": [
+          41.8,
+          21.699999999999996,
+          94.10000000000001
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_servo.stl",
+      "step": "CAD/exports/STEP/tilt_servo.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "pan_horn",
+      "part_number": "NODI-C03",
+      "name": "19mm servo disc horn, match-drilled",
+      "group": "yaw",
+      "color": [
+        0.91,
+        0.94,
+        0.95
+      ],
+      "material": "Nylon",
+      "density_g_cm3": 1.14,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        48
+      ],
+      "notes": "",
+      "volume_mm3": 474.9711101109338,
+      "mass_g": 1.5,
+      "com_mm": [
+        8.265236624934218e-16,
+        -1.5780024427638977e-16,
+        33.04546392570838
+      ],
+      "bbox_mm": {
+        "min": [
+          -9.5,
+          -9.5,
+          30.4
+        ],
+        "max": [
+          9.5,
+          9.5,
+          34.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_horn.stl",
+      "step": "CAD/exports/STEP/pan_horn.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "tilt_horn",
+      "part_number": "NODI-C03",
+      "name": "19mm servo disc horn, match-drilled",
+      "group": "yaw",
+      "color": [
+        0.91,
+        0.94,
+        0.95
+      ],
+      "material": "Nylon",
+      "density_g_cm3": 1.14,
+      "printable": false,
+      "explode": [
+        25,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 637.7935741611857,
+      "mass_g": 1.5,
+      "com_mm": [
+        42.76573472041613,
+        1.779190249435815e-16,
+        88.00000000000001
+      ],
+      "bbox_mm": {
+        "min": [
+          39.8,
+          -9.5,
+          78.5
+        ],
+        "max": [
+          44.0,
+          9.5,
+          97.5
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_horn.stl",
+      "step": "CAD/exports/STEP/tilt_horn.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "pan_retaining_screw",
+      "part_number": "NODI-F09",
+      "name": "Vendor M2.2 x6 servo horn retaining screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        65
+      ],
+      "notes": "",
+      "volume_mm3": 43.58959806855839,
+      "mass_g": 0.3421783448381833,
+      "com_mm": [
+        -9.16916664926419e-17,
+        7.417539815194938e-17,
+        32.787837837837834
+      ],
+      "bbox_mm": {
+        "min": [
+          -2.1,
+          -2.1,
+          28.0
+        ],
+        "max": [
+          2.1,
+          2.1,
+          35.5
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_retaining_screw.stl",
+      "step": "CAD/exports/STEP/pan_retaining_screw.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "tilt_retaining_screw",
+      "part_number": "NODI-F09",
+      "name": "Vendor M2.2 x6 servo horn retaining screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        35,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 43.58959806855836,
+      "mass_g": 0.3421783448381831,
+      "com_mm": [
+        42.78783783783784,
+        -9.381996940692931e-17,
+        88.00000000000001
+      ],
+      "bbox_mm": {
+        "min": [
+          38.0,
+          -2.1,
+          85.9
+        ],
+        "max": [
+          45.5,
+          2.1,
+          90.1
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_retaining_screw.stl",
+      "step": "CAD/exports/STEP/tilt_retaining_screw.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pitch_sleeve",
+      "part_number": "NODI-C04",
+      "name": "Brass pivot sleeve OD4 ID3.2 x14.2",
+      "group": "yaw",
+      "color": [
+        0.7,
+        0.51,
+        0.18
+      ],
+      "material": "Brass",
+      "density_g_cm3": 8.5,
+      "printable": false,
+      "explode": [
+        -22,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 64.2392865806044,
+      "mass_g": 0.5460339359351374,
+      "com_mm": [
+        -40.900000000000006,
+        2.5538774363026813e-16,
+        88.00000000000003
+      ],
+      "bbox_mm": {
+        "min": [
+          -48.0,
+          -2.0,
+          86.0
+        ],
+        "max": [
+          -33.8,
+          2.0,
+          90.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/pitch_sleeve.stl",
+      "step": "CAD/exports/STEP/pitch_sleeve.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pitch_washer",
+      "part_number": "NODI-C05",
+      "name": "PTFE pivot washer OD8 ID4.3 x1",
+      "group": "yaw",
+      "color": [
+        0.91,
+        0.94,
+        0.95
+      ],
+      "material": "PTFE",
+      "density_g_cm3": 2.2,
+      "printable": false,
+      "explode": [
+        -20,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 35.74347041621786,
+      "mass_g": 0.07863563491567929,
+      "com_mm": [
+        -43.5,
+        -2.8996334890410326e-16,
+        88.0
+      ],
+      "bbox_mm": {
+        "min": [
+          -44.0,
+          -4.0,
+          84.0
+        ],
+        "max": [
+          -43.0,
+          4.0,
+          92.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/pitch_washer.stl",
+      "step": "CAD/exports/STEP/pitch_washer.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pitch_bolt",
+      "part_number": "NODI-F01",
+      "name": "M3 x20 passive pivot screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        -36,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 188.8882582970863,
+      "mass_g": 1.4827728276321275,
+      "com_mm": [
+        -40.76715176715176,
+        -2.2677489522481843e-17,
+        87.99999999999999
+      ],
+      "bbox_mm": {
+        "min": [
+          -50.0,
+          -2.75,
+          85.25
+        ],
+        "max": [
+          -28.0,
+          2.75,
+          90.75
+        ]
+      },
+      "stl": "CAD/exports/meshes/pitch_bolt.stl",
+      "step": "CAD/exports/STEP/pitch_bolt.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pitch_nut",
+      "part_number": "NODI-F02",
+      "name": "M3 DIN985 nylon locking nut envelope",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        -12,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 73.79601143282424,
+      "mass_g": 0.5792986897476703,
+      "com_mm": [
+        -31.8,
+        1.496280540237172e-16,
+        88.00000000000001
+      ],
+      "bbox_mm": {
+        "min": [
+          -33.8,
+          -2.75,
+          85.25
+        ],
+        "max": [
+          -29.799999999999997,
+          2.75,
+          90.75
+        ]
+      },
+      "stl": "CAD/exports/meshes/pitch_nut.stl",
+      "step": "CAD/exports/STEP/pitch_nut.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "oled_pcb",
+      "part_number": "NODI-C06",
+      "name": "Adafruit938 OLED PCB envelope",
+      "group": "pitch",
+      "color": [
+        0.04,
+        0.35,
+        0.22
+      ],
+      "material": "FR4 module",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        -30,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 1848.2640734641031,
+      "mass_g": 5,
+      "com_mm": [
+        3.844378874001309e-17,
+        -18.099999999999994,
+        90.0
+      ],
+      "bbox_mm": {
+        "min": [
+          -17.8,
+          -18.900000000000002,
+          73.5
+        ],
+        "max": [
+          17.8,
+          -17.3,
+          106.5
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_pcb.stl",
+      "step": "CAD/exports/STEP/oled_pcb.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "oled_panel",
+      "part_number": "NODI-C06",
+      "name": "OLED glass and driver panel envelope",
+      "group": "pitch",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "OLED module",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        -36,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 3253.3500000000004,
+      "mass_g": 4,
+      "com_mm": [
+        -1.1373016349818675e-16,
+        -20.950000000000006,
+        89.99999999999999
+      ],
+      "bbox_mm": {
+        "min": [
+          -17.25,
+          -23.0,
+          78.5
+        ],
+        "max": [
+          17.25,
+          -18.9,
+          101.5
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_panel.stl",
+      "step": "CAD/exports/STEP/oled_panel.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "oled_active",
+      "part_number": "VISUAL",
+      "name": "OLED active display surface",
+      "group": "pitch",
+      "color": [
+        0.025,
+        0.06,
+        0.07
+      ],
+      "material": "Display surface",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "29.42x14.7mm active area; renderer may overlay time/eyes within this area.",
+      "volume_mm3": 12.974220000000152,
+      "mass_g": 0,
+      "com_mm": [
+        -5.1797820253204336e-17,
+        -23.015000000000004,
+        90.00000000000003
+      ],
+      "bbox_mm": {
+        "min": [
+          -14.71,
+          -23.03,
+          82.65
+        ],
+        "max": [
+          14.71,
+          -23.0,
+          97.35000000000001
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_active.stl",
+      "step": "CAD/exports/STEP/oled_active.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "rear_carrier",
+      "part_number": "NODI-P06",
+      "name": "Rear electronics carrier80x27",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.89,
+        0.82
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        20,
+        20
+      ],
+      "notes": "",
+      "volume_mm3": 4167.44426074168,
+      "mass_g": 5.292654211141934,
+      "com_mm": [
+        3.3417693793988353e-16,
+        29.0,
+        7.991532851676617
+      ],
+      "bbox_mm": {
+        "min": [
+          -40.0,
+          15.5,
+          7.0
+        ],
+        "max": [
+          40.0,
+          42.5,
+          9.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/rear_carrier.stl",
+      "step": "CAD/exports/STEP/rear_carrier.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "power_carrier",
+      "part_number": "NODI-P07",
+      "name": "Power electronics carrier35x28",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.89,
+        0.82
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        -18,
+        0,
+        20
+      ],
+      "notes": "",
+      "volume_mm3": 1832.4785570592203,
+      "mass_g": 2.32724776746521,
+      "com_mm": [
+        -34.50000000000001,
+        -1.2485535507816492e-15,
+        5.986208487918864
+      ],
+      "bbox_mm": {
+        "min": [
+          -52.00000000000002,
+          -14.000000000000021,
+          5.0
+        ],
+        "max": [
+          -17.0,
+          14.000000000000021,
+          7.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/power_carrier.stl",
+      "step": "CAD/exports/STEP/power_carrier.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pico",
+      "part_number": "NODI-C07",
+      "name": "Raspberry Pi Pico board envelope",
+      "group": "fixed",
+      "color": [
+        0.04,
+        0.35,
+        0.22
+      ],
+      "material": "Pico assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 4069.8000000000006,
+      "mass_g": 3,
+      "com_mm": [
+        -11.999999999999998,
+        29.0,
+        10.9
+      ],
+      "bbox_mm": {
+        "min": [
+          -37.5,
+          18.5,
+          9.0
+        ],
+        "max": [
+          13.5,
+          39.5,
+          12.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/pico.stl",
+      "step": "CAD/exports/STEP/pico.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "rtc",
+      "part_number": "NODI-C08",
+      "name": "Adafruit3013 DS3231 RTC envelope",
+      "group": "fixed",
+      "color": [
+        0.04,
+        0.35,
+        0.22
+      ],
+      "material": "RTC assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 2914.5599999999995,
+      "mass_g": 5,
+      "com_mm": [
+        26.999999999999996,
+        28.999999999999996,
+        12.6
+      ],
+      "bbox_mm": {
+        "min": [
+          15.5,
+          20.2,
+          9.0
+        ],
+        "max": [
+          38.5,
+          37.8,
+          16.2
+        ]
+      },
+      "stl": "CAD/exports/meshes/rtc.stl",
+      "step": "CAD/exports/STEP/rtc.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "power_perfboard",
+      "part_number": "NODI-C09",
+      "name": "Power and buffer perfboard envelope",
+      "group": "fixed",
+      "color": [
+        0.04,
+        0.35,
+        0.22
+      ],
+      "material": "Populated circuit",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 1190.3999999999996,
+      "mass_g": 6,
+      "com_mm": [
+        -34.5,
+        2.2681975771911805e-16,
+        7.8
+      ],
+      "bbox_mm": {
+        "min": [
+          -50.0,
+          -12.0,
+          7.0
+        ],
+        "max": [
+          -19.0,
+          12.0,
+          8.6
+        ]
+      },
+      "stl": "CAD/exports/meshes/power_perfboard.stl",
+      "step": "CAD/exports/STEP/power_perfboard.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "capacitor",
+      "part_number": "NODI-C10",
+      "name": "1000uF capacitor envelope OD10x16",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Capacitor assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 1256.6370614359175,
+      "mass_g": 2.5,
+      "com_mm": [
+        -41.99999999999999,
+        -2.4973220564838747e-16,
+        16.599999999999998
+      ],
+      "bbox_mm": {
+        "min": [
+          -47.0,
+          -5.0,
+          8.6
+        ],
+        "max": [
+          -37.0,
+          5.0,
+          24.6
+        ]
+      },
+      "stl": "CAD/exports/meshes/capacitor.stl",
+      "step": "CAD/exports/STEP/capacitor.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "buffer_ic",
+      "part_number": "NODI-C11",
+      "name": "74AHCT125 DIP14 envelope",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "IC assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 501.8,
+      "mass_g": 1,
+      "com_mm": [
+        -26.5,
+        -4.175197699445033e-17,
+        10.6
+      ],
+      "bbox_mm": {
+        "min": [
+          -29.75,
+          -9.65,
+          8.6
+        ],
+        "max": [
+          -23.25,
+          9.65,
+          12.6
+        ]
+      },
+      "stl": "CAD/exports/meshes/buffer_ic.stl",
+      "step": "CAD/exports/STEP/buffer_ic.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "switch_carrier",
+      "part_number": "NODI-P08",
+      "name": "Snooze switch carrier",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.89,
+        0.82
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        -20,
+        20
+      ],
+      "notes": "",
+      "volume_mm3": 806.2640729817931,
+      "mass_g": 1.0239553726868773,
+      "com_mm": [
+        -1.93881145279249e-16,
+        -36.00000000000001,
+        23.7
+      ],
+      "bbox_mm": {
+        "min": [
+          -13.0,
+          -46.0,
+          22.9
+        ],
+        "max": [
+          13.0,
+          -26.0,
+          24.5
+        ]
+      },
+      "stl": "CAD/exports/meshes/switch_carrier.stl",
+      "step": "CAD/exports/STEP/switch_carrier.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "snooze_switch",
+      "part_number": "NODI-C12",
+      "name": "12mm tactile snooze switch envelope",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Switch assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 528.0528187540468,
+      "mass_g": 1.5,
+      "com_mm": [
+        2.434677397517592e-16,
+        -36.0,
+        26.38665007305974
+      ],
+      "bbox_mm": {
+        "min": [
+          -6.0,
+          -42.0,
+          24.5
+        ],
+        "max": [
+          6.0,
+          -30.0,
+          30.5
+        ]
+      },
+      "stl": "CAD/exports/meshes/snooze_switch.stl",
+      "step": "CAD/exports/STEP/snooze_switch.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "snooze_cap",
+      "part_number": "NODI-P09",
+      "name": "Snooze button cap",
+      "group": "fixed",
+      "color": [
+        0.91,
+        0.4,
+        0.2
+      ],
+      "material": "PETG",
+      "density_g_cm3": 1.27,
+      "printable": true,
+      "explode": [
+        0,
+        -20,
+        40
+      ],
+      "notes": "",
+      "volume_mm3": 792.2311274190059,
+      "mass_g": 1.0061335318221376,
+      "com_mm": [
+        -1.1838924005156823e-15,
+        -35.99999999999999,
+        34.22598889659958
+      ],
+      "bbox_mm": {
+        "min": [
+          -8.0,
+          -44.0,
+          30.5
+        ],
+        "max": [
+          8.0,
+          -28.0,
+          36.3
+        ]
+      },
+      "stl": "CAD/exports/meshes/snooze_cap.stl",
+      "step": "CAD/exports/STEP/snooze_cap.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "piezo",
+      "part_number": "NODI-C13",
+      "name": "Murata PKM13 piezo buzzer envelope",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Piezo assembly",
+      "density_g_cm3": null,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 860.3597057047544,
+      "mass_g": 2,
+      "com_mm": [
+        31.999999999999996,
+        -28.0,
+        5.85
+      ],
+      "bbox_mm": {
+        "min": [
+          25.7,
+          -34.3,
+          2.4
+        ],
+        "max": [
+          38.3,
+          -21.7,
+          9.3
+        ]
+      },
+      "stl": "CAD/exports/meshes/piezo.stl",
+      "step": "CAD/exports/STEP/piezo.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "vendor/engineering estimate"
+    },
+    {
+      "id": "foot_1",
+      "part_number": "NODI-C14",
+      "name": "Self adhesive silicone foot12x3",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Silicone",
+      "density_g_cm3": 1.15,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        -12
+      ],
+      "notes": "",
+      "volume_mm3": 339.29200658769764,
+      "mass_g": 0.39018580757585225,
+      "com_mm": [
+        -45.00000000000001,
+        -44.0,
+        -1.5
+      ],
+      "bbox_mm": {
+        "min": [
+          -51.0,
+          -50.0,
+          -3.0
+        ],
+        "max": [
+          -39.0,
+          -38.0,
+          0.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/foot_1.stl",
+      "step": "CAD/exports/STEP/foot_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "foot_2",
+      "part_number": "NODI-C14",
+      "name": "Self adhesive silicone foot12x3",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Silicone",
+      "density_g_cm3": 1.15,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        -12
+      ],
+      "notes": "",
+      "volume_mm3": 339.29200658769764,
+      "mass_g": 0.39018580757585225,
+      "com_mm": [
+        -45.00000000000001,
+        44.0,
+        -1.5
+      ],
+      "bbox_mm": {
+        "min": [
+          -51.0,
+          38.0,
+          -3.0
+        ],
+        "max": [
+          -39.0,
+          50.0,
+          0.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/foot_2.stl",
+      "step": "CAD/exports/STEP/foot_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "foot_3",
+      "part_number": "NODI-C14",
+      "name": "Self adhesive silicone foot12x3",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Silicone",
+      "density_g_cm3": 1.15,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        -12
+      ],
+      "notes": "",
+      "volume_mm3": 339.2920065876976,
+      "mass_g": 0.3901858075758522,
+      "com_mm": [
+        45.0,
+        -44.00000000000001,
+        -1.5000000000000002
+      ],
+      "bbox_mm": {
+        "min": [
+          39.0,
+          -50.0,
+          -3.0
+        ],
+        "max": [
+          51.0,
+          -38.0,
+          0.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/foot_3.stl",
+      "step": "CAD/exports/STEP/foot_3.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "foot_4",
+      "part_number": "NODI-C14",
+      "name": "Self adhesive silicone foot12x3",
+      "group": "fixed",
+      "color": [
+        0.075,
+        0.1,
+        0.13
+      ],
+      "material": "Silicone",
+      "density_g_cm3": 1.15,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        -12
+      ],
+      "notes": "",
+      "volume_mm3": 339.2920065876976,
+      "mass_g": 0.3901858075758522,
+      "com_mm": [
+        45.0,
+        44.00000000000001,
+        -1.5000000000000002
+      ],
+      "bbox_mm": {
+        "min": [
+          39.0,
+          38.0,
+          -3.0
+        ],
+        "max": [
+          51.0,
+          50.0,
+          0.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/foot_4.stl",
+      "step": "CAD/exports/STEP/foot_4.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "ballast",
+      "part_number": "NODI-P10",
+      "name": "Retained steel ballast40x18x12.5",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Low carbon steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -20,
+        15
+      ],
+      "notes": "",
+      "volume_mm3": 8773.019930778135,
+      "mass_g": 68.86820645660836,
+      "com_mm": [
+        4.0,
+        -19.0,
+        14.65
+      ],
+      "bbox_mm": {
+        "min": [
+          -16.0,
+          -28.0,
+          8.4
+        ],
+        "max": [
+          24.0,
+          -10.0,
+          20.9
+        ]
+      },
+      "stl": "CAD/exports/meshes/ballast.stl",
+      "step": "CAD/exports/STEP/ballast.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "ballast_screw_1",
+      "part_number": "NODI-F10",
+      "name": "M3 x18 ballast screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 154.71715500399011,
+      "mass_g": 1.2145296667813223,
+      "com_mm": [
+        -10.000000000000002,
+        -19.000000000000004,
+        13.605263157894735
+      ],
+      "bbox_mm": {
+        "min": [
+          -12.7,
+          -21.7,
+          2.8999999999999986
+        ],
+        "max": [
+          -7.3,
+          -16.3,
+          22.099999999999998
+        ]
+      },
+      "stl": "CAD/exports/meshes/ballast_screw_1.stl",
+      "step": "CAD/exports/STEP/ballast_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "ballast_screw_2",
+      "part_number": "NODI-F10",
+      "name": "M3 x18 ballast screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 154.71715500399011,
+      "mass_g": 1.2145296667813223,
+      "com_mm": [
+        17.999999999999996,
+        -18.999999999999996,
+        13.605263157894735
+      ],
+      "bbox_mm": {
+        "min": [
+          15.3,
+          -21.7,
+          2.8999999999999986
+        ],
+        "max": [
+          20.7,
+          -16.3,
+          22.099999999999998
+        ]
+      },
+      "stl": "CAD/exports/meshes/ballast_screw_2.stl",
+      "step": "CAD/exports/STEP/ballast_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "deck_screw_1",
+      "part_number": "NODI-F03",
+      "name": "M3 x10 deck screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        30
+      ],
+      "notes": "",
+      "volume_mm3": 100.24193839074312,
+      "mass_g": 0.7868992163673335,
+      "com_mm": [
+        -51.0,
+        -41.0,
+        27.251147047762313
+      ],
+      "bbox_mm": {
+        "min": [
+          -53.8,
+          -43.8,
+          20.6
+        ],
+        "max": [
+          -48.2,
+          -38.2,
+          31.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/deck_screw_1.stl",
+      "step": "CAD/exports/STEP/deck_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "deck_screw_2",
+      "part_number": "NODI-F03",
+      "name": "M3 x10 deck screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        30
+      ],
+      "notes": "",
+      "volume_mm3": 100.24193839074312,
+      "mass_g": 0.7868992163673335,
+      "com_mm": [
+        -51.0,
+        41.0,
+        27.251147047762313
+      ],
+      "bbox_mm": {
+        "min": [
+          -53.8,
+          38.2,
+          20.6
+        ],
+        "max": [
+          -48.2,
+          43.8,
+          31.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/deck_screw_2.stl",
+      "step": "CAD/exports/STEP/deck_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "deck_screw_3",
+      "part_number": "NODI-F03",
+      "name": "M3 x10 deck screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        30
+      ],
+      "notes": "",
+      "volume_mm3": 100.24193839074312,
+      "mass_g": 0.7868992163673335,
+      "com_mm": [
+        51.0,
+        -41.0,
+        27.251147047762313
+      ],
+      "bbox_mm": {
+        "min": [
+          48.2,
+          -43.8,
+          20.6
+        ],
+        "max": [
+          53.8,
+          -38.2,
+          31.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/deck_screw_3.stl",
+      "step": "CAD/exports/STEP/deck_screw_3.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "deck_screw_4",
+      "part_number": "NODI-F03",
+      "name": "M3 x10 deck screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        30
+      ],
+      "notes": "",
+      "volume_mm3": 100.24193839074312,
+      "mass_g": 0.7868992163673335,
+      "com_mm": [
+        51.0,
+        41.0,
+        27.251147047762313
+      ],
+      "bbox_mm": {
+        "min": [
+          48.2,
+          38.2,
+          20.6
+        ],
+        "max": [
+          53.8,
+          43.8,
+          31.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/deck_screw_4.stl",
+      "step": "CAD/exports/STEP/deck_screw_4.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "bezel_screw_1",
+      "part_number": "NODI-F04",
+      "name": "M2 x8 bezel screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -60,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 37.34725346587547,
+      "mass_g": 0.2931759397071224,
+      "com_mm": [
+        -36.0,
+        -21.504441453566617,
+        64.0
+      ],
+      "bbox_mm": {
+        "min": [
+          -37.8,
+          -25.2,
+          62.2
+        ],
+        "max": [
+          -34.2,
+          -16.0,
+          65.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/bezel_screw_1.stl",
+      "step": "CAD/exports/STEP/bezel_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "bezel_screw_2",
+      "part_number": "NODI-F04",
+      "name": "M2 x8 bezel screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -60,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 37.34725346587548,
+      "mass_g": 0.2931759397071225,
+      "com_mm": [
+        -36.0,
+        -21.504441453566624,
+        112.0
+      ],
+      "bbox_mm": {
+        "min": [
+          -37.8,
+          -25.2,
+          110.2
+        ],
+        "max": [
+          -34.2,
+          -16.0,
+          113.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/bezel_screw_2.stl",
+      "step": "CAD/exports/STEP/bezel_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "bezel_screw_3",
+      "part_number": "NODI-F04",
+      "name": "M2 x8 bezel screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -60,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 37.34725346587547,
+      "mass_g": 0.2931759397071224,
+      "com_mm": [
+        36.0,
+        -21.504441453566617,
+        64.0
+      ],
+      "bbox_mm": {
+        "min": [
+          34.2,
+          -25.2,
+          62.2
+        ],
+        "max": [
+          37.8,
+          -16.0,
+          65.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/bezel_screw_3.stl",
+      "step": "CAD/exports/STEP/bezel_screw_3.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "bezel_screw_4",
+      "part_number": "NODI-F04",
+      "name": "M2 x8 bezel screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -60,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 37.34725346587548,
+      "mass_g": 0.2931759397071225,
+      "com_mm": [
+        36.0,
+        -21.504441453566624,
+        112.0
+      ],
+      "bbox_mm": {
+        "min": [
+          34.2,
+          -25.2,
+          110.2
+        ],
+        "max": [
+          37.8,
+          -16.0,
+          113.8
+        ]
+      },
+      "stl": "CAD/exports/meshes/bezel_screw_4.stl",
+      "step": "CAD/exports/STEP/bezel_screw_4.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "oled_screw_1",
+      "part_number": "NODI-F05",
+      "name": "M2 x5 OLED screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -25,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 26.603006590598376,
+      "mass_g": 0.20883360173619725,
+      "com_mm": [
+        -15.25,
+        -18.53042040623524,
+        76.00000000000001
+      ],
+      "bbox_mm": {
+        "min": [
+          -16.95,
+          -22.3,
+          74.3
+        ],
+        "max": [
+          -13.55,
+          -16.1,
+          77.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_screw_1.stl",
+      "step": "CAD/exports/STEP/oled_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "oled_screw_2",
+      "part_number": "NODI-F05",
+      "name": "M2 x5 OLED screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -25,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 26.603006590598376,
+      "mass_g": 0.20883360173619725,
+      "com_mm": [
+        -15.25,
+        -18.53042040623524,
+        104.0
+      ],
+      "bbox_mm": {
+        "min": [
+          -16.95,
+          -22.3,
+          102.3
+        ],
+        "max": [
+          -13.55,
+          -16.1,
+          105.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_screw_2.stl",
+      "step": "CAD/exports/STEP/oled_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "oled_screw_3",
+      "part_number": "NODI-F05",
+      "name": "M2 x5 OLED screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -25,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 26.603006590598376,
+      "mass_g": 0.20883360173619725,
+      "com_mm": [
+        15.25,
+        -18.53042040623524,
+        75.99999999999999
+      ],
+      "bbox_mm": {
+        "min": [
+          13.55,
+          -22.3,
+          74.3
+        ],
+        "max": [
+          16.95,
+          -16.1,
+          77.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_screw_3.stl",
+      "step": "CAD/exports/STEP/oled_screw_3.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "oled_screw_4",
+      "part_number": "NODI-F05",
+      "name": "M2 x5 OLED screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        -25,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 26.603006590598376,
+      "mass_g": 0.20883360173619725,
+      "com_mm": [
+        15.25,
+        -18.53042040623524,
+        104.0
+      ],
+      "bbox_mm": {
+        "min": [
+          13.55,
+          -22.3,
+          102.3
+        ],
+        "max": [
+          16.95,
+          -16.1,
+          105.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/oled_screw_4.stl",
+      "step": "CAD/exports/STEP/oled_screw_4.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pan_mount_screw_1",
+      "part_number": "NODI-F06",
+      "name": "M2 x8 servo mounting screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 36.02778455136774,
+      "mass_g": 0.2828181087282367,
+      "com_mm": [
+        -8.2,
+        1.3461377092059878e-17,
+        23.391070805720265
+      ],
+      "bbox_mm": {
+        "min": [
+          -9.899999999999999,
+          -1.7,
+          18.0
+        ],
+        "max": [
+          -6.499999999999999,
+          1.7,
+          27.2
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_mount_screw_1.stl",
+      "step": "CAD/exports/STEP/pan_mount_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pan_mount_screw_2",
+      "part_number": "NODI-F06",
+      "name": "M2 x8 servo mounting screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 36.027784551367745,
+      "mass_g": 0.28281810872823676,
+      "com_mm": [
+        19.2,
+        1.4747141789112953e-17,
+        23.39107080572027
+      ],
+      "bbox_mm": {
+        "min": [
+          17.5,
+          -1.7,
+          18.0
+        ],
+        "max": [
+          20.9,
+          1.7,
+          27.2
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_mount_screw_2.stl",
+      "step": "CAD/exports/STEP/pan_mount_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "tilt_mount_screw_1",
+      "part_number": "NODI-F06",
+      "name": "M2 x8 servo mounting screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        25,
+        0,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 36.02778455136778,
+      "mass_g": 0.28281810872823704,
+      "com_mm": [
+        36.00892919427973,
+        -8.2,
+        88.0
+      ],
+      "bbox_mm": {
+        "min": [
+          32.199999999999996,
+          -9.899999999999999,
+          86.3
+        ],
+        "max": [
+          41.4,
+          -6.499999999999999,
+          89.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_mount_screw_1.stl",
+      "step": "CAD/exports/STEP/tilt_mount_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "tilt_mount_screw_2",
+      "part_number": "NODI-F06",
+      "name": "M2 x8 servo mounting screw",
+      "group": "pitch",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        25,
+        0,
+        100
+      ],
+      "notes": "",
+      "volume_mm3": 36.02778455136778,
+      "mass_g": 0.28281810872823704,
+      "com_mm": [
+        36.00892919427972,
+        19.199999999999996,
+        88.0
+      ],
+      "bbox_mm": {
+        "min": [
+          32.199999999999996,
+          17.5,
+          86.3
+        ],
+        "max": [
+          41.4,
+          20.9,
+          89.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_mount_screw_2.stl",
+      "step": "CAD/exports/STEP/tilt_mount_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pan_horn_screw_1",
+      "part_number": "NODI-F07",
+      "name": "M2 x6 horn screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        68
+      ],
+      "notes": "",
+      "volume_mm3": 29.744599244188162,
+      "mass_g": 0.23349510406687707,
+      "com_mm": [
+        -7.0,
+        5.8831843267715196e-18,
+        36.31863117870722
+      ],
+      "bbox_mm": {
+        "min": [
+          -8.7,
+          -1.7,
+          32.0
+        ],
+        "max": [
+          -5.3,
+          1.7,
+          39.2
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_horn_screw_1.stl",
+      "step": "CAD/exports/STEP/pan_horn_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "pan_horn_screw_2",
+      "part_number": "NODI-F07",
+      "name": "M2 x6 horn screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        68
+      ],
+      "notes": "",
+      "volume_mm3": 29.744599244188162,
+      "mass_g": 0.23349510406687707,
+      "com_mm": [
+        7.0,
+        2.9425092328310884e-18,
+        36.31863117870722
+      ],
+      "bbox_mm": {
+        "min": [
+          5.3,
+          -1.7,
+          32.0
+        ],
+        "max": [
+          8.7,
+          1.7,
+          39.2
+        ]
+      },
+      "stl": "CAD/exports/meshes/pan_horn_screw_2.stl",
+      "step": "CAD/exports/STEP/pan_horn_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "tilt_horn_screw_1",
+      "part_number": "NODI-F07",
+      "name": "M2 x6 horn screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        35,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 29.744599244188187,
+      "mass_g": 0.23349510406687726,
+      "com_mm": [
+        46.31863117870723,
+        -7.0,
+        88.0
+      ],
+      "bbox_mm": {
+        "min": [
+          42.0,
+          -8.7,
+          86.3
+        ],
+        "max": [
+          49.2,
+          -5.3,
+          89.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_horn_screw_1.stl",
+      "step": "CAD/exports/STEP/tilt_horn_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "tilt_horn_screw_2",
+      "part_number": "NODI-F07",
+      "name": "M2 x6 horn screw",
+      "group": "yaw",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        35,
+        0,
+        62
+      ],
+      "notes": "",
+      "volume_mm3": 29.744599244188183,
+      "mass_g": 0.23349510406687723,
+      "com_mm": [
+        46.31863117870723,
+        7.000000000000001,
+        88.0
+      ],
+      "bbox_mm": {
+        "min": [
+          42.0,
+          5.3,
+          86.3
+        ],
+        "max": [
+          49.2,
+          8.7,
+          89.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/tilt_horn_screw_2.stl",
+      "step": "CAD/exports/STEP/tilt_horn_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "rear_screw_1",
+      "part_number": "NODI-F08",
+      "name": "M3 x6 carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 69.8941533570657,
+      "mass_g": 0.5486691038529659,
+      "com_mm": [
+        -36.0,
+        19.5,
+        6.215533980582525
+      ],
+      "bbox_mm": {
+        "min": [
+          -38.7,
+          16.8,
+          1.7999999999999998
+        ],
+        "max": [
+          -33.3,
+          22.2,
+          9.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/rear_screw_1.stl",
+      "step": "CAD/exports/STEP/rear_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "rear_screw_2",
+      "part_number": "NODI-F08",
+      "name": "M3 x6 carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 69.89415335706573,
+      "mass_g": 0.5486691038529661,
+      "com_mm": [
+        -35.99999999999999,
+        38.5,
+        6.215533980582524
+      ],
+      "bbox_mm": {
+        "min": [
+          -38.7,
+          35.8,
+          1.7999999999999998
+        ],
+        "max": [
+          -33.3,
+          41.2,
+          9.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/rear_screw_2.stl",
+      "step": "CAD/exports/STEP/rear_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "rear_screw_3",
+      "part_number": "NODI-F08",
+      "name": "M3 x6 carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 69.8941533570657,
+      "mass_g": 0.5486691038529659,
+      "com_mm": [
+        36.0,
+        19.5,
+        6.215533980582525
+      ],
+      "bbox_mm": {
+        "min": [
+          33.3,
+          16.8,
+          1.7999999999999998
+        ],
+        "max": [
+          38.7,
+          22.2,
+          9.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/rear_screw_3.stl",
+      "step": "CAD/exports/STEP/rear_screw_3.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "rear_screw_4",
+      "part_number": "NODI-F08",
+      "name": "M3 x6 carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 69.89415335706573,
+      "mass_g": 0.5486691038529661,
+      "com_mm": [
+        36.0,
+        38.5,
+        6.215533980582524
+      ],
+      "bbox_mm": {
+        "min": [
+          33.3,
+          35.8,
+          1.7999999999999998
+        ],
+        "max": [
+          38.7,
+          41.2,
+          9.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/rear_screw_4.stl",
+      "step": "CAD/exports/STEP/rear_screw_4.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "power_screw_1",
+      "part_number": "NODI-F11",
+      "name": "M3 x5 power carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 62.82556988648869,
+      "mass_g": 0.49318072360893617,
+      "com_mm": [
+        -49.99999999999999,
+        -12.0,
+        4.656075607560757
+      ],
+      "bbox_mm": {
+        "min": [
+          -52.7,
+          -14.7,
+          0.7999999999999998
+        ],
+        "max": [
+          -47.3,
+          -9.3,
+          7.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/power_screw_1.stl",
+      "step": "CAD/exports/STEP/power_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "power_screw_2",
+      "part_number": "NODI-F11",
+      "name": "M3 x5 power carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 62.82556988648869,
+      "mass_g": 0.49318072360893617,
+      "com_mm": [
+        -49.99999999999999,
+        12.0,
+        4.656075607560757
+      ],
+      "bbox_mm": {
+        "min": [
+          -52.7,
+          9.3,
+          0.7999999999999998
+        ],
+        "max": [
+          -47.3,
+          14.7,
+          7.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/power_screw_2.stl",
+      "step": "CAD/exports/STEP/power_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "power_screw_3",
+      "part_number": "NODI-F11",
+      "name": "M3 x5 power carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 62.82556988648868,
+      "mass_g": 0.49318072360893617,
+      "com_mm": [
+        -19.000000000000004,
+        -12.000000000000002,
+        4.656075607560756
+      ],
+      "bbox_mm": {
+        "min": [
+          -21.7,
+          -14.7,
+          0.7999999999999998
+        ],
+        "max": [
+          -16.3,
+          -9.3,
+          7.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/power_screw_3.stl",
+      "step": "CAD/exports/STEP/power_screw_3.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "power_screw_4",
+      "part_number": "NODI-F11",
+      "name": "M3 x5 power carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 62.82556988648868,
+      "mass_g": 0.49318072360893617,
+      "com_mm": [
+        -19.000000000000004,
+        12.000000000000002,
+        4.656075607560756
+      ],
+      "bbox_mm": {
+        "min": [
+          -21.7,
+          9.3,
+          0.7999999999999998
+        ],
+        "max": [
+          -16.3,
+          14.7,
+          7.0
+        ]
+      },
+      "stl": "CAD/exports/meshes/power_screw_4.stl",
+      "step": "CAD/exports/STEP/power_screw_4.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "switch_screw_1",
+      "part_number": "NODI-F08",
+      "name": "M3 x6 carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 69.89415335706572,
+      "mass_g": 0.548669103852966,
+      "com_mm": [
+        -9.500000000000002,
+        -36.0,
+        22.915533980582524
+      ],
+      "bbox_mm": {
+        "min": [
+          -12.2,
+          -38.7,
+          18.5
+        ],
+        "max": [
+          -6.8,
+          -33.3,
+          25.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/switch_screw_1.stl",
+      "step": "CAD/exports/STEP/switch_screw_1.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    },
+    {
+      "id": "switch_screw_2",
+      "part_number": "NODI-F08",
+      "name": "M3 x6 carrier screw",
+      "group": "fixed",
+      "color": [
+        0.55,
+        0.59,
+        0.63
+      ],
+      "material": "Steel",
+      "density_g_cm3": 7.85,
+      "printable": false,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "notes": "",
+      "volume_mm3": 69.89415335706572,
+      "mass_g": 0.548669103852966,
+      "com_mm": [
+        9.5,
+        -36.0,
+        22.915533980582524
+      ],
+      "bbox_mm": {
+        "min": [
+          6.8,
+          -38.7,
+          18.5
+        ],
+        "max": [
+          12.2,
+          -33.3,
+          25.7
+        ]
+      },
+      "stl": "CAD/exports/meshes/switch_screw_2.stl",
+      "step": "CAD/exports/STEP/switch_screw_2.step",
+      "solid_count": 1,
+      "valid": true,
+      "mass_basis": "CAD solid volume x material density (100% solid upper bound)"
+    }
+  ],
+  "mechanism": {
+    "pitch_axis_mm": [
+      0,
+      0,
+      88
+    ],
+    "yaw_axis_mm": [
+      0,
+      0,
+      0
+    ],
+    "pitch_limits_deg": [
+      -15,
+      25
+    ],
+    "yaw_limits_deg": [
+      -30,
+      30
+    ],
+    "pitch_hard_limits_deg": [
+      -20,
+      30
+    ],
+    "yaw_hard_limits_deg": [
+      -35,
+      35
+    ]
+  },
+  "drawing_dimensions": {
+    "yoke_width_mm": 96,
+    "yoke_gap_mm": 88,
+    "yoke_thickness_mm": 4,
+    "pan_plate_depth_mm": 40,
+    "pan_plate_z_mm": [
+      34,
+      38
+    ],
+    "arm_depth_mm": 12,
+    "pitch_axis_z_mm": 88,
+    "upper_pad_radius_mm": 14,
+    "left_bore_mm": 4.2,
+    "right_access_bore_mm": 6,
+    "horn_holes_mm": 2.2,
+    "horn_hole_y_mm": [
+      -7,
+      7
+    ],
+    "pan_horn_hole_x_mm": [
+      -7,
+      7
+    ],
+    "pilot_od_mm": 24,
+    "pilot_id_mm": 20.4,
+    "pilot_z_mm": [
+      29,
+      34
+    ],
+    "central_access_mm": 9,
+    "pitch_stop_pin_diameter_mm": 3,
+    "pitch_stop_centres_yz_mm": [
+      [
+        6.772951272533191,
+        97.905913943695
+      ],
+      [
+        -8.390198828412661,
+        96.57931020652026
+      ]
+    ],
+    "pitch_stop_recess_od_mm": 28,
+    "pitch_stop_recess_id_mm": 19,
+    "pitch_stop_recess_depth_mm": 1.4,
+    "pitch_stop_recess_x_mm": [
+      -45.4,
+      -44
+    ],
+    "pitch_stop_pin_x_mm": [
+      -45.5,
+      -44
+    ],
+    "pitch_stop_lug_x_mm": [
+      -44.4,
+      -42
+    ],
+    "yaw_stop_lug_center_mm": [
+      55,
+      0,
+      36
+    ],
+    "yaw_stop_lug_diameter_mm": 4,
+    "yaw_stop_bridge_bounds_mm": [
+      [
+        45,
+        -2,
+        34
+      ],
+      [
+        55,
+        2,
+        38
+      ]
+    ]
+  },
+  "mass_properties": {
+    "fixed": {
+      "mass_g": 245.61999542249285,
+      "com_mm": [
+        0.17553449120027656,
+        -4.788639327752436,
+        14.998005214628128
+      ]
+    },
+    "yaw": {
+      "mass_g": 37.26332373173535,
+      "com_mm": [
+        0.6719372715170329,
+        -0.0005454551686064598,
+        52.73674095680758
+      ]
+    },
+    "pitch": {
+      "mass_g": 92.59002389004615,
+      "com_mm": [
+        3.708589641239299,
+        -1.3439501315270208,
+        88.23155319497535
+      ]
+    },
+    "total_mass_g": 375.4733430442742
+  }
+}

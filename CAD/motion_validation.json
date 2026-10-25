@@ -1,0 +1,101 @@
+{
+  "units": "mm",
+  "sweep_step_deg": 1,
+  "exact_solid_pair_checks": 490,
+  "nonexcluded_intersections": [],
+  "minimum_clearances": [
+    {
+      "a": "yoke",
+      "b": "snooze_cap",
+      "yaw_deg": 30,
+      "pitch_deg": 0,
+      "intersection_mm3": 0.0,
+      "distance_mm": 3.176914536239791
+    },
+    {
+      "a": "head_shell",
+      "b": "yoke",
+      "yaw_deg": 0,
+      "pitch_deg": 2,
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.9999999999999831
+    },
+    {
+      "a": "head_shell",
+      "b": "base_deck",
+      "yaw_deg": 0,
+      "pitch_deg": 25,
+      "intersection_mm3": 0.0,
+      "distance_mm": 19.68221193530139
+    },
+    {
+      "a": "tilt_servo",
+      "b": "yoke",
+      "yaw_deg": 0,
+      "pitch_deg": -13,
+      "intersection_mm3": 0.0,
+      "distance_mm": 2.280350850198275
+    },
+    {
+      "a": "front_bezel",
+      "b": "yoke",
+      "yaw_deg": 0,
+      "pitch_deg": 25,
+      "intersection_mm3": 0.0,
+      "distance_mm": 2.815439054561133
+    }
+  ],
+  "hardstop_checks": [
+    {
+      "axis": "yaw",
+      "angle_deg": -35,
+      "intersection_mm3": 0.0014511252760684074,
+      "distance_mm": 0.0
+    },
+    {
+      "axis": "yaw",
+      "angle_deg": 35,
+      "intersection_mm3": 0.0014511252760693672,
+      "distance_mm": 0.0
+    },
+    {
+      "axis": "yaw",
+      "angle_deg": -36,
+      "intersection_mm3": 8.21752393675426,
+      "distance_mm": 0.0
+    },
+    {
+      "axis": "yaw",
+      "angle_deg": 36,
+      "intersection_mm3": 8.217523936754258,
+      "distance_mm": 0.0
+    },
+    {
+      "axis": "pitch",
+      "angle_deg": -20,
+      "intersection_mm3": 0.0,
+      "distance_mm": 0.0
+    },
+    {
+      "axis": "pitch",
+      "angle_deg": 30,
+      "intersection_mm3": 0.0,
+      "distance_mm": 3.552713678800501e-15
+    },
+    {
+      "axis": "pitch",
+      "angle_deg": -21,
+      "intersection_mm3": 0.061275313099142734,
+      "distance_mm": 0.0
+    },
+    {
+      "axis": "pitch",
+      "angle_deg": 31,
+      "intersection_mm3": 0.0612753130989965,
+      "distance_mm": 0.0
+    }
+  ],
+  "pass_soft_limit_sweep": true,
+  "pass_hardstops": true,
+  "limitations": "Discrete 1-degree B-rep sweeps; no cable solids, manufacturing variation or contact forces. At hard limit solids touch; one degree beyond demonstrates intended mechanical interference, not strength validation."
+}

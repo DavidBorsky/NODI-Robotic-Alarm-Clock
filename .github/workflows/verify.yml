@@ -1,0 +1,27 @@
+name: Verify engineering sources
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Regenerate and check mechanical geometry
+        run: |
+          python CAD/build_nodi.py
+          python CAD/check_motion.py
+          python CAD/verify_exports.py
+      - name: Reproduce numerical analysis and drawing agreement
+        run: |
+          python Analysis/engineering_calculations.py
+          python Drawings/generate_yoke_drawing.py
+      - name: Execute controller scenarios
+        run: bash Firmware/tests/run_tests.sh
+      - name: Audit document links and PDF readability
+        run: python tools/audit_package.py

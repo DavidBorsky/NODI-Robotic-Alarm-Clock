@@ -1,0 +1,21 @@
+ref,description,manufacturer_or_requirement,quantity,estimated_unit_USD,estimated_extended_USD,status
+E01,Original Pico controller,Raspberry Pi Pico RP2040,1,4.00,4.00,Selected nominal envelope
+E02,Metal gear analog micro servo,Tower Pro MG90S genuine,2,9.00,18.00,Verify purchased horn and current
+E03,1.3 inch 128x64 OLED,Adafruit 938 current 2024 revision,1,20.00,20.00,Selected nominal envelope
+E04,DS3231 RTC breakout,Adafruit 3013,1,17.50,17.50,Selected nominal envelope
+E05,RTC backup battery,CR1220 non rechargeable,1,1.00,1.00,Selected chemistry
+E06,12mm tactile switch,Adafruit 1119 switch from pack,1,0.25,0.25,Selected nominal envelope
+E07,External drive piezo,Murata PKM13EPYH4000-A0 or approved dimensional replacement,1,1.00,1.00,Verify availability at procurement
+E08,3.3V to 5V buffer,TI SN74AHCT125N PDIP14,1,1.00,1.00,Selected circuit
+E09,Logic isolation Schottky,1N5819 axial,1,0.20,0.20,Selected circuit
+E10,Piezo low side driver,2N3904 TO92,1,0.15,0.15,Selected circuit
+E11,Bulk capacitor,1000uF 10V low ESR max diameter10mm height16mm,1,1.00,1.00,Verify purchased envelope
+E12,Decoupling capacitor,100nF ceramic,2,0.10,0.20,Selected circuit
+E13,Signal series resistors,220ohm quarter watt,2,0.05,0.10,Selected circuit
+E14,Input and base pull down resistors,100kohm quarter watt,3,0.05,0.15,Selected circuit
+E15,Piezo base resistor,4.7kohm quarter watt,1,0.05,0.05,Selected circuit
+E16,Piezo discharge resistor,1kohm quarter watt,1,0.05,0.05,Selected circuit
+E17,Supply fuse and insulated holder,2.5A time delay minimum32VDC,1,2.00,2.00,Coordinate actual time current behavior
+E18,Certified USB power adapter,Regulated5.0to5.1V3A e.g RaspberryPi15WUSB-C,1,10.00,10.00,Dedicated adapter required
+E19,Power pigtail with strain relief,3A rated wire20to22AWG USB-C sink needs separateCC Rd resistors,1,3.00,3.00,Supplier selection open before build
+E20,Perfboard and insulated wiring kit,FR4 perfboard31x24 plus small switch pad insulated mounting pads wire headers heatshrink servo connectors,1,5.00,5.00,Hand wired prototype

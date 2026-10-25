@@ -1,0 +1,48 @@
+part_number,description,make_or_buy,quantity,material_or_process,estimated_unit_USD,estimated_extended_USD,cad_instance_ids,electronics_ref,cost_basis_and_notes
+NODI-C01,PTFE annular thrust washer,buy and finish,1,PTFE,1.00,1.00,thrust_washer,,PTFE sheet washer OD40 / ID25 / thickness2 mm; cut and deburr
+NODI-C02,Metal gear analog micro servo,buy,2,MG90S assembly,9.00,18.00,pan_servo;tilt_servo,E02,Tower Pro MG90S genuine; Verify purchased horn and current
+NODI-C03,"19mm servo disc horn, match-drilled",buy and finish,2,Nylon,1.00,2.00,pan_horn;tilt_horn,,19mm nylon disc horn; verify actual spline; drill1.8 and tapM2 on14mm pitch; additional allowance if servo kit horn unsuitable
+NODI-C04,Brass pivot sleeve OD4 ID3.2 x14.2,buy and finish,1,Brass,1.00,1.00,pitch_sleeve,,Brass tube OD4 / ID3.2; cut square to14.2mm; verify axial stack
+NODI-C05,PTFE pivot washer OD8 ID4.3 x1,buy and finish,1,PTFE,0.40,0.40,pitch_washer,,PTFE washer OD8 / ID4.3 / thickness1mm
+NODI-C06,1.3 inch 128x64 OLED,buy,1,FR4 module,20.00,20.00,oled_pcb;oled_panel,E03,Adafruit 938 current 2024 revision; Selected nominal envelope; PCB and glass are one purchased module
+NODI-C07,Original Pico controller,buy,1,Pico assembly,4.00,4.00,pico,E01,Raspberry Pi Pico RP2040; Selected nominal envelope
+NODI-C08,DS3231 RTC breakout,buy,1,RTC assembly,17.50,17.50,rtc,E04,Adafruit 3013; Selected nominal envelope
+NODI-C09,Perfboard and insulated wiring kit,buy,1,Populated circuit,5.00,5.00,power_perfboard,E20,FR4 perfboard31x24 plus small switch pad insulated mounting pads wire headers heatshrink servo connectors; Hand wired prototype; kit includes wiring pads connectors and passives listed only where separately priced
+NODI-C10,Bulk capacitor,buy,1,Capacitor assembly,1.00,1.00,capacitor,E11,1000uF 10V low ESR max diameter10mm height16mm; Verify purchased envelope
+NODI-C11,3.3V to 5V buffer,buy,1,IC assembly,1.00,1.00,buffer_ic,E08,TI SN74AHCT125N PDIP14; Selected circuit
+NODI-C12,12mm tactile switch,buy,1,Switch assembly,0.25,0.25,snooze_switch,E06,Adafruit 1119 switch from pack; Selected nominal envelope
+NODI-C13,External drive piezo,buy,1,Piezo assembly,1.00,1.00,piezo,E07,Murata PKM13EPYH4000-A0 or approved dimensional replacement; Verify availability at procurement
+NODI-C14,Self adhesive silicone foot12x3,buy,4,Silicone,0.25,1.00,foot_1;foot_2;foot_3;foot_4,,"Self-adhesive silicone foot diameter12mm thickness3mm; four positionsX+/-45,Y+/-44"
+NODI-F01,M3 x20 passive pivot screw,buy,1,Steel,0.15,0.15,pitch_bolt,,M3x20 pan/socket head passive pivot screw; thread omitted from CAD
+NODI-F02,M3 DIN985 nylon locking nut envelope,buy,1,Steel,0.15,0.15,pitch_nut,,M3 DIN985 nylon-insert locking nut; nominal4mm axial envelope; install after sleeve
+NODI-F03,M3 x10 deck screw,buy,4,Steel,0.10,0.40,deck_screw_1;deck_screw_2;deck_screw_3;deck_screw_4,,M3x10 deck screw; hand-tap printed2.7mm pilot; low-profile head fits CAD counterbore
+NODI-F04,M2 x8 bezel screw,buy,4,Steel,0.08,0.32,bezel_screw_1;bezel_screw_2;bezel_screw_3;bezel_screw_4,,M2x8 bezel screw; hand-tap printed1.8mm pilot
+NODI-F05,M2 x5 OLED screw,buy,4,Steel,0.08,0.32,oled_screw_1;oled_screw_2;oled_screw_3;oled_screw_4,,M2x5 OLED screw; hand-tap printed1.8mm pilot; do not stress glass
+NODI-F06,M2 x8 servo mounting screw,buy,4,Steel,0.08,0.32,pan_mount_screw_1;pan_mount_screw_2;tilt_mount_screw_1;tilt_mount_screw_2,,M2x8 servo mounting screw; four total two per servo; hand-tap printed1.8mm pilot
+NODI-F07,M2 x6 horn screw,buy,4,Steel,0.08,0.32,pan_horn_screw_1;pan_horn_screw_2;tilt_horn_screw_1;tilt_horn_screw_2,,M2x6 horn screw; four total two per horn; tap nylon1.8mm holesM2
+NODI-F08,M3 x6 carrier screw,buy,6,Steel,0.10,0.60,rear_screw_1;rear_screw_2;rear_screw_3;rear_screw_4;switch_screw_1;switch_screw_2,,M3x6 rear/switch carrier screw; hand-tap printed2.7mm pilot
+NODI-F09,Vendor M2.2 x6 servo horn retaining screw,buy - included,2,Steel,0.00,0.00,pan_retaining_screw;tilt_retaining_screw,,Vendor-supplied horn retaining screw; modeled M2.2x6 is nominal; use exact thread supplied with servo; included in E02 cost
+NODI-F10,M3 x18 ballast screw,buy,2,Steel,0.15,0.30,ballast_screw_1;ballast_screw_2,,M3x18 steel ballast screw; two; hand-tap2.7mm blind pilots; do not replace with adhesive
+NODI-F11,M3 x5 power carrier screw,buy,4,Steel,0.10,0.40,power_screw_1;power_screw_2;power_screw_3;power_screw_4,,M3x5 power carrier screw; four; shorter length avoids floor breakthrough
+NODI-P01,Base cup and integral mounting bosses,make,1,PETG,2.56,2.56,base_cup,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P02,Removable base deck with yaw stops,make,1,PETG,1.08,1.08,base_deck,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P03,One-piece pan and tilt yoke,make,1,PETG,0.94,0.94,yoke,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P04,Head shell with servo cradle and passive pivot,make,1,PETG,1.70,1.70,head_shell,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P05,Front bezel and OLED mounting spacers,make,1,PETG,0.41,0.41,front_bezel,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P06,Rear electronics carrier80x27,make,1,PETG,0.17,0.17,rear_carrier,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P07,Power electronics carrier35x28,make,1,PETG,0.07,0.07,power_carrier,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P08,Snooze switch carrier,make,1,PETG,0.03,0.03,switch_carrier,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P09,Snooze button cap,make,1,PETG,0.03,0.03,snooze_cap,,FFF PETG; CAD solid upper-bound mass x25USD/kg x1.25 waste; machine time and labor excluded
+NODI-P10,Retained steel ballast40x18x12.5,make,1,Low carbon steel,5.00,5.00,ballast,,Low-carbon steel40x18x12.5;2holes3.4mm at28mm pitch; deburr and insulate from wiring; stock allowance excludes labor
+NODI-E05,RTC backup battery,buy,1,CR1220 non rechargeable,1.00,1.00,not modeled - electrical accessory,E05,Selected chemistry
+NODI-E09,Logic isolation Schottky,buy,1,1N5819 axial,0.20,0.20,not modeled - electrical accessory,E09,Selected circuit
+NODI-E10,Piezo low side driver,buy,1,2N3904 TO92,0.15,0.15,not modeled - electrical accessory,E10,Selected circuit
+NODI-E12,Decoupling capacitor,buy,2,100nF ceramic,0.10,0.20,not modeled - electrical accessory,E12,Selected circuit
+NODI-E13,Signal series resistors,buy,2,220ohm quarter watt,0.05,0.10,not modeled - electrical accessory,E13,Selected circuit
+NODI-E14,Input and base pull down resistors,buy,3,100kohm quarter watt,0.05,0.15,not modeled - electrical accessory,E14,Selected circuit
+NODI-E15,Piezo base resistor,buy,1,4.7kohm quarter watt,0.05,0.05,not modeled - electrical accessory,E15,Selected circuit
+NODI-E16,Piezo discharge resistor,buy,1,1kohm quarter watt,0.05,0.05,not modeled - electrical accessory,E16,Selected circuit
+NODI-E17,Supply fuse and insulated holder,buy,1,2.5A time delay minimum32VDC,2.00,2.00,not modeled - electrical accessory,E17,Coordinate actual time current behavior
+NODI-E18,Certified USB power adapter,buy,1,Regulated5.0to5.1V3A e.g RaspberryPi15WUSB-C,10.00,10.00,not modeled - electrical accessory,E18,Dedicated adapter required
+NODI-E19,Power pigtail with strain relief,buy,1,3A rated wire20to22AWG USB-C sink needs separateCC Rd resistors,3.00,3.00,not modeled - electrical accessory,E19,Supplier selection open before build
+NODI-A01,Cable grommets and mechanical strain-relief kit,buy,1,Elastomer grommets plus insulated cable clamps,2.00,2.00,not modeled - harness accessory,,Fit rear7.2mm entry and deck10mm bore with approximately6mm freeID; head8mm edge protection; three nylon ties for inlet plus both moving-harness ends; supplier selection and cable pull test open

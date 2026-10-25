@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "cad_revision": "A",
+  "drawing_revision": "A",
+  "nominal_features_compared": 27,
+  "maximum_stop_rounding_mm": 0.00051,
+  "mismatches": [],
+  "scope": "Parameter agreement, not independent metrology or a complete drawing standards audit."
+}

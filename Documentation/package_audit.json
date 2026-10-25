@@ -1,13 +1,13 @@
 {
   "status": "PASS",
-  "local_markdown_links_checked": 125,
+  "local_markdown_links_checked": 126,
   "pdf_pages": {
     "Drawings/NODI-P03_Yoke_RevA.pdf": 2,
     "Documentation/NODI_Engineering_Design_Report.pdf": 7,
     "Analysis/actuator_torque_analysis.pdf": 1,
     "Analysis/command_motion_profiles.pdf": 1
   },
-  "files_checked": 218,
+  "files_checked": 220,
   "secret_pattern_scan": "no matches",
   "limitations": "Pattern scan does not prove absence of every secret. Review tracked files before publishing.",
   "errors": []

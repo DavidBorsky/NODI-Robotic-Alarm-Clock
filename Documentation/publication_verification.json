@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-24",
+  "repository_url": "https://github.com/DavidBorsky/NODI-Robotic-Alarm-Clock",
+  "public": true,
+  "anonymous_requests": true,
+  "authentication_headers_or_cookies_used": false,
+  "verified_commit": "be517a29c02799cf5be81c12f1daaa257c9c11c3",
+  "remote_file_count": 219,
+  "all_remote_git_blob_ids_match_local_commit": true,
+  "repository_page_http_status": 200,
+  "readme_html_contains_rendered_markdown_and_expected_media": true,
+  "sampled_downloads": [
+    {
+      "path": "README.md",
+      "anonymous_http_status": 200,
+      "bytes": 12035,
+      "sha256": "1aa80baf4f2f802eb5586867801575eac2a451c0fa2e9ad3e9dbb747365619b1"
+    },
+    {
+      "path": "CAD/exports/NODI_Assembly_RevA.step",
+      "anonymous_http_status": 200,
+      "bytes": 1884435,
+      "sha256": "3f27cff47a1095a20d76c87e75235bc9ac23144eb697d704dfa53f926f59454b"
+    },
+    {
+      "path": "CAD/exports/NODI_Exploded_RevA.step",
+      "anonymous_http_status": 200,
+      "bytes": 1870259,
+      "sha256": "67d14061f1231915b6bea3818d17288dbbb82a4dbbb041ea5fa08841439288a5"
+    },
+    {
+      "path": "CAD/exports/STL/NODI-P03_yoke.stl",
+      "anonymous_http_status": 200,
+      "bytes": 261884,
+      "sha256": "2e22b500c2a4afe699f95fa96104f2e0402dc02d508e338e12ccb65981e22c51"
+    },
+    {
+      "path": "Documentation/NODI_Engineering_Design_Report.pdf",
+      "anonymous_http_status": 200,
+      "bytes": 2022552,
+      "sha256": "5e24ba4077745519ff1884b32b6bfc58230ddbdd15ee368497921217efc46ed3"
+    },
+    {
+      "path": "Drawings/NODI-P03_Yoke_RevA.pdf",
+      "anonymous_http_status": 200,
+      "bytes": 52626,
+      "sha256": "d17572ffbf7933b308f82115b32c1f5c3c353d283143c5a08124b55f4b743ce8"
+    },
+    {
+      "path": "Images/nodi_hero.png",
+      "anonymous_http_status": 200,
+      "bytes": 1496814,
+      "sha256": "b4c643576232d7ed32f96e04d55ba228c2b88c85d4bbcf79d531e7d8080fa578"
+    },
+    {
+      "path": "Images/nodi_pose_sequence.gif",
+      "anonymous_http_status": 200,
+      "bytes": 1151550,
+      "sha256": "5824fb6dfe4bbcaf7f2279237046df6c913824d2f54c0ae57738914b9d5625ee"
+    },
+    {
+      "path": "Electronics/wiring_block_diagram.svg",
+      "anonymous_http_status": 200,
+      "bytes": 6682,
+      "sha256": "a206592d617eff3fe7dabcd37e320766aacffa4f4a9553369daad4447660a618"
+    },
+    {
+      "path": "Firmware/NODI/NODI.ino",
+      "anonymous_http_status": 200,
+      "bytes": 8633,
+      "sha256": "922cef0827b3e7bce3602f8758880988470c45de20d9d51e885c9dd2e92818e9"
+    }
+  ],
+  "notes": "Every tracked remote file matched the local Git tree; selected CAD, STL, PDFs, firmware and media also downloaded anonymously with identical SHA256 hashes. This is publication verification, not hardware validation."
+}

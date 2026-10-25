@@ -122,7 +122,7 @@ Optional renders require Blender 4.5.3: `blender -b --python tools/render_cad.py
 | Requirements and proposed tests | [Verification matrix](Documentation/requirements_and_verification.md) |
 | Development and launch | [24-hour scope and 30-week roadmap](Documentation/development_timeline.md) |
 | Final report | [PDF](Documentation/NODI_Engineering_Design_Report.pdf), [editable Markdown](Documentation/engineering_report.md) |
-| Package checks | [Verification summary](Documentation/verification_summary.md), [audit record](Documentation/package_audit.json), [CAD checks](CAD/validation.json), [drawing check](Drawings/drawing_geometry_check.json) |
+| Package checks | [Verification summary](Documentation/verification_summary.md), [public access verification](Documentation/publication_verification.json), [audit record](Documentation/package_audit.json), [CAD checks](CAD/validation.json), [drawing check](Drawings/drawing_geometry_check.json) |
 
 ## What remains before a physical proof of concept
 

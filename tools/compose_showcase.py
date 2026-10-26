@@ -1,13 +1,15 @@
 """Compose the showcase and report from the executed analysis and CAD records.
 This does not run CAD or analysis. Run those before this script.
 """
-import json,re,math
+import json,re,math,csv
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 a=json.loads((ROOT/'Analysis/analysis_results.json').read_text())
 m=json.loads((ROOT/'CAD/manifest.json').read_text())
 v=json.loads((ROOT/'CAD/validation.json').read_text())
 mass=a['mass'];motor=a['motor'];s=a['structure'];tip=a['stability'];t=a['thermal_and_power']
+with (ROOT/'Manufacturing/BOM.csv').open() as bom_file:
+    bom_total=sum(float(row['estimated_extended_USD']) for row in csv.DictReader(bom_file))
 readme=f'''# NODI — a little clock that wakes up with you
 
 **An expressive, two-axis robotic alarm clock.** Sleepy at rest, reluctant when snoozed, cheerful when you get up.
@@ -16,13 +18,17 @@ readme=f'''# NODI — a little clock that wakes up with you
 
 [**Read the engineering report (PDF)**](Documentation/NODI_Engineering_Design_Report.pdf) · [**Download the STEP assembly**](CAD/exports/NODI_Assembly_RevA.step) · [**Manufacturing drawing (PDF)**](Drawings/NODI-P03_Yoke_RevA.pdf)
 
-Prepared for Human Computer Lab's Mechanical Engineering Internship challenge · David Borsky · Revision A · October 2026
+[**Full electrical schematic**](Electronics/Schematics/NODI_System_RevB.pdf) · [**Pin-by-pin wiring**](Electronics/Wiring/NODI_Wiring_RevB.pdf) · [**Articulated joint model**](CAD/Kinematics/README.md)
+
+Prepared for Human Computer Lab's Mechanical Engineering Internship challenge · David Borsky · Mechanical revision A / electrical revision B · October 2026
 
 > **Evidence status:** This is an unbuilt digital engineering proof of concept. The parametric CAD, exports, calculations and software checks were executed. Renders show the actual CAD with illustrative OLED pixels. Hardware performance remains untested; no FEA was run. [Design provenance and evidence boundaries](Documentation/design_provenance.md).
 
 ## A character made from motion
 
 NODI slowly raises its head before the alarm, looks around and nods while ringing, droops for a five-minute snooze, and lifts its head when dismissed. A short button press snoozes; a 1.5-second hold dismisses the active alarm. Time and alarm settings are configured through USB serial and retained by the RTC and controller.
+
+The name NODI comes from its nodding motion; it is a character name, not a technical acronym.
 
 ![CAD key-pose sequence: sleepy, awake and cheerful](Images/nodi_pose_sequence.gif)
 
@@ -45,9 +51,17 @@ The motion uses bounded quintic trajectories rather than instant angle jumps. Se
 
 ## The mechanism
 
-The yaw servo turns a U-yoke through a match-drilled disc horn. An annular PTFE thrust washer supports the rotating table; a printed pilot locates it radially. The servo is not intended to carry the assembly's axial weight.
+The STEP assembly is static. The separate [articulated Blender model](CAD/Kinematics/NODI_Articulated_RevA.blend) contains two hinge joints and two angular motors. Bullet solved the yaw and pitch sequence without keyframing the body placements; the [joint results](CAD/Kinematics/solver_validation.json) and [source/URDF instructions](CAD/Kinematics/README.md) are included.
 
-The pitch servo is mounted **inside the head**. Its horn is fixed to the yoke, so the servo case and head rotate together. A brass sleeve and M3 fastener support the opposite side. Printed stops sit beyond software travel. Cable service loops pass through the head's lower opening and the open rear of the mechanism.
+![Cutaway driven by the executed joint solver](CAD/Kinematics/mechanism_motion.gif)
+
+*Ideal joint demonstration: zero gravity, inter-link collisions disabled, approximate inertia and assumed rigid servo/horn couplings. It establishes the intended articulation, not real servo performance or physical fit.*
+
+The yaw servo turns a U-yoke through a match-drilled disc horn. An annular PTFE thrust washer supports the rotating table; a printed pilot locates it radially. The washer is intended to relieve the servo shaft; actual axial load sharing with the horn and deck has not been established.
+
+The pitch servo is mounted **inside the head**. Its horn is fixed to the yoke, so the servo case and head rotate together. A retained brass sleeve and M3 fastener support the opposite side. Sleeve rotation is not positively locked in the current geometry. Printed stops sit beyond software travel. Cable service loops pass through the head's lower opening and the open rear of the mechanism.
+
+The [mechanism audit](Documentation/mechanism_audit.md) identifies open spline compatibility, endfloat, axial-load sharing and tool-access issues. These must be resolved on measured hardware before the design can be claimed to work physically.
 
 ![Exploded assembly generated from the same solids](Images/nodi_exploded.png)
 
@@ -81,7 +95,7 @@ The final mechanical checks record **67 valid solid bodies**, matching STEP read
 
 ## Manufacturing and assembly
 
-The prototype uses nine printable custom rigid parts, standard screws, replaceable purchased modules and a machined stock ballast. The complete BOM totals **$107.32 in preliminary material/component allowances**, excluding labor, shipping, tools and certification. The removable deck, electronics trays and bezel expose service joints. [Materials and DFM/DFA](Manufacturing/materials_and_processes.md) distinguishes the PETG prototype from a future PC-ABS molding redesign with draft, uniform walls, ribs and tooling review.
+The prototype uses nine printable custom rigid parts, standard screws, replaceable purchased modules and a machined stock ballast. The complete BOM totals **${bom_total:.2f} in preliminary material/component allowances**, excluding labor, shipping, tools and certification. The removable deck, electronics trays and bezel expose service joints. [Materials and DFM/DFA](Manufacturing/materials_and_processes.md) distinguishes the PETG prototype from a future PC-ABS molding redesign with draft, uniform walls, ribs and tooling review.
 
 ![Yoke drawing preview with datums and GD&T](Images/nodi_yoke_drawing.png)
 
@@ -91,7 +105,13 @@ The yoke drawing defines functional datums, axis position tolerances, bearing fi
 
 ## Electrical integration and software
 
-![Electrical architecture](Electronics/wiring_block_diagram.svg)
+[**Circuit schematic PDF — power, controller interfaces, servo drivers and audio**](Electronics/Schematics/NODI_System_RevB.pdf) · [Editable KiCad source](Electronics/Schematics/NODI_System_RevB.kicad_sch)
+
+![Full connection and harness diagram](Electronics/Wiring/NODI_Wiring_RevB.svg)
+
+[Printable wiring PDF](Electronics/Wiring/NODI_Wiring_RevB.pdf) · [Wire schedule](Electronics/wiring_schedule.csv) · [Pin/net list](Electronics/netlist.csv) · [Electrical checks](Electronics/validation.json)
+
+The circuit includes individual component values and reference designators, Pico GP/header numbers, used and unused module pins, both USB-C CC terminations, the isolated logic feed, servo buffering, piezo driver and moving head harness. Module internal circuits remain vendor designs linked in the electrical documentation. This is a system wiring/schematic package, not a routed custom PCB.
 
 [Wiring, pin assignments and power architecture](Electronics/architecture.md) · [Firmware and build instructions](Firmware/README.md) · [Actual compiler and host-test results](Firmware/verification_results.md)
 
@@ -114,12 +134,16 @@ python Analysis/engineering_calculations.py
 python Analysis/plot_analysis.py
 python Drawings/generate_yoke_drawing.py
 bash Firmware/tests/run_tests.sh
+python Electronics/verify_electrical.py
+python Manufacturing/build_bom.py --check
 python tools/compose_showcase.py
 python tools/build_report.py
 python tools/audit_package.py
 ```
 
 Optional renders require Blender 4.5.3: `blender -b --python tools/render_cad.py -- hero` (also `exploded`, `front`, `side`, `top`, `cutaway`, `sleepy`, `awake`, `cheerful`). [Render source](tools/render_cad.py) imports exported CAD meshes; [the Blender scene](CAD/nodi_render_scene.blend) is included for visual review. Compiler setup is pinned separately in the firmware README.
+
+Use the [articulated-model instructions](CAD/Kinematics/README.md) to regenerate the joint solver run. Electrical source regeneration, KiCad exports and rule-check commands are documented in [the electrical architecture](Electronics/architecture.md).
 
 | Deliverable | Files |
 |---|---|
@@ -128,7 +152,8 @@ Optional renders require Blender 4.5.3: `blender -b --python tools/render_cad.py
 | Manufacturing drawing and GD&T | [Drawing PDF](Drawings/NODI-P03_Yoke_RevA.pdf), [editable source](Drawings/generate_yoke_drawing.py) |
 | Calculations and numerical evidence | [Analysis](Analysis/engineering_analysis.md), [machine-readable results](Analysis/analysis_results.json) |
 | Materials, BOM and assembly | [Process plan](Manufacturing/materials_and_processes.md), [BOM](Manufacturing/BOM.csv), [assembly](Manufacturing/assembly_instructions.md) |
-| Functional integration | [Electronics](Electronics/architecture.md), [firmware](Firmware/README.md) |
+| Functional integration | [Circuit schematic](Electronics/Schematics/NODI_System_RevB.pdf), [wiring](Electronics/Wiring/NODI_Wiring_RevB.pdf), [firmware](Firmware/README.md) |
+| Articulated mechanism | [Native joint model](CAD/Kinematics/README.md), [solver record](CAD/Kinematics/solver_validation.json), [mechanism audit](Documentation/mechanism_audit.md) |
 | Requirements and proposed tests | [Verification matrix](Documentation/requirements_and_verification.md) |
 | Development and launch | [24-hour scope and 30-week roadmap](Documentation/development_timeline.md) |
 | Final report | [PDF](Documentation/NODI_Engineering_Design_Report.pdf), [editable Markdown](Documentation/engineering_report.md) |
@@ -144,7 +169,7 @@ The [verification matrix](Documentation/requirements_and_verification.md) define
 report=f'''# NODI
 ## Expressive robotic alarm clock
 
-**Mechanical engineering design challenge · David Borsky · Revision A · 24 October 2026**
+**Mechanical engineering design challenge · David Borsky · Mechanical A / Electrical B · 25 October 2026**
 
 A two-axis desktop character that physically wakes up with its user. The design combines a serviceable pan-tilt mechanism, a time-and-eye OLED, audible alarm and one accessible snooze/dismiss button.
 
@@ -159,14 +184,14 @@ A two-axis desktop character that physically wakes up with its user. The design 
 | Prototype materials | PETG printed rigid parts, PTFE thrust washer, steel ballast |
 | Power | Dedicated regulated5V/3A USB source; fuse and Schottky-fed logic |
 
-**Status:** Executed parametric CAD, exports, analytical scripts, ARM firmware compilation and host software tests. No fabrication, hardware tests or FEA. Results below are computational checks and calculated estimates. AI assistance was used to create this design package; see the repository provenance record.
+**Status:** Executed parametric CAD, exports, analytical scripts, ARM firmware compilation, host software tests and an ideal articulated joint-solver demonstration. Detailed electrical schematics and wiring are supplied separately. No fabrication, hardware tests or FEA. Results below are computational checks and calculated estimates. AI assistance was used to create this design package; see the repository provenance record.
 
 <!-- pagebreak -->
 ## 1. Mechanical architecture and concept choice
 
-NODI uses a U-yoke with a yaw table and an inverse tilt drive. A PTFE annular washer carries axial weight above the removable base deck. The integral pilot locates the table radially. A yaw servo below the deck drives the table through a purchased, match-drilled horn. Its shaft is not the intended thrust support.
+NODI uses a U-yoke with a yaw table and an inverse tilt drive. A PTFE annular washer is intended to support axial weight above the removable base deck. The integral pilot locates the table radially. A yaw servo below the deck drives the table through a purchased, match-drilled horn. Actual axial load sharing between the washer and servo shaft remains unverified.
 
-The pitch servo is fixed inside the head while its output horn is fixed to the right yoke arm. The servo case and head therefore rotate together. A brass sleeve, PTFE washer and M3 fastener support the left side; the sleeve sets endfloat so tightening does not clamp the head. This keeps the drive within the head envelope and balances mass around the pitch axis.
+The pitch servo is fixed inside the head while its output horn is fixed to the right yoke arm. The servo case and head therefore rotate together. A brass sleeve, PTFE washer and M3 fastener support the left side. The sleeve length is intended to preserve endfloat with the fastener tightened, but its nominal clearance can be consumed by manufacturing variation. Sleeve rotation is not positively locked. The drive remains inside the head envelope and balances mass around the pitch axis.
 
 ![Exploded configuration from the same CAD solids. Identify components using the BOM and CAD manifest.](Images/nodi_exploded.png)
 
@@ -248,7 +273,7 @@ The two-sheet drawing defines datumsA(plate underside),B(left arm outer plane) a
 
 **Assembly order:** Inspect coupons and incoming components; retain the ballast; wire and test logic on removable trays; center servos; install yaw motor, deck, thrust washer, horn and yoke; mount the pitch servo in the head; install the sleeve-supported passive pivot and fixed pitch horn; fit the OLED and bezel; route and strain-relieve flexible loops; then perform unpowered clearance checks and current-limited one-axis commissioning.
 
-The full BOM, fastening quantities, required tools, inspection points and service sequence are supplied in the repository. Assembly≤30min is a target excluding printing, soldering and programming; no timed build has been performed. Structural joints remain accessible; unloaded electronics pads and feet may use adhesive.
+The full BOM, fastening quantities, required tools, inspection points and service sequence are supplied in the repository. Assembly≤30min is a target excluding printing, soldering and programming; no timed build has been performed. Internal pitch-servo screw access needs a trial with a short bit or right-angle tool; unrestricted straight-driver access is blocked by the shell. Unloaded electronics pads and feet may use adhesive.
 
 <!-- pagebreak -->
 ## 5. Alarm electronics and executed software checks
@@ -299,9 +324,35 @@ The critical path runs through architecture, valid CAD, physical integration, EV
 
 **Review package:** Start with README.md, open CAD/exports/NODI_Assembly_RevA.step, review Drawings/NODI-P03_Yoke_RevA.pdf, then run the calculation and software commands in the README. Detailed sources and assumptions are in Analysis/sources.md and Electronics/architecture.md. No FEA results or physical test data are included because none were produced.
 '''
+report+='''
+
+<!-- pagebreak -->
+## 7. Movement and wiring review
+
+The original STEP is a positioned solid assembly and the original character GIF contains prescribed poses. Neither one defines a constrained drive mechanism. A separate articulated model now supplies a fixed base, a yaw stage and a head connected by two revolute hinges. All67 CAD components remain individually named and rigidly attached to the appropriate stage. The native Blender file contains actual Bullet hinge and angular-motor constraints; body placements are not keyframed.
+
+The joint solver was executed for780 frames at60fps. It exercises yaw±30° and pitch−15°/+25° with numerical bound tolerance0.1°. Joint anchor residuals stay below0.001mm. Those small residuals measure numerical constraint closure, not manufactured accuracy. Gravity and inter-link contact are disabled, inertia is approximate, and the motor impulse is arbitrary. This is not a loaded MG90S model or a hardware performance test. The solver CSV, validation JSON, URDF, native scene and cutaway animation are included under CAD/Kinematics.
+
+![Actual solver frame with shells hidden and drive interfaces labeled.](../CAD/Kinematics/mechanism_cutaway.png)
+
+The drive audit traces the actual attachments: base servo case → shaft/horn → yoke; then yoke-fixed pitch horn → servo case → head. It confirms nominal contact and coincident axes. The purchased spline and mounting offsets must be checked; the passive sleeve is clearance-fit and not keyed to the yoke; nominal0.2mm endfloat needs fitting to the manufactured stack; washer/horn axial preload and internal pitch-screw tool access need an assembly trial. Ideal rigid joints in the solver assume those interfaces; they do not validate them.
+
+Electrical revision B adds a complete system-level KiCad schematic and pin-by-pin wiring package. It exposes component reference designators, values, module header/GP numbers, no-connects, a connector/wire schedule, USB-C power-entry onboard CC resistors, fuse, Schottky logic feed, level-shifter pins, servo returns, piezo transistor circuit, RTC and OLED connections. Purchased board internals are linked vendor circuits; no custom PCB layout or fabrication claim is made.
+
+The selected USB-C input uses a specified breakout and two separate onboard5.1kΩ Rd terminations inside an insulated external input pod. A rated captive cable feeds the existing base inlet. The input pod and its contents are outside the mechanical CAD envelope; procurement, insulation and strain-relief inspection are required. Use the dedicated3A adapter specified in the electrical package.
+
+The repository README links the editable joints, circuit sheets, wiring and executed check records. A physical prototype is still required.
+'''
 report=report.replace('](Images/','](../Images/')
+# Keep filenames and URLs intact while normalizing prose typography.
+link_targets=[]
+def protect_target(match):
+    link_targets.append(match.group(1))
+    return '](__LINKTARGET_'+str(len(link_targets)-1)+'__)'
+report=re.sub(r'\]\(([^)]+)\)',protect_target,report)
 report=re.sub(r'([a-z]{2,})(?=\d)',r'\1 ',report)
 report=re.sub(r'(\d)(mm|MPa|GPa|dBA|m/s²|rad/s²|N·m|ms|µF|°C|°/s|g|V|A|W|s)(?![A-Za-z])',r'\1 \2',report)
 for old,new in {'UseSF':'Use SF','useSF':'use SF','SF=':'SF = ','SF2':'SF 2','usesGP':'uses GP','TheØ':'The Ø','toØ':'to Ø','boreØ':'bore Ø','2–4extraweeks':'2–4 extra weeks','receive40':'receive 40','conservative10':'conservative 10','Fifteen':'Fifteen'}.items():report=report.replace(old,new)
+for i,target in enumerate(link_targets):report=report.replace('__LINKTARGET_'+str(i)+'__',target)
 (ROOT/'Documentation/engineering_report.md').write_text(report)
 print('Composed README.md and Documentation/engineering_report.md from current analysis.')

@@ -6,13 +6,17 @@
 
 [**Read the engineering report (PDF)**](Documentation/NODI_Engineering_Design_Report.pdf) · [**Download the STEP assembly**](CAD/exports/NODI_Assembly_RevA.step) · [**Manufacturing drawing (PDF)**](Drawings/NODI-P03_Yoke_RevA.pdf)
 
-Prepared for Human Computer Lab's Mechanical Engineering Internship challenge · David Borsky · Revision A · October 2026
+[**Full electrical schematic**](Electronics/Schematics/NODI_System_RevB.pdf) · [**Pin-by-pin wiring**](Electronics/Wiring/NODI_Wiring_RevB.pdf) · [**Articulated joint model**](CAD/Kinematics/README.md)
+
+Prepared for Human Computer Lab's Mechanical Engineering Internship challenge · David Borsky · Mechanical revision A / electrical revision B · October 2026
 
 > **Evidence status:** This is an unbuilt digital engineering proof of concept. The parametric CAD, exports, calculations and software checks were executed. Renders show the actual CAD with illustrative OLED pixels. Hardware performance remains untested; no FEA was run. [Design provenance and evidence boundaries](Documentation/design_provenance.md).
 
 ## A character made from motion
 
 NODI slowly raises its head before the alarm, looks around and nods while ringing, droops for a five-minute snooze, and lifts its head when dismissed. A short button press snoozes; a 1.5-second hold dismisses the active alarm. Time and alarm settings are configured through USB serial and retained by the RTC and controller.
+
+The name NODI comes from its nodding motion; it is a character name, not a technical acronym.
 
 ![CAD key-pose sequence: sleepy, awake and cheerful](Images/nodi_pose_sequence.gif)
 
@@ -35,9 +39,17 @@ The motion uses bounded quintic trajectories rather than instant angle jumps. Se
 
 ## The mechanism
 
-The yaw servo turns a U-yoke through a match-drilled disc horn. An annular PTFE thrust washer supports the rotating table; a printed pilot locates it radially. The servo is not intended to carry the assembly's axial weight.
+The STEP assembly is static. The separate [articulated Blender model](CAD/Kinematics/NODI_Articulated_RevA.blend) contains two hinge joints and two angular motors. Bullet solved the yaw and pitch sequence without keyframing the body placements; the [joint results](CAD/Kinematics/solver_validation.json) and [source/URDF instructions](CAD/Kinematics/README.md) are included.
 
-The pitch servo is mounted **inside the head**. Its horn is fixed to the yoke, so the servo case and head rotate together. A brass sleeve and M3 fastener support the opposite side. Printed stops sit beyond software travel. Cable service loops pass through the head's lower opening and the open rear of the mechanism.
+![Cutaway driven by the executed joint solver](CAD/Kinematics/mechanism_motion.gif)
+
+*Ideal joint demonstration: zero gravity, inter-link collisions disabled, approximate inertia and assumed rigid servo/horn couplings. It establishes the intended articulation, not real servo performance or physical fit.*
+
+The yaw servo turns a U-yoke through a match-drilled disc horn. An annular PTFE thrust washer supports the rotating table; a printed pilot locates it radially. The washer is intended to relieve the servo shaft; actual axial load sharing with the horn and deck has not been established.
+
+The pitch servo is mounted **inside the head**. Its horn is fixed to the yoke, so the servo case and head rotate together. A retained brass sleeve and M3 fastener support the opposite side. Sleeve rotation is not positively locked in the current geometry. Printed stops sit beyond software travel. Cable service loops pass through the head's lower opening and the open rear of the mechanism.
+
+The [mechanism audit](Documentation/mechanism_audit.md) identifies open spline compatibility, endfloat, axial-load sharing and tool-access issues. These must be resolved on measured hardware before the design can be claimed to work physically.
 
 ![Exploded assembly generated from the same solids](Images/nodi_exploded.png)
 
@@ -71,7 +83,7 @@ The final mechanical checks record **67 valid solid bodies**, matching STEP read
 
 ## Manufacturing and assembly
 
-The prototype uses nine printable custom rigid parts, standard screws, replaceable purchased modules and a machined stock ballast. The complete BOM totals **$107.32 in preliminary material/component allowances**, excluding labor, shipping, tools and certification. The removable deck, electronics trays and bezel expose service joints. [Materials and DFM/DFA](Manufacturing/materials_and_processes.md) distinguishes the PETG prototype from a future PC-ABS molding redesign with draft, uniform walls, ribs and tooling review.
+The prototype uses nine printable custom rigid parts, standard screws, replaceable purchased modules and a machined stock ballast. The complete BOM totals **$112.27 in preliminary material/component allowances**, excluding labor, shipping, tools and certification. The removable deck, electronics trays and bezel expose service joints. [Materials and DFM/DFA](Manufacturing/materials_and_processes.md) distinguishes the PETG prototype from a future PC-ABS molding redesign with draft, uniform walls, ribs and tooling review.
 
 ![Yoke drawing preview with datums and GD&T](Images/nodi_yoke_drawing.png)
 
@@ -81,7 +93,13 @@ The yoke drawing defines functional datums, axis position tolerances, bearing fi
 
 ## Electrical integration and software
 
-![Electrical architecture](Electronics/wiring_block_diagram.svg)
+[**Circuit schematic PDF — power, controller interfaces, servo drivers and audio**](Electronics/Schematics/NODI_System_RevB.pdf) · [Editable KiCad source](Electronics/Schematics/NODI_System_RevB.kicad_sch)
+
+![Full connection and harness diagram](Electronics/Wiring/NODI_Wiring_RevB.svg)
+
+[Printable wiring PDF](Electronics/Wiring/NODI_Wiring_RevB.pdf) · [Wire schedule](Electronics/wiring_schedule.csv) · [Pin/net list](Electronics/netlist.csv) · [Electrical checks](Electronics/validation.json)
+
+The circuit includes individual component values and reference designators, Pico GP/header numbers, used and unused module pins, both USB-C CC terminations, the isolated logic feed, servo buffering, piezo driver and moving head harness. Module internal circuits remain vendor designs linked in the electrical documentation. This is a system wiring/schematic package, not a routed custom PCB.
 
 [Wiring, pin assignments and power architecture](Electronics/architecture.md) · [Firmware and build instructions](Firmware/README.md) · [Actual compiler and host-test results](Firmware/verification_results.md)
 
@@ -104,12 +122,16 @@ python Analysis/engineering_calculations.py
 python Analysis/plot_analysis.py
 python Drawings/generate_yoke_drawing.py
 bash Firmware/tests/run_tests.sh
+python Electronics/verify_electrical.py
+python Manufacturing/build_bom.py --check
 python tools/compose_showcase.py
 python tools/build_report.py
 python tools/audit_package.py
 ```
 
 Optional renders require Blender 4.5.3: `blender -b --python tools/render_cad.py -- hero` (also `exploded`, `front`, `side`, `top`, `cutaway`, `sleepy`, `awake`, `cheerful`). [Render source](tools/render_cad.py) imports exported CAD meshes; [the Blender scene](CAD/nodi_render_scene.blend) is included for visual review. Compiler setup is pinned separately in the firmware README.
+
+Use the [articulated-model instructions](CAD/Kinematics/README.md) to regenerate the joint solver run. Electrical source regeneration, KiCad exports and rule-check commands are documented in [the electrical architecture](Electronics/architecture.md).
 
 | Deliverable | Files |
 |---|---|
@@ -118,7 +140,8 @@ Optional renders require Blender 4.5.3: `blender -b --python tools/render_cad.py
 | Manufacturing drawing and GD&T | [Drawing PDF](Drawings/NODI-P03_Yoke_RevA.pdf), [editable source](Drawings/generate_yoke_drawing.py) |
 | Calculations and numerical evidence | [Analysis](Analysis/engineering_analysis.md), [machine-readable results](Analysis/analysis_results.json) |
 | Materials, BOM and assembly | [Process plan](Manufacturing/materials_and_processes.md), [BOM](Manufacturing/BOM.csv), [assembly](Manufacturing/assembly_instructions.md) |
-| Functional integration | [Electronics](Electronics/architecture.md), [firmware](Firmware/README.md) |
+| Functional integration | [Circuit schematic](Electronics/Schematics/NODI_System_RevB.pdf), [wiring](Electronics/Wiring/NODI_Wiring_RevB.pdf), [firmware](Firmware/README.md) |
+| Articulated mechanism | [Native joint model](CAD/Kinematics/README.md), [solver record](CAD/Kinematics/solver_validation.json), [mechanism audit](Documentation/mechanism_audit.md) |
 | Requirements and proposed tests | [Verification matrix](Documentation/requirements_and_verification.md) |
 | Development and launch | [24-hour scope and 30-week roadmap](Documentation/development_timeline.md) |
 | Final report | [PDF](Documentation/NODI_Engineering_Design_Report.pdf), [editable Markdown](Documentation/engineering_report.md) |

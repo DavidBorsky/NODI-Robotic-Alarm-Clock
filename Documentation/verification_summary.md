@@ -1,6 +1,6 @@
-# Executed verification — revision A
+# Executed verification — mechanical A / electrical B
 
-Date: 2026-10-24. This record describes executed computational checks. No prototype was fabricated, powered or physically tested.
+Updated: 2026-10-25. This record describes executed computational checks. No prototype was fabricated, powered or physically tested.
 
 | Check | Executed result | Evidence |
 |---|---|---|
@@ -13,7 +13,9 @@ Date: 2026-10-24. This record describes executed computational checks. No protot
 | Minimum checked head/yoke gap | 1.00 mm nominal | [Motion report](../CAD/motion_validation.json) |
 | Analytical calculations | Executed from current CAD manifest; hashes bind geometry and assumptions | [Numerical results](../Analysis/analysis_results.json) |
 | Drawing agreement | 27 dimensions/feature groups agree with CAD manifest | [Drawing check](../Drawings/drawing_geometry_check.json) |
-| BOM reconciliation | 47 rows; all 66 nonvisual CAD instances and 20 electrical items mapped once | [BOM](../Manufacturing/BOM.csv), [check script](../Manufacturing/build_bom.py) |
+| BOM reconciliation | 49 rows; all 66 nonvisual CAD instances and 22 electrical items mapped once | [BOM](../Manufacturing/BOM.csv), [check script](../Manufacturing/build_bom.py) |
+| Articulated joint solver | 780 executed Bullet frames; two hinges and two angular motors; ideal unloaded articulation | [Joint solver scope and results](../CAD/Kinematics/solver_validation.json) |
+| Electrical package | System schematic, connector wiring and pin/net validation; exact tool checks recorded separately | [Electrical checks](../Electronics/validation.json) |
 | Controller host execution | 15 scenario groups pass | [Firmware verification](../Firmware/verification_results.md) |
 | Actual ARM compilation | Exit 0; 82,776 bytes flash; 10,620 bytes static RAM | [Compiler record and source hashes](../Firmware/verification_results.md) |
 | Documents and links | PDFs parse; local Markdown links and credential patterns checked | [Package audit](package_audit.json) |
@@ -22,4 +24,4 @@ The motion sweep is discrete and covers the interacting pairs listed in its sour
 
 The analytical pass conditions depend on measured mass/CG, assumed friction, cable drag, reduced material properties and finished fits. Raw printed pilot and carrier-hole tolerance stacks can close their clearances, so finishing and gauging are required. The thermal upper estimate exceeds its target; deck compliance, local stress concentrations, creep and fatigue require physical tests. No FEA was run or claimed.
 
-Reproduce the checks using the commands in [the README](../README.md). The [requirements matrix](requirements_and_verification.md) preserves all physical acceptance tests still open. Publication access is checked separately after the repository is pushed.
+Reproduce the checks using the commands in [the README](../README.md). The [requirements matrix](requirements_and_verification.md) preserves all physical acceptance tests still open. Publication access is checked separately after the repository is pushed. The [mechanism audit](mechanism_audit.md) distinguishes connected nominal geometry from validated physical drive interfaces.

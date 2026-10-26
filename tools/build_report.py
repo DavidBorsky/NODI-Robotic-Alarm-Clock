@@ -39,7 +39,7 @@ while i<len(lines):
     if line.startswith('!['):
         m=re.match(r'!\[([^]]*)\]\(([^)]+)\)',line);p=(ROOT/'Documentation'/m[2]).resolve()
         from PIL import Image as PI
-        w,h=PI.open(p).size;mw=495;mh=285;r=min(mw/w,mh/h)
+        w,h=PI.open(p).size;mw=495;mh=255 if p.name=='mechanism_cutaway.png' else 285;r=min(mw/w,mh/h)
         story.extend([Image(str(p),width=w*r,height=h*r),Paragraph(inline(m[1]),style['Caption'])]);i+=1;continue
     if line.startswith('|'):
         rows=[]
@@ -64,7 +64,7 @@ while i<len(lines):
 
 def footer(c,doc):
     c.saveState();c.setStrokeColor(colors.HexColor('#93adae'));c.line(48,42,547,42);c.setFont('Nodi',7)
-    c.setFillColor(colors.HexColor('#536369'));c.drawString(48,30,'NODI / Engineering design challenge / Rev A / Computational prototype')
+    c.setFillColor(colors.HexColor('#536369'));c.drawString(48,30,'NODI / Engineering challenge / Mechanical A, Electrical B / Computational prototype')
     c.drawRightString(547,30,str(doc.page));c.restoreState()
 pdf=ROOT/'Documentation/NODI_Engineering_Design_Report.pdf'
 doc=SimpleDocTemplate(str(pdf),pagesize=(595.28,841.89),rightMargin=50,leftMargin=50,topMargin=45,bottomMargin=58,title='NODI — Engineering Design Report',author='David Borsky — AI-assisted design study')

@@ -1,7 +1,7 @@
 # NODI
 ## Expressive robotic alarm clock
 
-**Mechanical engineering design challenge · David Borsky · Revision A · 24 October 2026**
+**Mechanical engineering design challenge · David Borsky · Mechanical A / Electrical B · 25 October 2026**
 
 A two-axis desktop character that physically wakes up with its user. The design combines a serviceable pan-tilt mechanism, a time-and-eye OLED, audible alarm and one accessible snooze/dismiss button.
 
@@ -16,14 +16,14 @@ A two-axis desktop character that physically wakes up with its user. The design 
 | Prototype materials | PETG printed rigid parts, PTFE thrust washer, steel ballast |
 | Power | Dedicated regulated 5 V/3 A USB source; fuse and Schottky-fed logic |
 
-**Status:** Executed parametric CAD, exports, analytical scripts, ARM firmware compilation and host software tests. No fabrication, hardware tests or FEA. Results below are computational checks and calculated estimates. AI assistance was used to create this design package; see the repository provenance record.
+**Status:** Executed parametric CAD, exports, analytical scripts, ARM firmware compilation, host software tests and an ideal articulated joint-solver demonstration. Detailed electrical schematics and wiring are supplied separately. No fabrication, hardware tests or FEA. Results below are computational checks and calculated estimates. AI assistance was used to create this design package; see the repository provenance record.
 
 <!-- pagebreak -->
 ## 1. Mechanical architecture and concept choice
 
-NODI uses a U-yoke with a yaw table and an inverse tilt drive. A PTFE annular washer carries axial weight above the removable base deck. The integral pilot locates the table radially. A yaw servo below the deck drives the table through a purchased, match-drilled horn. Its shaft is not the intended thrust support.
+NODI uses a U-yoke with a yaw table and an inverse tilt drive. A PTFE annular washer is intended to support axial weight above the removable base deck. The integral pilot locates the table radially. A yaw servo below the deck drives the table through a purchased, match-drilled horn. Actual axial load sharing between the washer and servo shaft remains unverified.
 
-The pitch servo is fixed inside the head while its output horn is fixed to the right yoke arm. The servo case and head therefore rotate together. A brass sleeve, PTFE washer and M3 fastener support the left side; the sleeve sets endfloat so tightening does not clamp the head. This keeps the drive within the head envelope and balances mass around the pitch axis.
+The pitch servo is fixed inside the head while its output horn is fixed to the right yoke arm. The servo case and head therefore rotate together. A brass sleeve, PTFE washer and M3 fastener support the left side. The sleeve length is intended to preserve endfloat with the fastener tightened, but its nominal clearance can be consumed by manufacturing variation. Sleeve rotation is not positively locked. The drive remains inside the head envelope and balances mass around the pitch axis.
 
 ![Exploded configuration from the same CAD solids. Identify components using the BOM and CAD manifest.](../Images/nodi_exploded.png)
 
@@ -53,7 +53,7 @@ All calculations run from a shared CAD manifest and an explicit assumptions file
 | Assumed operating budget |0.04413 N·m |Designer allowance at 25% of stall |
 | Pitch/yaw reserve ratio |1.27 / 3.25 |Requires loaded actuator characterization |
 
-Manufacturer data: [Tower Pro MG90S](https://torqpro.com/product/mg 90 s-analog/). Nominal envelope 22.8×12.2×28.5 mm and mass 13.4 g are procurement references. Flange/horn details vary; inspect the actual lot before fabrication and adjust parametric mounting features if necessary.
+Manufacturer data: [Tower Pro MG90S](https://torqpro.com/product/mg90s-analog/). Nominal envelope 22.8×12.2×28.5 mm and mass 13.4 g are procurement references. Flange/horn details vary; inspect the actual lot before fabrication and adjust parametric mounting features if necessary.
 
 The yoke arms are reduced to 4×12 mm cantilevers of 50 mm free length. The model combines axial compression, driven-arm bending and lateral inertial bending. PETG uses assumedE=1 GPa and a10 MPa screening allowable. These reduced values are not qualified FFF material properties. The vertical proof case is 3 g, not an all-direction drop specification.
 
@@ -105,7 +105,7 @@ The two-sheet drawing defines datumsA(plate underside),B(left arm outer plane) a
 
 **Assembly order:** Inspect coupons and incoming components; retain the ballast; wire and test logic on removable trays; center servos; install yaw motor, deck, thrust washer, horn and yoke; mount the pitch servo in the head; install the sleeve-supported passive pivot and fixed pitch horn; fit the OLED and bezel; route and strain-relieve flexible loops; then perform unpowered clearance checks and current-limited one-axis commissioning.
 
-The full BOM, fastening quantities, required tools, inspection points and service sequence are supplied in the repository. Assembly≤30min is a target excluding printing, soldering and programming; no timed build has been performed. Structural joints remain accessible; unloaded electronics pads and feet may use adhesive.
+The full BOM, fastening quantities, required tools, inspection points and service sequence are supplied in the repository. Assembly≤30min is a target excluding printing, soldering and programming; no timed build has been performed. Internal pitch-servo screw access needs a trial with a short bit or right-angle tool; unrestricted straight-driver access is blocked by the shell. Unloaded electronics pads and feet may use adhesive.
 
 <!-- pagebreak -->
 ## 5. Alarm electronics and executed software checks
@@ -155,3 +155,21 @@ The requirements matrix maps 22 measurable requirements to CAD, calculation, sof
 The critical path runs through architecture, valid CAD, physical integration, EVT, iteration, tooling, PVT and release. DVT/tooling overlap is an explicit cost risk. Reserve 2–4 extra weeks for a tool correction. The one-day challenge scope covers digital design and documentation; it is separate from this proposed 30-week commercial program.
 
 **Review package:** Start with README.md, open CAD/exports/NODI_Assembly_RevA.step, review Drawings/NODI-P03_Yoke_RevA.pdf, then run the calculation and software commands in the README. Detailed sources and assumptions are in Analysis/sources.md and Electronics/architecture.md. No FEA results or physical test data are included because none were produced.
+
+
+<!-- pagebreak -->
+## 7. Movement and wiring review
+
+The original STEP is a positioned solid assembly and the original character GIF contains prescribed poses. Neither one defines a constrained drive mechanism. A separate articulated model now supplies a fixed base, a yaw stage and a head connected by two revolute hinges. All 67 CAD components remain individually named and rigidly attached to the appropriate stage. The native Blender file contains actual Bullet hinge and angular-motor constraints; body placements are not keyframed.
+
+The joint solver was executed for 780 frames at 60fps. It exercises yaw±30° and pitch−15°/+25° with numerical bound tolerance 0.1°. Joint anchor residuals stay below 0.001 mm. Those small residuals measure numerical constraint closure, not manufactured accuracy. Gravity and inter-link contact are disabled, inertia is approximate, and the motor impulse is arbitrary. This is not a loaded MG90S model or a hardware performance test. The solver CSV, validation JSON, URDF, native scene and cutaway animation are included under CAD/Kinematics.
+
+![Actual solver frame with shells hidden and drive interfaces labeled.](../CAD/Kinematics/mechanism_cutaway.png)
+
+The drive audit traces the actual attachments: base servo case → shaft/horn → yoke; then yoke-fixed pitch horn → servo case → head. It confirms nominal contact and coincident axes. The purchased spline and mounting offsets must be checked; the passive sleeve is clearance-fit and not keyed to the yoke; nominal 0.2 mm endfloat needs fitting to the manufactured stack; washer/horn axial preload and internal pitch-screw tool access need an assembly trial. Ideal rigid joints in the solver assume those interfaces; they do not validate them.
+
+Electrical revision B adds a complete system-level KiCad schematic and pin-by-pin wiring package. It exposes component reference designators, values, module header/GP numbers, no-connects, a connector/wire schedule, USB-C power-entry onboard CC resistors, fuse, Schottky logic feed, level-shifter pins, servo returns, piezo transistor circuit, RTC and OLED connections. Purchased board internals are linked vendor circuits; no custom PCB layout or fabrication claim is made.
+
+The selected USB-C input uses a specified breakout and two separate onboard 5.1kΩ Rd terminations inside an insulated external input pod. A rated captive cable feeds the existing base inlet. The input pod and its contents are outside the mechanical CAD envelope; procurement, insulation and strain-relief inspection are required. Use the dedicated 3 A adapter specified in the electrical package.
+
+The repository README links the editable joints, circuit sheets, wiring and executed check records. A physical prototype is still required.

@@ -7,7 +7,7 @@ NODI-C05,PTFE pivot washer OD8 ID4.3 x1,buy and finish,1,PTFE,0.40,0.40,pitch_wa
 NODI-C06,1.3 inch 128x64 OLED,buy,1,FR4 module,20.00,20.00,oled_pcb;oled_panel,E03,Adafruit 938 current 2024 revision; Selected nominal envelope; PCB and glass are one purchased module
 NODI-C07,Original Pico controller,buy,1,Pico assembly,4.00,4.00,pico,E01,Raspberry Pi Pico RP2040; Selected nominal envelope
 NODI-C08,DS3231 RTC breakout,buy,1,RTC assembly,17.50,17.50,rtc,E04,Adafruit 3013; Selected nominal envelope
-NODI-C09,Perfboard and insulated wiring kit,buy,1,Populated circuit,5.00,5.00,power_perfboard,E20,FR4 perfboard31x24 plus small switch pad insulated mounting pads wire headers heatshrink servo connectors; Hand wired prototype; kit includes wiring pads connectors and passives listed only where separately priced
+NODI-C09,Perfboard and insulated wiring kit,buy,1,Populated circuit,5.00,5.00,power_perfboard,E20,FR4 perfboard31x24 switch pad insulating pads wire JRservo headers JSTB7B-XH-A XHP-7 SXH-001T-P0.6 contacts and QTlead; Hand wired prototype J4separately retained and insulated not assumed perfboardfit; kit includes wiring pads connectors and passives listed only where separately priced
 NODI-C10,Bulk capacitor,buy,1,Capacitor assembly,1.00,1.00,capacitor,E11,1000uF 10V low ESR max diameter10mm height16mm; Verify purchased envelope
 NODI-C11,3.3V to 5V buffer,buy,1,IC assembly,1.00,1.00,buffer_ic,E08,TI SN74AHCT125N PDIP14; Selected circuit
 NODI-C12,12mm tactile switch,buy,1,Switch assembly,0.25,0.25,snooze_switch,E06,Adafruit 1119 switch from pack; Selected nominal envelope
@@ -44,5 +44,7 @@ NODI-E15,Piezo base resistor,buy,1,4.7kohm quarter watt,0.05,0.05,not modeled - 
 NODI-E16,Piezo discharge resistor,buy,1,1kohm quarter watt,0.05,0.05,not modeled - electrical accessory,E16,Selected circuit
 NODI-E17,Supply fuse and insulated holder,buy,1,2.5A time delay minimum32VDC,2.00,2.00,not modeled - electrical accessory,E17,Coordinate actual time current behavior
 NODI-E18,Certified USB power adapter,buy,1,Regulated5.0to5.1V3A e.g RaspberryPi15WUSB-C,10.00,10.00,not modeled - electrical accessory,E18,Dedicated adapter required
-NODI-E19,Power pigtail with strain relief,buy,1,3A rated wire20to22AWG USB-C sink needs separateCC Rd resistors,3.00,3.00,not modeled - electrical accessory,E19,Supplier selection open before build
+NODI-E19,USB-C sink breakout,buy,1,SparkFun BOB-15100 current revision with two onboard5.1kohm Rd,4.95,4.95,not modeled - electrical accessory,E19,Selected external insulated input pod not CAD modeled
+NODI-E21,CC sink termination resistors,buy,2,Two5.1kohm1percent ALREADY fitted on currentBOB15100 vendorR1andR4,0.00,0.00,not modeled - electrical accessory,E21,Included in E19 do not fit extra parallel resistors
+NODI-E22,Rated captive input cable and pod insulation,buy,1,20to22AWG two conductor3A rated wire with covered joints and insulated externalUSB-Cbreakout enclosure,3.00,3.00,not modeled - electrical accessory,E22,Unmodeled accessory preliminary material allowance
 NODI-A01,Cable grommets and mechanical strain-relief kit,buy,1,Elastomer grommets plus insulated cable clamps,2.00,2.00,not modeled - harness accessory,,Fit rear7.2mm entry and deck10mm bore with approximately6mm freeID; head8mm edge protection; three nylon ties for inlet plus both moving-harness ends; supplier selection and cable pull test open

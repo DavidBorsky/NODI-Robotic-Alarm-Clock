@@ -1,0 +1,59 @@
+{
+  "exported_at_utc": "2026-10-26T00:50:00.867554+00:00",
+  "kicad_version": "10.0.7",
+  "commands": [
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "netlist",
+      "--format",
+      "kicadxml",
+      "-o",
+      "Schematics/NODI_System_RevB.net",
+      "Schematics/NODI_System_RevB.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "erc",
+      "--format",
+      "json",
+      "--severity-all",
+      "--exit-code-violations",
+      "-o",
+      "Schematics/erc_report.json",
+      "Schematics/NODI_System_RevB.kicad_sch"
+    ],
+    [
+      "kicad-cli",
+      "sch",
+      "export",
+      "pdf",
+      "-o",
+      "Schematics/NODI_System_RevB.pdf",
+      "Schematics/NODI_System_RevB.kicad_sch"
+    ]
+  ],
+  "sources_sha256": {
+    "generate_electrical.py": "3061c94d6cf14e1fb4e2ea59e51302c28b5f109341a6764cf385d02d8c261f52",
+    "electronics_BOM.csv": "56afac9d11f4f5df6a0ea0e37df7b2d9d1e0920a631361eb3a5002dea64c6dd7",
+    "netlist.csv": "5ddd802873d80c1b59b9157cec3f31e9c2cf4cabea6c1f59b251bac94417826c",
+    "schematic_components.csv": "5ba6245653e737d8f6aa1cf978753ad420fefda0ec9483158c9f982799e89d5e",
+    "wiring_schedule.csv": "fc890597f37c8fda25d5b4e3e66a56d816b44ac0857ff7b85dfd2b585e651af8",
+    "Schematics/NODI_System_RevB.kicad_sch": "7bb57e776b97917cb345bfc72a2a2fba7c298801281f11994ec91cbf1e4da00b",
+    "Schematics/Controller_Interfaces.kicad_sch": "1d1bbc9db6e86c94805fb5811051d04671694f6c644c7d9cb2f9367df7334624",
+    "Schematics/Motion_Audio.kicad_sch": "bc574ada73da2b7591337b0af519f9ce8c6154b400cc2c947f7d5c621ded20fa",
+    "Schematics/NODI_System.kicad_sym": "9d2851de31dafef438eba20be68fc238e39951c9093fa908b3bfe7cc4949fe7d",
+    "Schematics/NODI_System_RevB.kicad_pro": "4cab789aafe4f7c4bff160a2bf86a7a65496f02f70171a73a8f73c37e1177799",
+    "Schematics/sym-lib-table": "99be5d1352655af833c5ff343eb073ab4e8ace1e9fd6851fb83f2b2038f8e7f5",
+    "Wiring/NODI_Wiring_RevB.svg": "a324f23f273237d5b9e959bb4b13898790171a18903b7f7eec3eb47bd6b240f6",
+    "Wiring/NODI_Wiring_RevB.pdf": "3f442d45cb53f8faeaabd61b89639680b0185f65fe33f0519121b0c147e8721e"
+  },
+  "outputs_sha256": {
+    "Schematics/NODI_System_RevB.net": "bdb57f9835a4052dc35d9033e362cd7f058e1ba009bd0626683e4af9d52f1b2e",
+    "Schematics/erc_report.json": "3c6210f82954b7131e693c3d5e1f072e1d2b9148bd80ee86de91a64fc3df9ccb",
+    "Schematics/NODI_System_RevB.pdf": "a7cd68256eb78c1475fb1f0d19d6c898784b27462ad92dedf9275ed21cff31ec"
+  },
+  "hardware_tested": false
+}

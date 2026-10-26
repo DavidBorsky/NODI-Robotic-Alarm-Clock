@@ -6,7 +6,7 @@ Use [BOM.csv](BOM.csv), [CAD/manifest.json](../CAD/manifest.json), the [exploded
 
 ## Kit, tools and preparation
 
-Required tools: FFF printer and slicer, calipers, small drill/reamer set, M2 × 0.4 and M3 × 0.5 taps with hand holder, fine file/deburring tool, miniature driver bits matching the purchased screw heads, a small 5.5 mm nut driver or spanner for M3, tube cutter/fine saw, soldering iron, heat-shrink tools, wire stripper, multimeter, regulated current-limited 5 V supply, programming computer and USB lead. A drill press and a simple horn-drilling fixture improve alignment.
+Required tools: FFF printer and slicer, calipers, small drill/reamer set, M2 × 0.4 and M3 × 0.5 taps with hand holder, fine file/deburring tool, miniature driver bits matching the purchased screw heads, a small 5.5 mm nut driver or spanner for M3, tube cutter/fine saw, soldering iron, heat-shrink tools, wire stripper, multimeter, regulated current-limited 5 V supply, programming computer and USB lead. A drill press and a simple horn-drilling fixture improve alignment. The internal pitch-servo mounting screws need a short/right-angle driver or a demonstrated insertion sequence; the closed head side walls prevent an unrestricted straight approach. Confirm actual tool access before accepting the kit or assembly-time target.
 
 1. Print PETG parts P01–P09 using the proposed process in [materials_and_processes.md](materials_and_processes.md). P10 is a **steel ballast**, not an STL-printing task. Inspect the yoke drawing datums, bores and stop features. Remove supports and burrs without altering bearing positions.
 2. Incoming-check the actual MG90S flange, output spline, center screw and horn. The body envelope is manufacturer based; the flange and 19 mm horn interfaces are design assumptions. Do not force an incompatible spline. Check the current-revision Adafruit 938 board against the 30.5 × 28 mm hole rectangle.
@@ -54,7 +54,7 @@ Before fitting the face, check access for the pivot nut driver and the two pitch
 | F10 | M3 × 18 low-profile head | 2 steel ballast screws |
 | F11 | M3 × 5 low-profile head | 4 power carrier screws |
 
-There are **35 screws and one nut** in the final CAD assembly. The firmware can be programmed and electronics assembled outside the case, so these fasteners remain reachable. Servo-kit screws are counted for assembly but not priced a second time. The BOM gives head-envelope requirements; verify real driver recesses and head diameters before purchase. A production revision should reduce screw variety after prototype assembly evidence identifies safe consolidation opportunities.
+There are **35 screws and one nut** in the CAD assembly. The firmware can be programmed and electronics assembled outside the case. Actual internal tool access, especially the pitch-servo mounting screws, remains an open assembly trial documented in the mechanism audit. Servo-kit screws are counted for assembly but not priced a second time. The BOM gives head-envelope requirements; verify real driver recesses and head diameters before purchase. A production revision should reduce screw variety after prototype assembly evidence identifies safe consolidation opportunities.
 
 ## Inspection, service and limitations
 
@@ -75,4 +75,10 @@ python3 Manufacturing/build_bom.py
 python3 Manufacturing/build_bom.py --check
 ```
 
-The script maps every nonvisual CAD instance once, consolidates the OLED's two solids into one purchase, retains two servos, and adds electrical items omitted from simplified CAD envelopes. The electrical subtotal is **$84.65**. All prices are one-prototype planning allowances in USD, excluding labor, machine time, tooling, shipping and tax; they are not supplier quotations. Printing allowance uses solid CAD material mass at $25/kg plus 25% waste, so a slicer's actual infill consumption may be lower. Hardware pack minimum quantities and procurement substitutions can raise the checkout total.
+The script maps every nonvisual CAD instance once, consolidates the OLED's two solids into one purchase, retains two servos, and adds electrical items omitted from simplified CAD envelopes. The electrical subtotal is calculated from [the electrical BOM](../Electronics/electronics_BOM.csv), including the external input pod. All prices are one-prototype planning allowances in USD, excluding labor, machine time, tooling, shipping and tax; they are not supplier quotations. Printing allowance uses solid CAD material mass at $25/kg plus 25% waste, so a slicer's actual infill consumption may be lower. Hardware pack minimum quantities and procurement substitutions can raise the checkout total.
+
+## Electrical revision B and motion review
+
+Use the [full circuit schematic](../Electronics/Schematics/NODI_System_RevB.pdf) and [pin-by-pin wiring package](../Electronics/Wiring/NODI_Wiring_RevB.pdf). The specified resistor-equipped USB-C breakout lives in an insulated external input pod; its onboard CC resistors must not be duplicated. The pod is outside the current mechanical CAD envelope. Inspect the actual cable rating, module revision and CC resistance before applying power.
+
+The [articulated model](../CAD/Kinematics/README.md) shows the intended ideal joints. The [mechanism audit](../Documentation/mechanism_audit.md) records unverified spline engagement, sleeve rotation, endfloat and axial support/load sharing. Fit the passive bearing against the measured stack; never rely on leaving the pivot nut loose.

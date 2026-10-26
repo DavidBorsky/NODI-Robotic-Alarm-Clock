@@ -1,0 +1,1025 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="NODI_revision_A_ideal_articulated">
+  <link name="base_link" />
+  <link name="yaw_link" />
+  <link name="head_link" />
+  <joint name="yaw_revolute" type="revolute">
+    <parent link="base_link" />
+    <child link="yaw_link" />
+    <origin xyz="0 0 0.034" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.5235987755982988" upper="0.5235987755982988" effort="0" velocity="0" />
+  </joint>
+  <joint name="pitch_revolute" type="revolute">
+    <parent link="yaw_link" />
+    <child link="head_link" />
+    <origin xyz="0 0 0.054" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="0.4363323129985824" effort="0" velocity="0" />
+  </joint>
+  <link name="base_cup">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/base_cup.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="base_cup_material">
+        <color rgba="0.91 0.89 0.82 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__base_cup" type="fixed">
+    <parent link="base_link" />
+    <child link="base_cup" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="base_deck">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/base_deck.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="base_deck_material">
+        <color rgba="0.91 0.89 0.82 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__base_deck" type="fixed">
+    <parent link="base_link" />
+    <child link="base_deck" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="thrust_washer">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/thrust_washer.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="thrust_washer_material">
+        <color rgba="0.91 0.94 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__thrust_washer" type="fixed">
+    <parent link="base_link" />
+    <child link="thrust_washer" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="yoke">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/yoke.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="yoke_material">
+        <color rgba="0.91 0.4 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__yoke" type="fixed">
+    <parent link="yaw_link" />
+    <child link="yoke" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="head_shell">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/head_shell.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="head_shell_material">
+        <color rgba="0.91 0.89 0.82 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__head_shell" type="fixed">
+    <parent link="head_link" />
+    <child link="head_shell" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="front_bezel">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/front_bezel.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="front_bezel_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__front_bezel" type="fixed">
+    <parent link="head_link" />
+    <child link="front_bezel" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="pan_servo">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_servo.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_servo_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_servo" type="fixed">
+    <parent link="base_link" />
+    <child link="pan_servo" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_servo">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_servo.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_servo_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_servo" type="fixed">
+    <parent link="head_link" />
+    <child link="tilt_servo" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="pan_horn">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_horn.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_horn_material">
+        <color rgba="0.91 0.94 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_horn" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pan_horn" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_horn">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_horn.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_horn_material">
+        <color rgba="0.91 0.94 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_horn" type="fixed">
+    <parent link="yaw_link" />
+    <child link="tilt_horn" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="pan_retaining_screw">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_retaining_screw.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_retaining_screw_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_retaining_screw" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pan_retaining_screw" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_retaining_screw">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_retaining_screw.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_retaining_screw_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_retaining_screw" type="fixed">
+    <parent link="yaw_link" />
+    <child link="tilt_retaining_screw" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="pitch_sleeve">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pitch_sleeve.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pitch_sleeve_material">
+        <color rgba="0.7 0.51 0.18 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pitch_sleeve" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pitch_sleeve" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="pitch_washer">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pitch_washer.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pitch_washer_material">
+        <color rgba="0.91 0.94 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pitch_washer" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pitch_washer" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="pitch_bolt">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pitch_bolt.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pitch_bolt_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pitch_bolt" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pitch_bolt" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="pitch_nut">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pitch_nut.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pitch_nut_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pitch_nut" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pitch_nut" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="oled_pcb">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_pcb.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_pcb_material">
+        <color rgba="0.04 0.35 0.22 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_pcb" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_pcb" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="oled_panel">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_panel.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_panel_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_panel" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_panel" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="oled_active">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_active.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_active_material">
+        <color rgba="0.025 0.06 0.07 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_active" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_active" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="rear_carrier">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/rear_carrier.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="rear_carrier_material">
+        <color rgba="0.91 0.89 0.82 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__rear_carrier" type="fixed">
+    <parent link="base_link" />
+    <child link="rear_carrier" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="power_carrier">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/power_carrier.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="power_carrier_material">
+        <color rgba="0.91 0.89 0.82 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__power_carrier" type="fixed">
+    <parent link="base_link" />
+    <child link="power_carrier" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="pico">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pico.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pico_material">
+        <color rgba="0.04 0.35 0.22 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pico" type="fixed">
+    <parent link="base_link" />
+    <child link="pico" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="rtc">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/rtc.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="rtc_material">
+        <color rgba="0.04 0.35 0.22 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__rtc" type="fixed">
+    <parent link="base_link" />
+    <child link="rtc" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="power_perfboard">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/power_perfboard.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="power_perfboard_material">
+        <color rgba="0.04 0.35 0.22 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__power_perfboard" type="fixed">
+    <parent link="base_link" />
+    <child link="power_perfboard" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="capacitor">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/capacitor.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="capacitor_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__capacitor" type="fixed">
+    <parent link="base_link" />
+    <child link="capacitor" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="buffer_ic">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/buffer_ic.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="buffer_ic_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__buffer_ic" type="fixed">
+    <parent link="base_link" />
+    <child link="buffer_ic" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="switch_carrier">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/switch_carrier.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="switch_carrier_material">
+        <color rgba="0.91 0.89 0.82 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__switch_carrier" type="fixed">
+    <parent link="base_link" />
+    <child link="switch_carrier" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="snooze_switch">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/snooze_switch.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="snooze_switch_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__snooze_switch" type="fixed">
+    <parent link="base_link" />
+    <child link="snooze_switch" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="snooze_cap">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/snooze_cap.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="snooze_cap_material">
+        <color rgba="0.91 0.4 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__snooze_cap" type="fixed">
+    <parent link="base_link" />
+    <child link="snooze_cap" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="piezo">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/piezo.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="piezo_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__piezo" type="fixed">
+    <parent link="base_link" />
+    <child link="piezo" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="foot_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/foot_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="foot_1_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__foot_1" type="fixed">
+    <parent link="base_link" />
+    <child link="foot_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="foot_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/foot_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="foot_2_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__foot_2" type="fixed">
+    <parent link="base_link" />
+    <child link="foot_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="foot_3">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/foot_3.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="foot_3_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__foot_3" type="fixed">
+    <parent link="base_link" />
+    <child link="foot_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="foot_4">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/foot_4.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="foot_4_material">
+        <color rgba="0.075 0.1 0.13 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__foot_4" type="fixed">
+    <parent link="base_link" />
+    <child link="foot_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="ballast">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/ballast.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="ballast_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__ballast" type="fixed">
+    <parent link="base_link" />
+    <child link="ballast" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="ballast_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/ballast_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="ballast_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__ballast_screw_1" type="fixed">
+    <parent link="base_link" />
+    <child link="ballast_screw_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="ballast_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/ballast_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="ballast_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__ballast_screw_2" type="fixed">
+    <parent link="base_link" />
+    <child link="ballast_screw_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="deck_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/deck_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="deck_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__deck_screw_1" type="fixed">
+    <parent link="base_link" />
+    <child link="deck_screw_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="deck_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/deck_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="deck_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__deck_screw_2" type="fixed">
+    <parent link="base_link" />
+    <child link="deck_screw_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="deck_screw_3">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/deck_screw_3.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="deck_screw_3_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__deck_screw_3" type="fixed">
+    <parent link="base_link" />
+    <child link="deck_screw_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="deck_screw_4">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/deck_screw_4.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="deck_screw_4_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__deck_screw_4" type="fixed">
+    <parent link="base_link" />
+    <child link="deck_screw_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="bezel_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/bezel_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="bezel_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__bezel_screw_1" type="fixed">
+    <parent link="head_link" />
+    <child link="bezel_screw_1" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="bezel_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/bezel_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="bezel_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__bezel_screw_2" type="fixed">
+    <parent link="head_link" />
+    <child link="bezel_screw_2" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="bezel_screw_3">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/bezel_screw_3.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="bezel_screw_3_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__bezel_screw_3" type="fixed">
+    <parent link="head_link" />
+    <child link="bezel_screw_3" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="bezel_screw_4">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/bezel_screw_4.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="bezel_screw_4_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__bezel_screw_4" type="fixed">
+    <parent link="head_link" />
+    <child link="bezel_screw_4" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="oled_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_screw_1" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_screw_1" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="oled_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_screw_2" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_screw_2" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="oled_screw_3">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_screw_3.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_screw_3_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_screw_3" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_screw_3" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="oled_screw_4">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/oled_screw_4.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="oled_screw_4_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__oled_screw_4" type="fixed">
+    <parent link="head_link" />
+    <child link="oled_screw_4" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="pan_mount_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_mount_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_mount_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_mount_screw_1" type="fixed">
+    <parent link="base_link" />
+    <child link="pan_mount_screw_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="pan_mount_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_mount_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_mount_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_mount_screw_2" type="fixed">
+    <parent link="base_link" />
+    <child link="pan_mount_screw_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_mount_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_mount_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_mount_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_mount_screw_1" type="fixed">
+    <parent link="head_link" />
+    <child link="tilt_mount_screw_1" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_mount_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_mount_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_mount_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_mount_screw_2" type="fixed">
+    <parent link="head_link" />
+    <child link="tilt_mount_screw_2" />
+    <origin xyz="0 0 -0.088" rpy="0 0 0" />
+  </joint>
+  <link name="pan_horn_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_horn_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_horn_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_horn_screw_1" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pan_horn_screw_1" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="pan_horn_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/pan_horn_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="pan_horn_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__pan_horn_screw_2" type="fixed">
+    <parent link="yaw_link" />
+    <child link="pan_horn_screw_2" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_horn_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_horn_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_horn_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_horn_screw_1" type="fixed">
+    <parent link="yaw_link" />
+    <child link="tilt_horn_screw_1" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="tilt_horn_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/tilt_horn_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="tilt_horn_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__tilt_horn_screw_2" type="fixed">
+    <parent link="yaw_link" />
+    <child link="tilt_horn_screw_2" />
+    <origin xyz="0 0 -0.034" rpy="0 0 0" />
+  </joint>
+  <link name="rear_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/rear_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="rear_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__rear_screw_1" type="fixed">
+    <parent link="base_link" />
+    <child link="rear_screw_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="rear_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/rear_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="rear_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__rear_screw_2" type="fixed">
+    <parent link="base_link" />
+    <child link="rear_screw_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="rear_screw_3">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/rear_screw_3.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="rear_screw_3_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__rear_screw_3" type="fixed">
+    <parent link="base_link" />
+    <child link="rear_screw_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="rear_screw_4">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/rear_screw_4.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="rear_screw_4_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__rear_screw_4" type="fixed">
+    <parent link="base_link" />
+    <child link="rear_screw_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="power_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/power_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="power_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__power_screw_1" type="fixed">
+    <parent link="base_link" />
+    <child link="power_screw_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="power_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/power_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="power_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__power_screw_2" type="fixed">
+    <parent link="base_link" />
+    <child link="power_screw_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="power_screw_3">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/power_screw_3.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="power_screw_3_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__power_screw_3" type="fixed">
+    <parent link="base_link" />
+    <child link="power_screw_3" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="power_screw_4">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/power_screw_4.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="power_screw_4_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__power_screw_4" type="fixed">
+    <parent link="base_link" />
+    <child link="power_screw_4" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="switch_screw_1">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/switch_screw_1.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="switch_screw_1_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__switch_screw_1" type="fixed">
+    <parent link="base_link" />
+    <child link="switch_screw_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="switch_screw_2">
+    <visual>
+      <geometry>
+        <mesh filename="../exports/meshes/switch_screw_2.stl" scale=".001 .001 .001" />
+      </geometry>
+      <material name="switch_screw_2_material">
+        <color rgba="0.55 0.59 0.63 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="fixed__switch_screw_2" type="fixed">
+    <parent link="base_link" />
+    <child link="switch_screw_2" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+</robot>

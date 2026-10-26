@@ -15,3 +15,9 @@ The product views are renders of the exported CAD meshes. OLED pixel artwork ill
 No FEA solver was run; there are no finite-element stress contours or FEA result files. Analytical stresses are not labeled as FEA. No assembly, acoustic, durability, power, thermal or alarm hardware tests have occurred. Firmware hardware builds and simulation results are distinguished in the firmware documentation.
 
 The 24-hour challenge scope is the intended scope of the proof of concept, not a claim about human labor hours. The product-development roadmap is a proposed commercial program, not completed development.
+
+## Revision B electrical and articulated-mechanism additions — 25 October 2026
+
+The original STEP has no assembly joint definitions, and the original pose GIF is a prescribed visualization. The additional native Blender model uses Bullet hinge/motor constraints and records solver-generated link transforms. It uses zero gravity, disabled inter-link contact and ideal rigid drive connections; it is a joint demonstrator, not validated actuator dynamics or physical motion. The independent mechanism audit identifies remaining purchased-interface and assembly risks.
+
+The electrical additions provide editable system schematics, module pin definitions and a point-to-point harness. Vendor board internals are referenced separately. KiCad parsing, netlist comparison or ERC results must be interpreted exactly as recorded in Electronics/validation.json; none establishes a manufactured circuit or a successful hardware test.

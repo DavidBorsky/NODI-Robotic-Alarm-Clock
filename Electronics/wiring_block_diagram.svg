@@ -10,7 +10,7 @@
   </defs>
   <rect width="1500" height="1010" fill="#fff"/>
   <text x="50" y="44" class="heading">NODI / power and signal architecture</text>
-  <text x="50" y="73" class="sub">Revision A · block-level wiring · no physical electrical testing performed</text>
+  <text x="50" y="73" class="sub">Revision B · overview only; full circuit and pin-to-pin harness in linked files · no physical electrical testing performed</text>
 
   <rect x="50" y="110" width="275" height="115" class="box"/>
   <text x="70" y="144" class="name">USB adapter</text>
@@ -94,7 +94,7 @@
   <rect x="50" y="824" width="1400" height="141" fill="#f9f2ed" rx="12"/>
   <text x="72" y="855" class="label">BUILD NOTES</text>
   <text x="72" y="883" class="detail">All grounds common; give motors separate returns. External +5 V must never connect to Pico VBUS / pin 40.</text>
-  <text x="72" y="909" class="detail">A USB-C sink pigtail requires separate CC1/CC2 Rd resistors; use only a known 3 A source. No current negotiation circuit is provided.</text>
+  <text x="72" y="909" class="detail">Current BOB-15100 includes both CC Rd resistors; do not add parallel resistors. Use a known 3 A source; no current detector is provided.</text>
   <text x="72" y="935" class="detail">Current allowance: 2 × 1.0 A servos + 0.20 A logic = 2.20 A estimate. Measure actual current and rail droop before motion.</text>
   <text x="50" y="993" class="small">Power: terracotta arrows · logic: teal arrows · detailed pinout, passive values and commissioning steps: Electronics/architecture.md</text>
 </svg>

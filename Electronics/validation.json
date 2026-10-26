@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-25",
+  "status": "PASS",
+  "scope": "actual KiCad XML versus expected CSV, physical wire endpoints and firmware GPIO constants; not physical testing",
+  "export_provenance_verified": true,
+  "kicad_version": "10.0.7",
+  "schematic_sheets": 3,
+  "schematic_symbols": 30,
+  "explicit_pin_rows": 142,
+  "exported_connected_pins": 85,
+  "exported_nc_pins": 54,
+  "named_functional_nets": 19,
+  "physical_wire_runs": 36,
+  "moving_conductors": 7,
+  "reported_erc_violations": 0,
+  "erc_ignored_checks": [
+    {
+      "description": "Global label only appears once in the schematic",
+      "key": "single_global_label"
+    },
+    {
+      "description": "Four connection points are joined together",
+      "key": "four_way_junction"
+    },
+    {
+      "description": "SPICE model issue",
+      "key": "simulation_model_issue"
+    },
+    {
+      "description": "Assigned footprint doesn't match footprint filters",
+      "key": "footprint_filter"
+    }
+  ],
+  "hardware_tested": false,
+  "sha256": {
+    "Electronics/Schematics/NODI_System_RevB.kicad_sch": "7bb57e776b97917cb345bfc72a2a2fba7c298801281f11994ec91cbf1e4da00b",
+    "Electronics/Schematics/Controller_Interfaces.kicad_sch": "1d1bbc9db6e86c94805fb5811051d04671694f6c644c7d9cb2f9367df7334624",
+    "Electronics/Schematics/Motion_Audio.kicad_sch": "bc574ada73da2b7591337b0af519f9ce8c6154b400cc2c947f7d5c621ded20fa",
+    "Electronics/Schematics/NODI_System.kicad_sym": "9d2851de31dafef438eba20be68fc238e39951c9093fa908b3bfe7cc4949fe7d",
+    "Electronics/Schematics/NODI_System_RevB.net": "bdb57f9835a4052dc35d9033e362cd7f058e1ba009bd0626683e4af9d52f1b2e",
+    "Electronics/netlist.csv": "5ddd802873d80c1b59b9157cec3f31e9c2cf4cabea6c1f59b251bac94417826c",
+    "Electronics/wiring_schedule.csv": "fc890597f37c8fda25d5b4e3e66a56d816b44ac0857ff7b85dfd2b585e651af8",
+    "Firmware/NODI/NODI.ino": "922cef0827b3e7bce3602f8758880988470c45de20d9d51e885c9dd2e92818e9"
+  }
+}

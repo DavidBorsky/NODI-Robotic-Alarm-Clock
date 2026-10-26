@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2592" viewBox="0 0 1600 2592"><title>NODI complete pin-to-pin harness RevB</title><rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#243746}.h{font-size:34px;font-weight:bold}.sub{font-size:19px}.t{font-size:18px}.small{font-size:16px}.bold{font-weight:bold}</style>
+<text x="45" y="52" class="h">NODI / full pin-to-pin wiring / revision B</text>
+<text x="45" y="87" class="sub">2026-10-25 · actual schematic pin IDs · all hardware untested · local passive wiring: three-sheet KiCad circuit</text>
+<text x="45" y="119" class="sub">Lengths below are initial cut allowances, not measured fits. Seven moving wires W14–W20 need ≥80 mm free loop.</text>
+<text x="45" y="151" class="small">ID / source pin</text><text x="560" y="151" class="small">net / color</text><text x="1060" y="151" class="small">destination pin / wire size / cut length</text>
+<rect x="32" y="156" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="180" class="t bold">W01  J1.6</text><line x1="330" y1="173" x2="990" y2="173" stroke="#c63e35" stroke-width="4"/><polygon points="990,168 1000,173 990,178" fill="#c63e35"/><rect x="485" y="157" width="355" height="29" fill="white"/><text x="500" y="180" class="t">+5V_RAW / red</text><text x="1060" y="180" class="t">F1.1 · 20 AWG · 300 mm</text>
+<text x="45" y="222" class="t bold">W02  J1.5</text><line x1="330" y1="215" x2="990" y2="215" stroke="#202731" stroke-width="4"/><polygon points="990,210 1000,215 990,220" fill="#202731"/><rect x="485" y="199" width="355" height="29" fill="white"/><text x="500" y="222" class="t">GND / black</text><text x="1060" y="222" class="t">TP2.1 · 20 AWG · 300 mm</text>
+<rect x="32" y="240" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="264" class="t bold">W03  F1.2</text><line x1="330" y1="257" x2="990" y2="257" stroke="#c63e35" stroke-width="4"/><polygon points="990,252 1000,257 990,262" fill="#c63e35"/><rect x="485" y="241" width="355" height="29" fill="white"/><text x="500" y="264" class="t">+5V_FUSED / red</text><text x="1060" y="264" class="t">TP1.1 · 20 AWG · 60 mm</text>
+<text x="45" y="306" class="t bold">W04  TP1.1</text><line x1="330" y1="299" x2="990" y2="299" stroke="#c63e35" stroke-width="4"/><polygon points="990,294 1000,299 990,304" fill="#c63e35"/><rect x="485" y="283" width="355" height="29" fill="white"/><text x="500" y="306" class="t">+5V_FUSED / red</text><text x="1060" y="306" class="t">J2.2 · 24 AWG · 80 mm</text>
+<rect x="32" y="324" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="348" class="t bold">W05  TP2.1</text><line x1="330" y1="341" x2="990" y2="341" stroke="#202731" stroke-width="4"/><polygon points="990,336 1000,341 990,346" fill="#202731"/><rect x="485" y="325" width="355" height="29" fill="white"/><text x="500" y="348" class="t">GND / black</text><text x="1060" y="348" class="t">J2.1 · 24 AWG · 80 mm</text>
+<text x="45" y="390" class="t bold">W06  R1.2</text><line x1="330" y1="383" x2="990" y2="383" stroke="#7854a3" stroke-width="4"/><polygon points="990,378 1000,383 990,388" fill="#7854a3"/><rect x="485" y="367" width="355" height="29" fill="white"/><text x="500" y="390" class="t">YAW_SIG / purple</text><text x="1060" y="390" class="t">J2.3 · 26 AWG · 80 mm</text>
+<rect x="32" y="408" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="432" class="t bold">W07  TP1.1</text><line x1="330" y1="425" x2="990" y2="425" stroke="#c63e35" stroke-width="4"/><polygon points="990,420 1000,425 990,430" fill="#c63e35"/><rect x="485" y="409" width="355" height="29" fill="white"/><text x="500" y="432" class="t">+5V_FUSED / red</text><text x="1060" y="432" class="t">J4.2 · 24 AWG · 90 mm</text>
+<text x="45" y="474" class="t bold">W08  TP2.1</text><line x1="330" y1="467" x2="990" y2="467" stroke="#202731" stroke-width="4"/><polygon points="990,462 1000,467 990,472" fill="#202731"/><rect x="485" y="451" width="355" height="29" fill="white"/><text x="500" y="474" class="t">GND / black</text><text x="1060" y="474" class="t">J4.1 · 24 AWG · 90 mm</text>
+<rect x="32" y="492" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="516" class="t bold">W09  R2.2</text><line x1="330" y1="509" x2="990" y2="509" stroke="#267b4c" stroke-width="4"/><polygon points="990,504 1000,509 990,514" fill="#267b4c"/><rect x="485" y="493" width="355" height="29" fill="white"/><text x="500" y="516" class="t">PITCH_SIG / green</text><text x="1060" y="516" class="t">J4.3 · 26 AWG · 90 mm</text>
+<text x="45" y="558" class="t bold">W10  U1.36</text><line x1="330" y1="551" x2="990" y2="551" stroke="#cf741c" stroke-width="4"/><polygon points="990,546 1000,551 990,556" fill="#cf741c"/><rect x="485" y="535" width="355" height="29" fill="white"/><text x="500" y="558" class="t">+3V3 / orange</text><text x="1060" y="558" class="t">J4.5 · 28 AWG · 90 mm</text>
+<rect x="32" y="576" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="600" class="t bold">W11  TP2.1</text><line x1="330" y1="593" x2="990" y2="593" stroke="#202731" stroke-width="4"/><polygon points="990,588 1000,593 990,598" fill="#202731"/><rect x="485" y="577" width="355" height="29" fill="white"/><text x="500" y="600" class="t">GND / black</text><text x="1060" y="600" class="t">J4.4 · 28 AWG · 90 mm</text>
+<text x="45" y="642" class="t bold">W12  U1.6</text><line x1="330" y1="635" x2="990" y2="635" stroke="#2176b8" stroke-width="4"/><polygon points="990,630 1000,635 990,640" fill="#2176b8"/><rect x="485" y="619" width="355" height="29" fill="white"/><text x="500" y="642" class="t">I2C_SDA / blue</text><text x="1060" y="642" class="t">J4.6 · 28 AWG · 90 mm</text>
+<rect x="32" y="660" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="684" class="t bold">W13  U1.7</text><line x1="330" y1="677" x2="990" y2="677" stroke="#ad8b00" stroke-width="4"/><polygon points="990,672 1000,677 990,682" fill="#ad8b00"/><rect x="485" y="661" width="355" height="29" fill="white"/><text x="500" y="684" class="t">I2C_SCL / yellow</text><text x="1060" y="684" class="t">J4.7 · 28 AWG · 90 mm</text>
+<text x="45" y="726" class="t bold">W14  J4.1</text><line x1="330" y1="719" x2="990" y2="719" stroke="#202731" stroke-width="4"/><polygon points="990,714 1000,719 990,724" fill="#202731"/><rect x="485" y="703" width="355" height="29" fill="white"/><text x="500" y="726" class="t">GND / black</text><text x="1060" y="726" class="t">J3.1 · 24 AWG · 180 mm · FLEX</text>
+<rect x="32" y="744" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="768" class="t bold">W15  J4.2</text><line x1="330" y1="761" x2="990" y2="761" stroke="#c63e35" stroke-width="4"/><polygon points="990,756 1000,761 990,766" fill="#c63e35"/><rect x="485" y="745" width="355" height="29" fill="white"/><text x="500" y="768" class="t">+5V_FUSED / red</text><text x="1060" y="768" class="t">J3.2 · 24 AWG · 180 mm · FLEX</text>
+<text x="45" y="810" class="t bold">W16  J4.3</text><line x1="330" y1="803" x2="990" y2="803" stroke="#267b4c" stroke-width="4"/><polygon points="990,798 1000,803 990,808" fill="#267b4c"/><rect x="485" y="787" width="355" height="29" fill="white"/><text x="500" y="810" class="t">PITCH_SIG / green</text><text x="1060" y="810" class="t">J3.3 · 26 AWG · 180 mm · FLEX</text>
+<rect x="32" y="828" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="852" class="t bold">W17  J4.4</text><line x1="330" y1="845" x2="990" y2="845" stroke="#202731" stroke-width="4"/><polygon points="990,840 1000,845 990,850" fill="#202731"/><rect x="485" y="829" width="355" height="29" fill="white"/><text x="500" y="852" class="t">GND / black</text><text x="1060" y="852" class="t">U3.QA1 · 28 AWG · 180 mm · FLEX</text>
+<text x="45" y="894" class="t bold">W18  J4.5</text><line x1="330" y1="887" x2="990" y2="887" stroke="#cf741c" stroke-width="4"/><polygon points="990,882 1000,887 990,892" fill="#cf741c"/><rect x="485" y="871" width="355" height="29" fill="white"/><text x="500" y="894" class="t">+3V3 / orange</text><text x="1060" y="894" class="t">U3.QA2 · 28 AWG · 180 mm · FLEX</text>
+<rect x="32" y="912" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="936" class="t bold">W19  J4.6</text><line x1="330" y1="929" x2="990" y2="929" stroke="#2176b8" stroke-width="4"/><polygon points="990,924 1000,929 990,934" fill="#2176b8"/><rect x="485" y="913" width="355" height="29" fill="white"/><text x="500" y="936" class="t">I2C_SDA / blue</text><text x="1060" y="936" class="t">U3.QA3 · 28 AWG · 180 mm · FLEX</text>
+<text x="45" y="978" class="t bold">W20  J4.7</text><line x1="330" y1="971" x2="990" y2="971" stroke="#ad8b00" stroke-width="4"/><polygon points="990,966 1000,971 990,976" fill="#ad8b00"/><rect x="485" y="955" width="355" height="29" fill="white"/><text x="500" y="978" class="t">I2C_SCL / yellow</text><text x="1060" y="978" class="t">U3.QA4 · 28 AWG · 180 mm · FLEX</text>
+<rect x="32" y="996" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1020" class="t bold">W21  U1.36</text><line x1="330" y1="1013" x2="990" y2="1013" stroke="#cf741c" stroke-width="4"/><polygon points="990,1008 1000,1013 990,1018" fill="#cf741c"/><rect x="485" y="997" width="355" height="29" fill="white"/><text x="500" y="1020" class="t">+3V3 / orange</text><text x="1060" y="1020" class="t">U4.1 · 28 AWG · 70 mm</text>
+<text x="45" y="1062" class="t bold">W22  TP2.1</text><line x1="330" y1="1055" x2="990" y2="1055" stroke="#202731" stroke-width="4"/><polygon points="990,1050 1000,1055 990,1060" fill="#202731"/><rect x="485" y="1039" width="355" height="29" fill="white"/><text x="500" y="1062" class="t">GND / black</text><text x="1060" y="1062" class="t">U4.2 · 28 AWG · 70 mm</text>
+<rect x="32" y="1080" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1104" class="t bold">W23  U1.6</text><line x1="330" y1="1097" x2="990" y2="1097" stroke="#2176b8" stroke-width="4"/><polygon points="990,1092 1000,1097 990,1102" fill="#2176b8"/><rect x="485" y="1081" width="355" height="29" fill="white"/><text x="500" y="1104" class="t">I2C_SDA / blue</text><text x="1060" y="1104" class="t">U4.4 · 28 AWG · 70 mm</text>
+<text x="45" y="1146" class="t bold">W24  U1.7</text><line x1="330" y1="1139" x2="990" y2="1139" stroke="#ad8b00" stroke-width="4"/><polygon points="990,1134 1000,1139 990,1144" fill="#ad8b00"/><rect x="485" y="1123" width="355" height="29" fill="white"/><text x="500" y="1146" class="t">I2C_SCL / yellow</text><text x="1060" y="1146" class="t">U4.3 · 28 AWG · 70 mm</text>
+<rect x="32" y="1164" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1188" class="t bold">W25  U1.20</text><line x1="330" y1="1181" x2="990" y2="1181" stroke="#6d7988" stroke-width="4"/><polygon points="990,1176 1000,1181 990,1186" fill="#6d7988"/><rect x="485" y="1165" width="355" height="29" fill="white"/><text x="500" y="1188" class="t">BUTTON_N / white</text><text x="1060" y="1188" class="t">SW1.A1 · 28 AWG · 100 mm</text>
+<text x="45" y="1230" class="t bold">W26  TP2.1</text><line x1="330" y1="1223" x2="990" y2="1223" stroke="#202731" stroke-width="4"/><polygon points="990,1218 1000,1223 990,1228" fill="#202731"/><rect x="485" y="1207" width="355" height="29" fill="white"/><text x="500" y="1230" class="t">GND / black</text><text x="1060" y="1230" class="t">SW1.B1 · 28 AWG · 100 mm</text>
+<rect x="32" y="1248" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1272" class="t bold">W27  U1.4</text><line x1="330" y1="1265" x2="990" y2="1265" stroke="#7854a3" stroke-width="4"/><polygon points="990,1260 1000,1265 990,1270" fill="#7854a3"/><rect x="485" y="1249" width="355" height="29" fill="white"/><text x="500" y="1272" class="t">YAW_PWM_3V3 / purple</text><text x="1060" y="1272" class="t">U2.2 · 28 AWG · 80 mm</text>
+<text x="45" y="1314" class="t bold">W28  U1.5</text><line x1="330" y1="1307" x2="990" y2="1307" stroke="#267b4c" stroke-width="4"/><polygon points="990,1302 1000,1307 990,1312" fill="#267b4c"/><rect x="485" y="1291" width="355" height="29" fill="white"/><text x="500" y="1314" class="t">PITCH_PWM_3V3 / green</text><text x="1060" y="1314" class="t">U2.5 · 28 AWG · 80 mm</text>
+<rect x="32" y="1332" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1356" class="t bold">W29  U1.21</text><line x1="330" y1="1349" x2="990" y2="1349" stroke="#805339" stroke-width="4"/><polygon points="990,1344 1000,1349 990,1354" fill="#805339"/><rect x="485" y="1333" width="355" height="29" fill="white"/><text x="500" y="1356" class="t">AUDIO_PWM_3V3 / brown</text><text x="1060" y="1356" class="t">R5.1 · 28 AWG · 80 mm</text>
+<text x="45" y="1398" class="t bold">W30  TP1.1</text><line x1="330" y1="1391" x2="990" y2="1391" stroke="#c63e35" stroke-width="4"/><polygon points="990,1386 1000,1391 990,1396" fill="#c63e35"/><rect x="485" y="1375" width="355" height="29" fill="white"/><text x="500" y="1398" class="t">+5V_FUSED / red</text><text x="1060" y="1398" class="t">BZ1.1 · 28 AWG · 70 mm</text>
+<rect x="32" y="1416" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1440" class="t bold">W31  Q1.3</text><line x1="330" y1="1433" x2="990" y2="1433" stroke="#805339" stroke-width="4"/><polygon points="990,1428 1000,1433 990,1438" fill="#805339"/><rect x="485" y="1417" width="355" height="29" fill="white"/><text x="500" y="1440" class="t">PIEZO_SW / brown</text><text x="1060" y="1440" class="t">BZ1.2 · 28 AWG · 70 mm</text>
+<text x="45" y="1482" class="t bold">W32  TP1.1</text><line x1="330" y1="1475" x2="990" y2="1475" stroke="#c63e35" stroke-width="4"/><polygon points="990,1470 1000,1475 990,1480" fill="#c63e35"/><rect x="485" y="1459" width="355" height="29" fill="white"/><text x="500" y="1482" class="t">+5V_FUSED / red</text><text x="1060" y="1482" class="t">U2.14 · 24 AWG · 40 mm</text>
+<rect x="32" y="1500" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1524" class="t bold">W33  TP2.1</text><line x1="330" y1="1517" x2="990" y2="1517" stroke="#202731" stroke-width="4"/><polygon points="990,1512 1000,1517 990,1522" fill="#202731"/><rect x="485" y="1501" width="355" height="29" fill="white"/><text x="500" y="1524" class="t">GND / black</text><text x="1060" y="1524" class="t">U2.7 · 24 AWG · 40 mm</text>
+<text x="45" y="1566" class="t bold">W34  TP1.1</text><line x1="330" y1="1559" x2="990" y2="1559" stroke="#c63e35" stroke-width="4"/><polygon points="990,1554 1000,1559 990,1564" fill="#c63e35"/><rect x="485" y="1543" width="355" height="29" fill="white"/><text x="500" y="1566" class="t">+5V_FUSED / red</text><text x="1060" y="1566" class="t">D1.2 · 24 AWG · 40 mm</text>
+<rect x="32" y="1584" width="1535" height="40" fill="#f4f7f8"/>
+<text x="45" y="1608" class="t bold">W35  D1.1</text><line x1="330" y1="1601" x2="990" y2="1601" stroke="#c63e35" stroke-width="4"/><polygon points="990,1596 1000,1601 990,1606" fill="#c63e35"/><rect x="485" y="1585" width="355" height="29" fill="white"/><text x="500" y="1608" class="t">VSYS_EXT / red</text><text x="1060" y="1608" class="t">U1.39 · 24 AWG · 90 mm</text>
+<text x="45" y="1650" class="t bold">W36  TP2.1</text><line x1="330" y1="1643" x2="990" y2="1643" stroke="#202731" stroke-width="4"/><polygon points="990,1638 1000,1643 990,1648" fill="#202731"/><rect x="485" y="1627" width="355" height="29" fill="white"/><text x="500" y="1650" class="t">GND / black</text><text x="1060" y="1650" class="t">U1.3 · 24 AWG · 90 mm</text>
+<text x="45" y="1707" class="h">CONNECTOR VIEWS AND ASSEMBLY RULES</text>
+<text x="45" y="1745" class="sub">J4 JST XH: mating-face PROJECT cavity numbering; identify molded cavity 1 and continuity-check before inserting contacts.</text>
+<rect x="65" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="80" y="1806" class="t">1 GND</text>
+<rect x="270" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="285" y="1806" class="t">2 +5V</text>
+<rect x="475" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="490" y="1806" class="t">3 PITCH</text>
+<rect x="680" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="695" y="1806" class="t">4 GND</text>
+<rect x="885" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="900" y="1806" class="t">5 +3V3</text>
+<rect x="1090" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="1105" y="1806" class="t">6 SDA</text>
+<rect x="1295" y="1770" width="190" height="58" rx="4" fill="#edf2f4" stroke="#344a5c"/>
+<text x="1310" y="1806" class="t">7 SCL</text>
+<text x="45" y="1865" class="small">View from WIRE ENTRY reverses left/right. Use circuit/cavity IDs, not a guessed mirror of a product photograph.</text>
+<text x="45" y="1916" class="sub">J2 / J3 servo plugs</text>
+<text x="45" y="1946" class="t">Mating face, project numbers:  [1 GND] [2 +5V] [3 SIG]</text>
+<text x="45" y="1976" class="small">Verify servo brown/black=GND, red=+5V, orange/yellow=signal.</text>
+<text x="830" y="1916" class="sub">U3 STEMMA QT / JST SH 4</text>
+<text x="830" y="1946" class="t">[1 GND] [2 VIN=3.3V] [3 SDA] [4 SCL]</text>
+<text x="830" y="1976" class="small">Stock QT red lead carries 3.3V here. Do not connect servo +5V.</text>
+<text x="45" y="2030" class="sub">J1 BOB-15100 component-side view, USB socket LEFT:</text>
+<text x="45" y="2060" class="t">Header TOP→BOTTOM: 6 VBUS, 5 GND, 4 CC1, 3 D−, 2 D+, 1 CC2.</text>
+<text x="45" y="2090" class="small">Current board already has 2 × 5.1k Rd. Do not parallel extra CC resistors.</text>
+<text x="830" y="2030" class="sub">SW1 four-leg switch / continuity labels</text>
+<text x="830" y="2060" class="t">A1—A2 are common; B1—B2 are common. Press joins A to B.</text>
+<text x="830" y="2090" class="small">Wire W25 to A1 and W26 to B1; verify pairs with an ohmmeter.</text>
+<text x="45" y="2155" class="small">No arbitrary computer USB port: dedicated 5.0–5.1V / 3A source. Main supply/return20AWG; servo branches24AWG; signal26/28AWG.</text>
+<text x="45" y="2191" class="small">J4 header + XHP-7 housing + SXH-001T-P0.6 contacts form an insulated fixed-base disconnect; its retention and exact fit are not modeled.</text>
+<text x="45" y="2227" class="small">Carrier-local wiring (R1–R9, C1–C3, D1, Q1 and U2 ties) is fully defined in the native circuit and netlist, not omitted from the electrical design.</text>
+<text x="45" y="2263" class="small">Inspect polarity and shorts before power. Center servos with horns removed. Require a physical harness sweep, cable pull test and supply droop test.</text>
+<text x="45" y="2335" class="sub">SW1 physical top view; rotate to put continuity-identified common pairs at left and right.</text>
+<rect x="220" y="2366" width="220" height="130" rx="8" fill="#edf2f4" stroke="#344a5c"/><circle cx="330" cy="2431" r="29" fill="#586c79"/>
+<circle cx="170" cy="2389" r="7" fill="#243746"/><line x1="170" y1="2389" x2="220" y2="2389" stroke="#243746" stroke-width="3"/>
+<text x="80" y="2377" class="small">A1 / W25</text>
+<circle cx="170" cy="2474" r="7" fill="#243746"/><line x1="170" y1="2474" x2="220" y2="2474" stroke="#243746" stroke-width="3"/>
+<text x="80" y="2462" class="small">A2 / no wire</text>
+<line x1="170" y1="2389" x2="170" y2="2474" stroke="#327d88" stroke-width="4"/>
+<circle cx="490" cy="2389" r="7" fill="#243746"/><line x1="490" y1="2389" x2="440" y2="2389" stroke="#243746" stroke-width="3"/>
+<text x="508" y="2377" class="small">B1 / W26</text>
+<circle cx="490" cy="2474" r="7" fill="#243746"/><line x1="490" y1="2474" x2="440" y2="2474" stroke="#243746" stroke-width="3"/>
+<text x="508" y="2462" class="small">B2 / no wire</text>
+<line x1="490" y1="2389" x2="490" y2="2474" stroke="#327d88" stroke-width="4"/>
+<text x="740" y="2396" class="t">Pair A is internally common; pair B is internally common.</text>
+<text x="740" y="2434" class="small">No terminal numbering is assumed from an anonymous switch photo.</text>
+<text x="740" y="2472" class="t">Use an ohmmeter; pressing must join A to B.</text>
+</svg>

@@ -1,0 +1,37 @@
+wire_id,from_ref,from_pin,to_ref,to_pin,net,wire_color,awg,cut_length_mm,moving,notes
+W01,J1,6,F1,1,+5V_RAW,red,20,300,False,External insulated input pod to captive cable; dedicated3A source
+W02,J1,5,TP2,1,GND,black,20,300,False,Main return; protect through rear sleeve and mechanical tie
+W03,F1,2,TP1,1,+5V_FUSED,red,20,60,False,"Covered solder star, not a Pico supply pin"
+W04,TP1,1,J2,2,+5V_FUSED,red,24,80,False,"Yaw servo supply, independent branch"
+W05,TP2,1,J2,1,GND,black,24,80,False,"Yaw servo return, independent branch"
+W06,R1,2,J2,3,YAW_SIG,purple,26,80,False,After220ohm series resistor
+W07,TP1,1,J4,2,+5V_FUSED,red,24,90,False,Pitch branch to fixed-base disconnect
+W08,TP2,1,J4,1,GND,black,24,90,False,Pitch motor return; not shared with thin OLED wire
+W09,R2,2,J4,3,PITCH_SIG,green,26,90,False,After220ohm series resistor
+W10,U1,36,J4,5,+3V3,orange,28,90,False,OLED VIN; electrically3.3V even though QT cable color may be red
+W11,TP2,1,J4,4,GND,black,28,90,False,Separate OLED return conductor
+W12,U1,6,J4,6,I2C_SDA,blue,28,90,False,GP4 physicalpin6
+W13,U1,7,J4,7,I2C_SCL,yellow,28,90,False,GP5 physicalpin7
+W14,J4,1,J3,1,GND,black,24,180,True,Moving motor return; at least80mm free loop after fit
+W15,J4,2,J3,2,+5V_FUSED,red,24,180,True,Moving motor supply; do not confuse with OLED VIN
+W16,J4,3,J3,3,PITCH_SIG,green,26,180,True,Moving motor signal; verify installed pitch polarity
+W17,J4,4,U3,QA1,GND,black,28,180,True,QT1 pin1 ground
+W18,J4,5,U3,QA2,+3V3,orange,28,180,True,QT1 pin2 VIN; stock QT lead red is3.3V on this circuit
+W19,J4,6,U3,QA3,I2C_SDA,blue,28,180,True,QT1 pin3 SDA
+W20,J4,7,U3,QA4,I2C_SCL,yellow,28,180,True,QT1 pin4 SCL
+W21,U1,36,U4,1,+3V3,orange,28,70,False,"RTC VIN headerpin1, not BATpin5"
+W22,TP2,1,U4,2,GND,black,28,70,False,RTC GND headerpin2
+W23,U1,6,U4,4,I2C_SDA,blue,28,70,False,RTC SDA headerpin4
+W24,U1,7,U4,3,I2C_SCL,yellow,28,70,False,RTC SCL headerpin3
+W25,U1,20,SW1,A1,BUTTON_N,white,28,100,False,GP15 to one terminal of common pairA; internal INPUT_PULLUP
+W26,TP2,1,SW1,B1,GND,black,28,100,False,One terminal of opposite common pairB; other two legs need no wires
+W27,U1,4,U2,2,YAW_PWM_3V3,purple,28,80,False,GP2 to AHCT1A; R3 pulls this node down
+W28,U1,5,U2,5,PITCH_PWM_3V3,green,28,80,False,GP3 to AHCT2A; R4 pulls this node down
+W29,U1,21,R5,1,AUDIO_PWM_3V3,brown,28,80,False,GP16 physicalpin21; R5 is4.7k base series
+W30,TP1,1,BZ1,1,+5V_FUSED,red,28,70,False,Piezo positive; R9 parallel between +5V and Q1collector
+W31,Q1,3,BZ1,2,PIEZO_SW,brown,28,70,False,Piezo negative to onsemi Q1collector pin3
+W32,TP1,1,U2,14,+5V_FUSED,red,24,40,False,AHCT VCC; C3 local across14/7
+W33,TP2,1,U2,7,GND,black,24,40,False,AHCT GND; channel OE and input ties local per schematic
+W34,TP1,1,D1,2,+5V_FUSED,red,24,40,False,Schottky ANODE pin2
+W35,D1,1,U1,39,VSYS_EXT,red,24,90,False,Banded CATHODE pin1 to VSYS39; NEVER VBUS40
+W36,TP2,1,U1,3,GND,black,24,90,False,Single Pico return; all other Pico GND pads internally common

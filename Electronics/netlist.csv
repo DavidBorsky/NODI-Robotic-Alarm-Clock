@@ -1,0 +1,143 @@
+reference,pin,pin_name,net,electrical_type,sheet,notes
+J1,1,CC2,USB_CC2,passive,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated
+J1,2,D+,NC,passive,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated
+J1,3,D-,NC,passive,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated
+J1,4,CC1,USB_CC1,passive,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated
+J1,5,GND,GND,passive,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated
+J1,6,VBUS,+5V_RAW,passive,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated
+R7,1,1,USB_CC1,passive,NODI_System_RevB,ALREADY fitted on current J1 module; vendor R4; do not add parallel external resistor
+R7,2,2,GND,passive,NODI_System_RevB,ALREADY fitted on current J1 module; vendor R4; do not add parallel external resistor
+R8,1,1,USB_CC2,passive,NODI_System_RevB,ALREADY fitted on current J1 module; vendor R1; do not add parallel external resistor
+R8,2,2,GND,passive,NODI_System_RevB,ALREADY fitted on current J1 module; vendor R1; do not add parallel external resistor
+F1,1,1,+5V_RAW,passive,NODI_System_RevB,Inline insulated holder; cable and fuse coordination untested
+F1,2,2,+5V_FUSED,passive,NODI_System_RevB,Inline insulated holder; cable and fuse coordination untested
+D1,2,A,+5V_FUSED,passive,NODI_System_RevB,"Band / cathode points toward Pico VSYS pin39, never VBUS pin40"
+D1,1,K,VSYS_EXT,passive,NODI_System_RevB,"Band / cathode points toward Pico VSYS pin39, never VBUS pin40"
+C1,1,+,+5V_FUSED,passive,NODI_System_RevB,Bulk capacitor maximum diameter10mm height16mm; observe polarity
+C1,2,-,GND,passive,NODI_System_RevB,Bulk capacitor maximum diameter10mm height16mm; observe polarity
+C2,1,1,+5V_FUSED,passive,NODI_System_RevB,Ceramic at distribution rail
+C2,2,2,GND,passive,NODI_System_RevB,Ceramic at distribution rail
+TP1,1,,+5V_FUSED,passive,NODI_System_RevB,Covered 3A-rated solder distribution point; not a separate fabricated PCB part
+TP2,1,,GND,passive,NODI_System_RevB,Separate motor and logic returns meet here
+#FLG01,1,,+5V_FUSED,power_out,NODI_System_RevB,ERC source assertion: external dedicated adapter through fuse/diode; not a physical part
+#FLG02,1,,VSYS_EXT,power_out,NODI_System_RevB,ERC source assertion: external dedicated adapter through fuse/diode; not a physical part
+#FLG03,1,,GND,power_out,NODI_System_RevB,ERC source assertion: external dedicated adapter through fuse/diode; not a physical part
+U1,1,GP0,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,2,GP1,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,3,GND,GND,power_in,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,4,GP2,YAW_PWM_3V3,output,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,5,GP3,PITCH_PWM_3V3,output,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,6,GP4,I2C_SDA,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,7,GP5,I2C_SCL,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,8,GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,9,GP6,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,10,GP7,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,11,GP8,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,12,GP9,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,13,GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,14,GP10,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,15,GP11,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,16,GP12,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,17,GP13,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,18,GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,19,GP14,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,20,GP15,BUTTON_N,input,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,40,VBUS,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,39,VSYS,VSYS_EXT,power_in,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,38,GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,37,3V3_EN,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,36,3V3_OUT,+3V3,power_out,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,35,ADC_VREF,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,34,GP28_ADC2,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,33,AGND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,32,GP27_ADC1,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,31,GP26_ADC0,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,30,RUN,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,29,GP22,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,28,GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,27,GP21,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,26,GP20,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,25,GP19,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,24,GP18,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,23,GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,22,GP17,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,21,GP16,AUDIO_PWM_3V3,output,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,SWCLK,SWCLK,NC,input,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,SWGND,SWD_GND,NC,passive,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U1,SWDIO,SWDIO,NC,bidirectional,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return
+U3,H1,SDA,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H2,SCL,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H3,DC_SA0,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H4,RST,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H5,CS,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H6,3V_OUT,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H7,VIN,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,H8,GND,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QA1,QT1_GND,GND,power_in,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QA2,QT1_VIN,+3V3,power_in,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QA3,QT1_SDA,I2C_SDA,bidirectional,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QA4,QT1_SCL,I2C_SCL,bidirectional,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QB1,QT2_GND,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QB2,QT2_VIN,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QB3,QT2_SDA,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U3,QB4,QT2_SCL,NC,passive,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector
+U4,1,VIN,+3V3,power_in,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,2,GND,GND,power_in,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,3,SCL,I2C_SCL,input,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,4,SDA,I2C_SDA,bidirectional,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,5,BAT,NC,passive,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,6,32K,NC,open_collector,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,7,SQW,NC,open_collector,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+U4,8,RST,NC,open_collector,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder
+SW1,A1,A1,BUTTON_N,passive,Controller_Interfaces,Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring
+SW1,A2,A2,BUTTON_N,passive,Controller_Interfaces,Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring
+SW1,B1,B1,GND,passive,Controller_Interfaces,Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring
+SW1,B2,B2,GND,passive,Controller_Interfaces,Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring
+U2,1,/1OE,GND,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,2,1A,YAW_PWM_3V3,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,4,/2OE,GND,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,5,2A,PITCH_PWM_3V3,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,10,/3OE,+5V_FUSED,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,9,3A,GND,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,13,/4OE,+5V_FUSED,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,12,4A,GND,input,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,3,1Y,YAW_BUFFER_5V,tri_state,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,6,2Y,PITCH_BUFFER_5V,tri_state,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,8,3Y,NC,tri_state,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,11,4Y,NC,tri_state,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,14,VCC,+5V_FUSED,power_in,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+U2,7,GND,GND,power_in,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4
+R1,1,1,YAW_BUFFER_5V,passive,Motion_Audio,Series servo signal resistor
+R1,2,2,YAW_SIG,passive,Motion_Audio,Series servo signal resistor
+R2,1,1,PITCH_BUFFER_5V,passive,Motion_Audio,Series servo signal resistor
+R2,2,2,PITCH_SIG,passive,Motion_Audio,Series servo signal resistor
+J2,1,GND,GND,passive,Motion_Audio,"Project mating-face numbering:1GND,2supply,3signal. Check actual servo wiring; vendor plug has no guaranteed molded numbers"
+J2,2,+5V,+5V_FUSED,passive,Motion_Audio,"Project mating-face numbering:1GND,2supply,3signal. Check actual servo wiring; vendor plug has no guaranteed molded numbers"
+J2,3,SIGNAL,YAW_SIG,passive,Motion_Audio,"Project mating-face numbering:1GND,2supply,3signal. Check actual servo wiring; vendor plug has no guaranteed molded numbers"
+J3,1,GND,GND,passive,Motion_Audio,Moving servo case; cable via J4; project mating-face numbering1GND2supply3signal
+J3,2,+5V,+5V_FUSED,passive,Motion_Audio,Moving servo case; cable via J4; project mating-face numbering1GND2supply3signal
+J3,3,SIGNAL,PITCH_SIG,passive,Motion_Audio,Moving servo case; cable via J4; project mating-face numbering1GND2supply3signal
+R3,1,1,YAW_PWM_3V3,passive,Motion_Audio,Input pulldown at U2
+R3,2,2,GND,passive,Motion_Audio,Input pulldown at U2
+R4,1,1,PITCH_PWM_3V3,passive,Motion_Audio,Input pulldown at U2
+R4,2,2,GND,passive,Motion_Audio,Input pulldown at U2
+C3,1,1,+5V_FUSED,passive,Motion_Audio,Ceramic directly across U2 pin14 and7
+C3,2,2,GND,passive,Motion_Audio,Ceramic directly across U2 pin14 and7
+J4,1,SERVO_GND,GND,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+J4,2,SERVO_5V,+5V_FUSED,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+J4,3,PITCH_SIG,PITCH_SIG,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+J4,4,OLED_GND,GND,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+J4,5,OLED_3V3,+3V3,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+J4,6,OLED_SDA,I2C_SDA,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+J4,7,OLED_SCL,I2C_SCL,passive,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors
+R5,1,1,AUDIO_PWM_3V3,passive,Motion_Audio,"Base current resistor; GPIO3.3V, about0.55mA atVBE0.7V"
+R5,2,2,PIEZO_BASE,passive,Motion_Audio,"Base current resistor; GPIO3.3V, about0.55mA atVBE0.7V"
+R6,1,1,PIEZO_BASE,passive,Motion_Audio,Q1 base-emitter pulldown
+R6,2,2,GND,passive,Motion_Audio,Q1 base-emitter pulldown
+Q1,2,B,PIEZO_BASE,passive,Motion_Audio,Physical pin1E2B3C for selected onsemi package; inspect actual package orientation
+Q1,3,C,PIEZO_SW,passive,Motion_Audio,Physical pin1E2B3C for selected onsemi package; inspect actual package orientation
+Q1,1,E,GND,passive,Motion_Audio,Physical pin1E2B3C for selected onsemi package; inspect actual package orientation
+BZ1,1,+,+5V_FUSED,passive,Motion_Audio,"External-drive PIEZO, not magnetic.4kHz; no inductive flyback diode required"
+BZ1,2,-,PIEZO_SW,passive,Motion_Audio,"External-drive PIEZO, not magnetic.4kHz; no inductive flyback diode required"
+R9,1,1,+5V_FUSED,passive,Motion_Audio,Piezo discharge resistor parallel to BZ1; about5mA while Q1 on
+R9,2,2,PIEZO_SW,passive,Motion_Audio,Piezo discharge resistor parallel to BZ1; about5mA while Q1 on

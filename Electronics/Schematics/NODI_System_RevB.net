@@ -1,0 +1,1374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/davidb/codes/Fun/NODI-Robotic-Alarm-Clock/Electronics/Schematics/NODI_System_RevB.kicad_sch</source>
+    <date>2026-10-25T20:49:59</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>NODI / power entry and distribution</title>
+        <company>NODI - David Borsky</company>
+        <rev>B</rev>
+        <date>2026-10-25</date>
+        <source>NODI_System_RevB.kicad_sch</source>
+        <comment number="1" value="SYSTEM SCHEMATIC / PROTOTYPE / HARDWARE UNTESTED"/>
+        <comment number="2" value="All module external pins shown; vendor PCB internals referenced separately"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Controller, display, RTC and button/" tstamps="/fd3e9c08-7e9d-5f2a-9c00-b5bad4aacead/">
+      <title_block>
+        <title>NODI / controller and user interfaces</title>
+        <company>NODI - David Borsky</company>
+        <rev>B</rev>
+        <date>2026-10-25</date>
+        <source>Controller_Interfaces.kicad_sch</source>
+        <comment number="1" value="SYSTEM SCHEMATIC / PROTOTYPE / HARDWARE UNTESTED"/>
+        <comment number="2" value="All module external pins shown; vendor PCB internals referenced separately"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/">
+      <title_block>
+        <title>NODI / actuators and sound</title>
+        <company>NODI - David Borsky</company>
+        <rev>B</rev>
+        <date>2026-10-25</date>
+        <source>Motion_Audio.kicad_sch</source>
+        <comment number="1" value="SYSTEM SCHEMATIC / PROTOTYPE / HARDWARE UNTESTED"/>
+        <comment number="2" value="All module external pins shown; vendor PCB internals referenced separately"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1000uF / 10V</value>
+      <description>Bulk capacitor maximum diameter10mm height16mm; observe polarity</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Bulk capacitor maximum diameter10mm height16mm; observe polarity</field>
+      </fields>
+      <libsource lib="NODI" part="Cap_Polar" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>636c634e-940e-560c-a472-478cb2c58543</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF / &gt;=10V</value>
+      <description>Ceramic at distribution rail</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Ceramic at distribution rail</field>
+      </fields>
+      <libsource lib="NODI" part="Cap" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1b84804-336f-55bd-b481-9bbd48b9e0b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>1N5819</value>
+      <description>Band / cathode points toward Pico VSYS pin39, never VBUS pin40</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Band / cathode points toward Pico VSYS pin39, never VBUS pin40</field>
+      </fields>
+      <libsource lib="NODI" part="Schottky" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92c3f4e9-ef48-50e8-8b1d-cea6c2275f4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>2.5 A time-delay &gt;=32 VDC</value>
+      <description>Inline insulated holder; cable and fuse coordination untested</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Inline insulated holder; cable and fuse coordination untested</field>
+      </fields>
+      <libsource lib="NODI" part="Fuse" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b0117ebc-ed0e-53c1-ac12-4315d1617d81</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>SparkFun BOB-15100 current Rd revision</value>
+      <description>Module header J3 pad numbers from current official Eagle source; socket shield remains isolated</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Module header J3 pad numbers from current official Eagle source; socket shield remains isolated</field>
+      </fields>
+      <libsource lib="NODI" part="BOB15100" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74b2df29-431f-56a5-a573-ee9ee1b39898</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>5.1k 1% included</value>
+      <description>ALREADY fitted on current J1 module; vendor R4; do not add parallel external resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">ALREADY fitted on current J1 module; vendor R4; do not add parallel external resistor</field>
+      </fields>
+      <libsource lib="NODI" part="R_V" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b04825c4-54d8-5592-a5c0-5acd2c43730d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>5.1k 1% included</value>
+      <description>ALREADY fitted on current J1 module; vendor R1; do not add parallel external resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">ALREADY fitted on current J1 module; vendor R1; do not add parallel external resistor</field>
+      </fields>
+      <libsource lib="NODI" part="R_V" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ec5f526-de22-56d4-b2e4-c84b62afe388</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>+5V solder star</value>
+      <description>Covered 3A-rated solder distribution point; not a separate fabricated PCB part</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Covered 3A-rated solder distribution point; not a separate fabricated PCB part</field>
+      </fields>
+      <libsource lib="NODI" part="Testpoint" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e8a0ee4-cd8e-52cb-a057-ce0b8401f771</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>GND solder star</value>
+      <description>Separate motor and logic returns meet here</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Separate motor and logic returns meet here</field>
+      </fields>
+      <libsource lib="NODI" part="Testpoint" description=""/>
+      <property name="Sheetname" value="NODI_System_RevB"/>
+      <property name="Sheetfile" value="NODI_System_RevB.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27c62063-27df-58fb-bdf4-06611ec4df7d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>Adafruit1119 / normally open</value>
+      <description>Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring</field>
+      </fields>
+      <libsource lib="NODI" part="Tactile4" description=""/>
+      <property name="Sheetname" value="Controller, display, RTC and button"/>
+      <property name="Sheetfile" value="Controller_Interfaces.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Controller, display, RTC and button/" tstamps="/fd3e9c08-7e9d-5f2a-9c00-b5bad4aacead/"/>
+      <tstamps>b4c89a5a-a048-59f1-a648-834b6f5245c4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A1"/>
+            <pin num="A2"/>
+            <pin num="B1"/>
+            <pin num="B2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>Raspberry Pi Pico / original RP2040</value>
+      <description>Physical header numbers; other GND pads internally common on Pico; use pin3 external return</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Physical header numbers; other GND pads internally common on Pico; use pin3 external return</field>
+      </fields>
+      <libsource lib="NODI" part="Pico" description=""/>
+      <property name="Sheetname" value="Controller, display, RTC and button"/>
+      <property name="Sheetfile" value="Controller_Interfaces.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Controller, display, RTC and button/" tstamps="/fd3e9c08-7e9d-5f2a-9c00-b5bad4aacead/"/>
+      <tstamps>cf0f6050-4a79-56a2-939a-a965a691990e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="SWCLK"/>
+            <pin num="SWGND"/>
+            <pin num="SWDIO"/>
+            <pin num="40"/>
+            <pin num="39"/>
+            <pin num="38"/>
+            <pin num="37"/>
+            <pin num="36"/>
+            <pin num="35"/>
+            <pin num="34"/>
+            <pin num="33"/>
+            <pin num="32"/>
+            <pin num="31"/>
+            <pin num="30"/>
+            <pin num="29"/>
+            <pin num="28"/>
+            <pin num="27"/>
+            <pin num="26"/>
+            <pin num="25"/>
+            <pin num="24"/>
+            <pin num="23"/>
+            <pin num="22"/>
+            <pin num="21"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>Adafruit 938 / current STEMMA QT</value>
+      <description>H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector</field>
+      </fields>
+      <libsource lib="NODI" part="OLED938" description=""/>
+      <property name="Sheetname" value="Controller, display, RTC and button"/>
+      <property name="Sheetfile" value="Controller_Interfaces.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Controller, display, RTC and button/" tstamps="/fd3e9c08-7e9d-5f2a-9c00-b5bad4aacead/"/>
+      <tstamps>ee4a8252-b437-5f06-8526-2d2a137021f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="H1"/>
+            <pin num="H2"/>
+            <pin num="H3"/>
+            <pin num="H4"/>
+            <pin num="H5"/>
+            <pin num="H6"/>
+            <pin num="H7"/>
+            <pin num="H8"/>
+            <pin num="QA1"/>
+            <pin num="QA2"/>
+            <pin num="QA3"/>
+            <pin num="QA4"/>
+            <pin num="QB1"/>
+            <pin num="QB2"/>
+            <pin num="QB3"/>
+            <pin num="QB4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>Adafruit 3013 / DS3231 non-QT</value>
+      <description>Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder</field>
+      </fields>
+      <libsource lib="NODI" part="RTC3013" description=""/>
+      <property name="Sheetname" value="Controller, display, RTC and button"/>
+      <property name="Sheetfile" value="Controller_Interfaces.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Controller, display, RTC and button/" tstamps="/fd3e9c08-7e9d-5f2a-9c00-b5bad4aacead/"/>
+      <tstamps>62bbe5be-89a3-5630-8577-a3422dc21932</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="BZ1">
+      <value>PKM13EPYH4000-A0</value>
+      <description>External-drive PIEZO, not magnetic.4kHz; no inductive flyback diode required</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">External-drive PIEZO, not magnetic.4kHz; no inductive flyback diode required</field>
+      </fields>
+      <libsource lib="NODI" part="Piezo" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>3dbf9492-7e87-5340-b733-1f6dbe894dd5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <description>Ceramic directly across U2 pin14 and7</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Ceramic directly across U2 pin14 and7</field>
+      </fields>
+      <libsource lib="NODI" part="Cap" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>a5a057fc-78c2-5cb1-8de8-755e40e6b280</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>Yaw servo / MG90S</value>
+      <description>Project mating-face numbering:1GND,2supply,3signal. Check actual servo wiring; vendor plug has no guaranteed molded numbers</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Project mating-face numbering:1GND,2supply,3signal. Check actual servo wiring; vendor plug has no guaranteed molded numbers</field>
+      </fields>
+      <libsource lib="NODI" part="ServoJR" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>890b2d6d-2f99-5dec-bc1f-edf2532fc9eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>Pitch servo / MG90S</value>
+      <description>Moving servo case; cable via J4; project mating-face numbering1GND2supply3signal</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Moving servo case; cable via J4; project mating-face numbering1GND2supply3signal</field>
+      </fields>
+      <libsource lib="NODI" part="ServoJR" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>2d2b963a-5361-53c0-9603-6e2cb0927e19</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>JST B7B-XH-A / XHP-7 harness</value>
+      <description>Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors</field>
+      </fields>
+      <libsource lib="NODI" part="XH7" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>a07446f7-7250-5e40-996e-3a93b091d313</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>onsemi 2N3904G / TO-92</value>
+      <description>Physical pin1E2B3C for selected onsemi package; inspect actual package orientation</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Physical pin1E2B3C for selected onsemi package; inspect actual package orientation</field>
+      </fields>
+      <libsource lib="NODI" part="NPN" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>f1c07af0-b3a7-58ab-af14-76d87ff99ca6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>220R</value>
+      <description>Series servo signal resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Series servo signal resistor</field>
+      </fields>
+      <libsource lib="NODI" part="R_H" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>0cc587a3-d3e5-5adf-a487-f0f30344e625</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>220R</value>
+      <description>Series servo signal resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Series servo signal resistor</field>
+      </fields>
+      <libsource lib="NODI" part="R_H" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>c9b22512-e241-5a85-ae09-c71109e19855</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>100k</value>
+      <description>Input pulldown at U2</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Input pulldown at U2</field>
+      </fields>
+      <libsource lib="NODI" part="R_V" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>782002e4-c946-5eac-960d-775d40d1fa6b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>100k</value>
+      <description>Input pulldown at U2</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Input pulldown at U2</field>
+      </fields>
+      <libsource lib="NODI" part="R_V" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>90378d21-c42b-5703-b4c9-0cd740c5126a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>4.7k</value>
+      <description>Base current resistor; GPIO3.3V, about0.55mA atVBE0.7V</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Base current resistor; GPIO3.3V, about0.55mA atVBE0.7V</field>
+      </fields>
+      <libsource lib="NODI" part="R_H" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>9adc602d-f14a-5382-a07d-47c8e8d42ef7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>100k</value>
+      <description>Q1 base-emitter pulldown</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Q1 base-emitter pulldown</field>
+      </fields>
+      <libsource lib="NODI" part="R_V" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>ef2700cd-c95a-5bdc-b1b0-8cc08c887450</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <description>Piezo discharge resistor parallel to BZ1; about5mA while Q1 on</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Piezo discharge resistor parallel to BZ1; about5mA while Q1 on</field>
+      </fields>
+      <libsource lib="NODI" part="R_V" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>9f23dfa8-eced-58ac-920e-58382eccd2cc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>SN74AHCT125N / PDIP14</value>
+      <description>AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4</field>
+      </fields>
+      <libsource lib="NODI" part="AHCT125" description=""/>
+      <property name="Sheetname" value="Actuators, buffer and piezo driver"/>
+      <property name="Sheetfile" value="Motion_Audio.kicad_sch"/>
+      <property name="exclude_from_board"/>
+      <sheetpath names="/Actuators, buffer and piezo driver/" tstamps="/e6999513-6a39-50e0-9ffd-7bedb1a01914/"/>
+      <tstamps>2c740663-5531-5cbf-b031-a08b232106be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="13"/>
+            <pin num="12"/>
+            <pin num="3"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="11"/>
+            <pin num="14"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="NODI" part="AHCT125">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AHCT125</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="/1OE" type="input"/>
+        <pin num="2" name="1A" type="input"/>
+        <pin num="3" name="1Y" type="tri_state"/>
+        <pin num="4" name="/2OE" type="input"/>
+        <pin num="5" name="2A" type="input"/>
+        <pin num="6" name="2Y" type="tri_state"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="3Y" type="tri_state"/>
+        <pin num="9" name="3A" type="input"/>
+        <pin num="10" name="/3OE" type="input"/>
+        <pin num="11" name="4Y" type="tri_state"/>
+        <pin num="12" name="4A" type="input"/>
+        <pin num="13" name="/4OE" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="BOB15100">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BOB15100</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="CC2" type="passive"/>
+        <pin num="2" name="D+" type="passive"/>
+        <pin num="3" name="D-" type="passive"/>
+        <pin num="4" name="CC1" type="passive"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="VBUS" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Cap">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Cap</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Cap_Polar">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Cap_Polar</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Fuse">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Fuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="NPN">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NPN</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="OLED938">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OLED938</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="H1" name="SDA" type="passive"/>
+        <pin num="H2" name="SCL" type="passive"/>
+        <pin num="H3" name="DC_SA0" type="passive"/>
+        <pin num="H4" name="RST" type="passive"/>
+        <pin num="H5" name="CS" type="passive"/>
+        <pin num="H6" name="3V_OUT" type="passive"/>
+        <pin num="H7" name="VIN" type="passive"/>
+        <pin num="H8" name="GND" type="passive"/>
+        <pin num="QA1" name="QT1_GND" type="power_in"/>
+        <pin num="QA2" name="QT1_VIN" type="power_in"/>
+        <pin num="QA3" name="QT1_SDA" type="bidirectional"/>
+        <pin num="QA4" name="QT1_SCL" type="bidirectional"/>
+        <pin num="QB1" name="QT2_GND" type="passive"/>
+        <pin num="QB2" name="QT2_VIN" type="passive"/>
+        <pin num="QB3" name="QT2_SDA" type="passive"/>
+        <pin num="QB4" name="QT2_SCL" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Pico">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Pico</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GP0" type="bidirectional"/>
+        <pin num="2" name="GP1" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="GP2" type="output"/>
+        <pin num="5" name="GP3" type="output"/>
+        <pin num="6" name="GP4" type="bidirectional"/>
+        <pin num="7" name="GP5" type="bidirectional"/>
+        <pin num="8" name="GND" type="passive"/>
+        <pin num="9" name="GP6" type="bidirectional"/>
+        <pin num="10" name="GP7" type="bidirectional"/>
+        <pin num="11" name="GP8" type="bidirectional"/>
+        <pin num="12" name="GP9" type="bidirectional"/>
+        <pin num="13" name="GND" type="passive"/>
+        <pin num="14" name="GP10" type="bidirectional"/>
+        <pin num="15" name="GP11" type="bidirectional"/>
+        <pin num="16" name="GP12" type="bidirectional"/>
+        <pin num="17" name="GP13" type="bidirectional"/>
+        <pin num="18" name="GND" type="passive"/>
+        <pin num="19" name="GP14" type="bidirectional"/>
+        <pin num="20" name="GP15" type="input"/>
+        <pin num="21" name="GP16" type="output"/>
+        <pin num="22" name="GP17" type="bidirectional"/>
+        <pin num="23" name="GND" type="passive"/>
+        <pin num="24" name="GP18" type="bidirectional"/>
+        <pin num="25" name="GP19" type="bidirectional"/>
+        <pin num="26" name="GP20" type="bidirectional"/>
+        <pin num="27" name="GP21" type="bidirectional"/>
+        <pin num="28" name="GND" type="passive"/>
+        <pin num="29" name="GP22" type="bidirectional"/>
+        <pin num="30" name="RUN" type="passive"/>
+        <pin num="31" name="GP26_ADC0" type="bidirectional"/>
+        <pin num="32" name="GP27_ADC1" type="bidirectional"/>
+        <pin num="33" name="AGND" type="passive"/>
+        <pin num="34" name="GP28_ADC2" type="bidirectional"/>
+        <pin num="35" name="ADC_VREF" type="passive"/>
+        <pin num="36" name="3V3_OUT" type="power_out"/>
+        <pin num="37" name="3V3_EN" type="passive"/>
+        <pin num="38" name="GND" type="passive"/>
+        <pin num="39" name="VSYS" type="power_in"/>
+        <pin num="40" name="VBUS" type="passive"/>
+        <pin num="SWCLK" name="SWCLK" type="input"/>
+        <pin num="SWDIO" name="SWDIO" type="bidirectional"/>
+        <pin num="SWGND" name="SWD_GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Piezo">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Piezo</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="RTC3013">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RTC3013</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="BAT" type="passive"/>
+        <pin num="6" name="32K" type="open_collector"/>
+        <pin num="7" name="SQW" type="open_collector"/>
+        <pin num="8" name="RST" type="open_collector"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="R_H">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">R_H</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="R_V">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">R_V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Schottky">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Schottky</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="ServoJR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ServoJR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="+5V" type="passive"/>
+        <pin num="3" name="SIGNAL" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Tactile4">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Tactile4</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A1" name="A1" type="passive"/>
+        <pin num="A2" name="A2" type="passive"/>
+        <pin num="B1" name="B1" type="passive"/>
+        <pin num="B2" name="B2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="Testpoint">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Testpoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NODI" part="XH7">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">XH7</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SERVO_GND" type="passive"/>
+        <pin num="2" name="SERVO_5V" type="passive"/>
+        <pin num="3" name="PITCH_SIG" type="passive"/>
+        <pin num="4" name="OLED_GND" type="passive"/>
+        <pin num="5" name="OLED_3V3" type="passive"/>
+        <pin num="6" name="OLED_SDA" type="passive"/>
+        <pin num="7" name="OLED_SCL" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="NODI">
+      <uri>${KIPRJMOD}/NODI_System.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3" class="Default">
+      <node ref="J4" pin="5" pinfunction="OLED_3V3_5" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="3V3_OUT_36" pintype="power_out"/>
+      <node ref="U3" pin="QA2" pinfunction="QT1_VIN_QA2" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="VIN_1" pintype="power_in"/>
+    </net>
+    <net code="2" name="+5V_FUSED" class="Default">
+      <node ref="BZ1" pin="1" pinfunction="+_1" pintype="passive"/>
+      <node ref="C1" pin="1" pinfunction="+_1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="F1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="+5V_2" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="+5V_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="SERVO_5V_2" pintype="passive"/>
+      <node ref="R9" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP1" pin="1" pintype="passive"/>
+      <node ref="U2" pin="10" pinfunction="/3OE_10" pintype="input"/>
+      <node ref="U2" pin="13" pinfunction="/4OE_13" pintype="input"/>
+      <node ref="U2" pin="14" pinfunction="VCC_14" pintype="power_in"/>
+    </net>
+    <net code="3" name="+5V_RAW" class="Default">
+      <node ref="F1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="VBUS_6" pintype="passive"/>
+    </net>
+    <net code="4" name="AUDIO_PWM_3V3" class="Default">
+      <node ref="R5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="GP16_21" pintype="output"/>
+    </net>
+    <net code="5" name="BUTTON_N" class="Default">
+      <node ref="SW1" pin="A1" pinfunction="A1_A1" pintype="passive"/>
+      <node ref="SW1" pin="A2" pinfunction="A2_A2" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="GP15_20" pintype="input"/>
+    </net>
+    <net code="6" name="GND" class="Default">
+      <node ref="C1" pin="2" pinfunction="-_2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="GND_5" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="SERVO_GND_1" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="OLED_GND_4" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="E_1" pintype="passive"/>
+      <node ref="R3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R8" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW1" pin="B1" pinfunction="B1_B1" pintype="passive"/>
+      <node ref="SW1" pin="B2" pinfunction="B2_B2" pintype="passive"/>
+      <node ref="TP2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="GND_3" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="/1OE_1" pintype="input"/>
+      <node ref="U2" pin="12" pinfunction="4A_12" pintype="input"/>
+      <node ref="U2" pin="4" pinfunction="/2OE_4" pintype="input"/>
+      <node ref="U2" pin="7" pinfunction="GND_7" pintype="power_in"/>
+      <node ref="U2" pin="9" pinfunction="3A_9" pintype="input"/>
+      <node ref="U3" pin="QA1" pinfunction="QT1_GND_QA1" pintype="power_in"/>
+      <node ref="U4" pin="2" pinfunction="GND_2" pintype="power_in"/>
+    </net>
+    <net code="7" name="I2C_SCL" class="Default">
+      <node ref="J4" pin="7" pinfunction="OLED_SCL_7" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="GP5_7" pintype="bidirectional"/>
+      <node ref="U3" pin="QA4" pinfunction="QT1_SCL_QA4" pintype="bidirectional"/>
+      <node ref="U4" pin="3" pinfunction="SCL_3" pintype="input"/>
+    </net>
+    <net code="8" name="I2C_SDA" class="Default">
+      <node ref="J4" pin="6" pinfunction="OLED_SDA_6" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="GP4_6" pintype="bidirectional"/>
+      <node ref="U3" pin="QA3" pinfunction="QT1_SDA_QA3" pintype="bidirectional"/>
+      <node ref="U4" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="PIEZO_BASE" class="Default">
+      <node ref="Q1" pin="2" pinfunction="B_2" pintype="passive"/>
+      <node ref="R5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R6" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="10" name="PIEZO_SW" class="Default">
+      <node ref="BZ1" pin="2" pinfunction="-_2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="C_3" pintype="passive"/>
+      <node ref="R9" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="11" name="PITCH_BUFFER_5V" class="Default">
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="2Y_6" pintype="tri_state"/>
+    </net>
+    <net code="12" name="PITCH_PWM_3V3" class="Default">
+      <node ref="R4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="GP3_5" pintype="output"/>
+      <node ref="U2" pin="5" pinfunction="2A_5" pintype="input"/>
+    </net>
+    <net code="13" name="PITCH_SIG" class="Default">
+      <node ref="J3" pin="3" pinfunction="SIGNAL_3" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="PITCH_SIG_3" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="14" name="USB_CC1" class="Default">
+      <node ref="J1" pin="4" pinfunction="CC1_4" pintype="passive"/>
+      <node ref="R7" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="15" name="USB_CC2" class="Default">
+      <node ref="J1" pin="1" pinfunction="CC2_1" pintype="passive"/>
+      <node ref="R8" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="16" name="VSYS_EXT" class="Default">
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="VSYS_39" pintype="power_in"/>
+    </net>
+    <net code="17" name="YAW_BUFFER_5V" class="Default">
+      <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="1Y_3" pintype="tri_state"/>
+    </net>
+    <net code="18" name="YAW_PWM_3V3" class="Default">
+      <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="GP2_4" pintype="output"/>
+      <node ref="U2" pin="2" pinfunction="1A_2" pintype="input"/>
+    </net>
+    <net code="19" name="YAW_SIG" class="Default">
+      <node ref="J2" pin="3" pinfunction="SIGNAL_3" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="20" name="unconnected-(J1-D+-Pad2)" class="Default">
+      <node ref="J1" pin="2" pinfunction="D+_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(J1-D--Pad3)" class="Default">
+      <node ref="J1" pin="3" pinfunction="D-_3" pintype="passive+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U1-3V3_EN-Pad37)" class="Default">
+      <node ref="U1" pin="37" pinfunction="3V3_EN_37" pintype="passive+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-ADC_VREF-Pad35)" class="Default">
+      <node ref="U1" pin="35" pinfunction="ADC_VREF_35" pintype="passive+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U1-AGND-Pad33)" class="Default">
+      <node ref="U1" pin="33" pinfunction="AGND_33" pintype="passive+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U1-GND-Pad8)" class="Default">
+      <node ref="U1" pin="8" pinfunction="GND_8" pintype="passive+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U1-GND-Pad13)" class="Default">
+      <node ref="U1" pin="13" pinfunction="GND_13" pintype="passive+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U1-GND-Pad18)" class="Default">
+      <node ref="U1" pin="18" pinfunction="GND_18" pintype="passive+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U1-GND-Pad23)" class="Default">
+      <node ref="U1" pin="23" pinfunction="GND_23" pintype="passive+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(U1-GND-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="GND_28" pintype="passive+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(U1-GND-Pad38)" class="Default">
+      <node ref="U1" pin="38" pinfunction="GND_38" pintype="passive+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U1-GP0-Pad1)" class="Default">
+      <node ref="U1" pin="1" pinfunction="GP0_1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U1-GP1-Pad2)" class="Default">
+      <node ref="U1" pin="2" pinfunction="GP1_2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U1-GP6-Pad9)" class="Default">
+      <node ref="U1" pin="9" pinfunction="GP6_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U1-GP7-Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="GP7_10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U1-GP8-Pad11)" class="Default">
+      <node ref="U1" pin="11" pinfunction="GP8_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-GP9-Pad12)" class="Default">
+      <node ref="U1" pin="12" pinfunction="GP9_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U1-GP10-Pad14)" class="Default">
+      <node ref="U1" pin="14" pinfunction="GP10_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U1-GP11-Pad15)" class="Default">
+      <node ref="U1" pin="15" pinfunction="GP11_15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U1-GP12-Pad16)" class="Default">
+      <node ref="U1" pin="16" pinfunction="GP12_16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U1-GP13-Pad17)" class="Default">
+      <node ref="U1" pin="17" pinfunction="GP13_17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U1-GP14-Pad19)" class="Default">
+      <node ref="U1" pin="19" pinfunction="GP14_19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(U1-GP17-Pad22)" class="Default">
+      <node ref="U1" pin="22" pinfunction="GP17_22" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U1-GP18-Pad24)" class="Default">
+      <node ref="U1" pin="24" pinfunction="GP18_24" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(U1-GP19-Pad25)" class="Default">
+      <node ref="U1" pin="25" pinfunction="GP19_25" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(U1-GP20-Pad26)" class="Default">
+      <node ref="U1" pin="26" pinfunction="GP20_26" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(U1-GP21-Pad27)" class="Default">
+      <node ref="U1" pin="27" pinfunction="GP21_27" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U1-GP22-Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="GP22_29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U1-GP26_ADC0-Pad31)" class="Default">
+      <node ref="U1" pin="31" pinfunction="GP26_ADC0_31" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U1-GP27_ADC1-Pad32)" class="Default">
+      <node ref="U1" pin="32" pinfunction="GP27_ADC1_32" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U1-GP28_ADC2-Pad34)" class="Default">
+      <node ref="U1" pin="34" pinfunction="GP28_ADC2_34" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U1-PadSWCLK)" class="Default">
+      <node ref="U1" pin="SWCLK" pinfunction="SWCLK_SWCLK" pintype="input+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U1-PadSWDIO)" class="Default">
+      <node ref="U1" pin="SWDIO" pinfunction="SWDIO_SWDIO" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U1-RUN-Pad30)" class="Default">
+      <node ref="U1" pin="30" pinfunction="RUN_30" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U1-SWD_GND-PadSWGND)" class="Default">
+      <node ref="U1" pin="SWGND" pinfunction="SWD_GND_SWGND" pintype="passive+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U1-VBUS-Pad40)" class="Default">
+      <node ref="U1" pin="40" pinfunction="VBUS_40" pintype="passive+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U2-3Y-Pad8)" class="Default">
+      <node ref="U2" pin="8" pinfunction="3Y_8" pintype="tri_state+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U2-4Y-Pad11)" class="Default">
+      <node ref="U2" pin="11" pinfunction="4Y_11" pintype="tri_state+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U3-3V_OUT-PadH6)" class="Default">
+      <node ref="U3" pin="H6" pinfunction="3V_OUT_H6" pintype="passive+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U3-CS-PadH5)" class="Default">
+      <node ref="U3" pin="H5" pinfunction="CS_H5" pintype="passive+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U3-DC_SA0-PadH3)" class="Default">
+      <node ref="U3" pin="H3" pinfunction="DC_SA0_H3" pintype="passive+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U3-GND-PadH8)" class="Default">
+      <node ref="U3" pin="H8" pinfunction="GND_H8" pintype="passive+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U3-QT2_GND-PadQB1)" class="Default">
+      <node ref="U3" pin="QB1" pinfunction="QT2_GND_QB1" pintype="passive+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U3-QT2_SCL-PadQB4)" class="Default">
+      <node ref="U3" pin="QB4" pinfunction="QT2_SCL_QB4" pintype="passive+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U3-QT2_SDA-PadQB3)" class="Default">
+      <node ref="U3" pin="QB3" pinfunction="QT2_SDA_QB3" pintype="passive+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U3-QT2_VIN-PadQB2)" class="Default">
+      <node ref="U3" pin="QB2" pinfunction="QT2_VIN_QB2" pintype="passive+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U3-RST-PadH4)" class="Default">
+      <node ref="U3" pin="H4" pinfunction="RST_H4" pintype="passive+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U3-SCL-PadH2)" class="Default">
+      <node ref="U3" pin="H2" pinfunction="SCL_H2" pintype="passive+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U3-SDA-PadH1)" class="Default">
+      <node ref="U3" pin="H1" pinfunction="SDA_H1" pintype="passive+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U3-VIN-PadH7)" class="Default">
+      <node ref="U3" pin="H7" pinfunction="VIN_H7" pintype="passive+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U4-32K-Pad6)" class="Default">
+      <node ref="U4" pin="6" pinfunction="32K_6" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U4-BAT-Pad5)" class="Default">
+      <node ref="U4" pin="5" pinfunction="BAT_5" pintype="passive+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U4-RST-Pad8)" class="Default">
+      <node ref="U4" pin="8" pinfunction="RST_8" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U4-SQW-Pad7)" class="Default">
+      <node ref="U4" pin="7" pinfunction="SQW_7" pintype="open_collector+no_connect"/>
+    </net>
+  </nets>
+</export>

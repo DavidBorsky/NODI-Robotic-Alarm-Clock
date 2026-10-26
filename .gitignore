@@ -8,3 +8,8 @@ __pycache__/
 .env.*
 *.key
 *.pem
+
+# KiCad local UI/lock files; schematic/project sources remain tracked
+*.kicad_prl
+*.kicad_sch.lck
+~*.lck

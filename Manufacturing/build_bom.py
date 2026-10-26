@@ -94,7 +94,10 @@ def render_bom():
     assert sorted(covered) == sorted(expected), "Unmapped or duplicated CAD instances"
     assert len([r for r in rows if r["electronics_ref"]]) == len(electrical)
     electrical_total = sum(Decimal(r["estimated_extended_USD"]) for r in rows if r["electronics_ref"])
-    assert electrical_total == Decimal("84.65"), "Electrical costs changed; update documented subtotal"
+    expected_electrical_total = sum(Decimal(e["estimated_unit_USD"]) * int(e["quantity"]) for e in electrical.values())
+    assert electrical_total == expected_electrical_total, "Electrical purchases duplicated or missing"
+    for e in electrical.values():
+        assert Decimal(e["estimated_extended_USD"]) == Decimal(e["estimated_unit_USD"]) * int(e["quantity"]), "Electrical source row arithmetic mismatch"
     return output.getvalue(), len(rows), len(covered), total
 
 if __name__ == "__main__":
@@ -104,7 +107,7 @@ if __name__ == "__main__":
     if args.check:
         if not destination.exists() or destination.read_text() != content:
             raise SystemExit("BOM differs from current CAD/electrical inputs; run Manufacturing/build_bom.py")
-        print(f"PASS: {rows} BOM rows map {covered} nonvisual CAD instances once; electrical subtotal 84.65 USD; total {total} USD")
+        print(f"PASS: {rows} BOM rows map {covered} nonvisual CAD instances once; electrical purchases reconciled; total {total} USD")
     else:
         destination.write_text(content)
         print(f"Wrote {rows} rows; {covered} nonvisual CAD instances; total planning allowance {total}USD")

@@ -1,0 +1,31 @@
+ref,value,symbol,sheet,notes,in_bom
+J1,SparkFun BOB-15100 current Rd revision,BOB15100,NODI_System_RevB,Module header J3 pad numbers from current official Eagle source; socket shield remains isolated,True
+R7,5.1k 1% included,R_V,NODI_System_RevB,ALREADY fitted on current J1 module; vendor R4; do not add parallel external resistor,False
+R8,5.1k 1% included,R_V,NODI_System_RevB,ALREADY fitted on current J1 module; vendor R1; do not add parallel external resistor,False
+F1,2.5 A time-delay >=32 VDC,Fuse,NODI_System_RevB,Inline insulated holder; cable and fuse coordination untested,True
+D1,1N5819,Schottky,NODI_System_RevB,"Band / cathode points toward Pico VSYS pin39, never VBUS pin40",True
+C1,1000uF / 10V,Cap_Polar,NODI_System_RevB,Bulk capacitor maximum diameter10mm height16mm; observe polarity,True
+C2,100nF / >=10V,Cap,NODI_System_RevB,Ceramic at distribution rail,True
+TP1,+5V solder star,Testpoint,NODI_System_RevB,Covered 3A-rated solder distribution point; not a separate fabricated PCB part,False
+TP2,GND solder star,Testpoint,NODI_System_RevB,Separate motor and logic returns meet here,False
+#FLG01,,Flag,NODI_System_RevB,ERC source assertion: external dedicated adapter through fuse/diode; not a physical part,False
+#FLG02,,Flag,NODI_System_RevB,ERC source assertion: external dedicated adapter through fuse/diode; not a physical part,False
+#FLG03,,Flag,NODI_System_RevB,ERC source assertion: external dedicated adapter through fuse/diode; not a physical part,False
+U1,Raspberry Pi Pico / original RP2040,Pico,Controller_Interfaces,Physical header numbers; other GND pads internally common on Pico; use pin3 external return,True
+U3,Adafruit 938 / current STEMMA QT,OLED938,Controller_Interfaces,H1..H8 are vendor JP2 header pad1..8; QA1..4 are QT connector1 pins; QB is second unused QT connector,True
+U4,Adafruit 3013 / DS3231 non-QT,RTC3013,Controller_Interfaces,Vendor JP1 header pin1..8. BAT header intentionally unused; CR1220 installs into ONBOARD holder,True
+SW1,Adafruit1119 / normally open,Tactile4,Controller_Interfaces,Project terminal labels A1/A2 are one common pair; B1/B2 other pair; verify continuity before wiring,True
+U2,SN74AHCT125N / PDIP14,AHCT125,Motion_Audio,AHCT TTL inputs; not HC. Unused outputs3Y/4Y NC; unused inputs tied; inputs tolerate5.5V atVCC0 per TIRevR5.4,True
+R1,220R,R_H,Motion_Audio,Series servo signal resistor,True
+R2,220R,R_H,Motion_Audio,Series servo signal resistor,True
+J2,Yaw servo / MG90S,ServoJR,Motion_Audio,"Project mating-face numbering:1GND,2supply,3signal. Check actual servo wiring; vendor plug has no guaranteed molded numbers",True
+J3,Pitch servo / MG90S,ServoJR,Motion_Audio,Moving servo case; cable via J4; project mating-face numbering1GND2supply3signal,True
+R3,100k,R_V,Motion_Audio,Input pulldown at U2,True
+R4,100k,R_V,Motion_Audio,Input pulldown at U2,True
+C3,100nF,Cap,Motion_Audio,Ceramic directly across U2 pin14 and7,True
+J4,JST B7B-XH-A / XHP-7 harness,XH7,Motion_Audio,Base header and mating XHP-7 housing; SXH-001T-P0.6 contacts; separate servo/display ground conductors,True
+R5,4.7k,R_H,Motion_Audio,"Base current resistor; GPIO3.3V, about0.55mA atVBE0.7V",True
+R6,100k,R_V,Motion_Audio,Q1 base-emitter pulldown,True
+Q1,onsemi 2N3904G / TO-92,NPN,Motion_Audio,Physical pin1E2B3C for selected onsemi package; inspect actual package orientation,True
+BZ1,PKM13EPYH4000-A0,Piezo,Motion_Audio,"External-drive PIEZO, not magnetic.4kHz; no inductive flyback diode required",True
+R9,1k,R_V,Motion_Audio,Piezo discharge resistor parallel to BZ1; about5mA while Q1 on,True

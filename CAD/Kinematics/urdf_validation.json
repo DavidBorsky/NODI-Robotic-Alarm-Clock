@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "method": "Independent stdlib URDF tree/FK compared with recorded Bullet world matrices",
+  "links": 70,
+  "revolute_joints": 2,
+  "fixed_joints": 67,
+  "mesh_paths_present": 67,
+  "frames_checked": 780,
+  "component_transform_checks": 52260,
+  "max_mesh_origin_difference_mm": 0.0001003347349971583,
+  "max_rotation_matrix_entry_difference": 1.1155071888424573e-06,
+  "source_manifest_digest_matches": true,
+  "scope": "Consistency between explicit joint graph and actual solver run; does not validate physical fixed joints, spline or vendor interfaces."
+}

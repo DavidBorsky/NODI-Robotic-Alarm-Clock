@@ -1,11 +1,11 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-26T00:51:17.875724+00:00",
   "repository_url": "https://github.com/DavidBorsky/NODI-Robotic-Alarm-Clock",
   "public": true,
   "anonymous_requests": true,
   "authentication_headers_or_cookies_used": false,
-  "verified_commit": "be517a29c02799cf5be81c12f1daaa257c9c11c3",
-  "remote_file_count": 219,
+  "verified_commit": "42bf78ec5d240f0fe05e6bad8c941089cc4dc446",
+  "remote_file_count": 256,
   "all_remote_git_blob_ids_match_local_commit": true,
   "repository_page_http_status": 200,
   "readme_html_contains_rendered_markdown_and_expected_media": true,
@@ -13,8 +13,8 @@
     {
       "path": "README.md",
       "anonymous_http_status": 200,
-      "bytes": 12035,
-      "sha256": "1aa80baf4f2f802eb5586867801575eac2a451c0fa2e9ad3e9dbb747365619b1"
+      "bytes": 14931,
+      "sha256": "98e42dd1ed56e65d06332d58634dd93737fca07f807bfe54ae5a98c6cb3ac1e6"
     },
     {
       "path": "CAD/exports/NODI_Assembly_RevA.step",
@@ -37,8 +37,8 @@
     {
       "path": "Documentation/NODI_Engineering_Design_Report.pdf",
       "anonymous_http_status": 200,
-      "bytes": 2022552,
-      "sha256": "5e24ba4077745519ff1884b32b6bfc58230ddbdd15ee368497921217efc46ed3"
+      "bytes": 2788669,
+      "sha256": "12c9cfe1d2b9b6504ce23a21602146a3b697257a93844bbc4e304516a629c212"
     },
     {
       "path": "Drawings/NODI-P03_Yoke_RevA.pdf",
@@ -59,10 +59,76 @@
       "sha256": "5824fb6dfe4bbcaf7f2279237046df6c913824d2f54c0ae57738914b9d5625ee"
     },
     {
-      "path": "Electronics/wiring_block_diagram.svg",
+      "path": "CAD/Kinematics/NODI_Articulated_RevA.blend",
       "anonymous_http_status": 200,
-      "bytes": 6682,
-      "sha256": "a206592d617eff3fe7dabcd37e320766aacffa4f4a9553369daad4447660a618"
+      "bytes": 6049122,
+      "sha256": "adf3951b5c950518d1ab011cd61381fa80e340112aca4f048e6dba1b9a8107bf"
+    },
+    {
+      "path": "CAD/Kinematics/NODI_Articulated_RevA.urdf",
+      "anonymous_http_status": 200,
+      "bytes": 31512,
+      "sha256": "401196f9250ac4c851a4687d171e4ae403f7a67b3c056bdf01628a734050ad11"
+    },
+    {
+      "path": "CAD/Kinematics/mechanism_motion.gif",
+      "anonymous_http_status": 200,
+      "bytes": 3702088,
+      "sha256": "92272f531a12403fab09db995a3f84ef524b12e5b64bc41c548d664fda650db7"
+    },
+    {
+      "path": "CAD/Kinematics/solver_motion.csv",
+      "anonymous_http_status": 200,
+      "bytes": 136860,
+      "sha256": "47d9a49fdf4befbe25d98ecc62201bef087fb5a7c6c4a57482c6ab7631ddc2b6"
+    },
+    {
+      "path": "Electronics/Schematics/NODI_System_RevB.kicad_sch",
+      "anonymous_http_status": 200,
+      "bytes": 27595,
+      "sha256": "7bb57e776b97917cb345bfc72a2a2fba7c298801281f11994ec91cbf1e4da00b"
+    },
+    {
+      "path": "Electronics/Schematics/Controller_Interfaces.kicad_sch",
+      "anonymous_http_status": 200,
+      "bytes": 34672,
+      "sha256": "1d1bbc9db6e86c94805fb5811051d04671694f6c644c7d9cb2f9367df7334624"
+    },
+    {
+      "path": "Electronics/Schematics/Motion_Audio.kicad_sch",
+      "anonymous_http_status": 200,
+      "bytes": 41731,
+      "sha256": "bc574ada73da2b7591337b0af519f9ce8c6154b400cc2c947f7d5c621ded20fa"
+    },
+    {
+      "path": "Electronics/Schematics/NODI_System_RevB.pdf",
+      "anonymous_http_status": 200,
+      "bytes": 200342,
+      "sha256": "a7cd68256eb78c1475fb1f0d19d6c898784b27462ad92dedf9275ed21cff31ec"
+    },
+    {
+      "path": "Electronics/Wiring/NODI_Wiring_RevB.svg",
+      "anonymous_http_status": 200,
+      "bytes": 20148,
+      "sha256": "a324f23f273237d5b9e959bb4b13898790171a18903b7f7eec3eb47bd6b240f6"
+    },
+    {
+      "path": "Electronics/Wiring/NODI_Wiring_RevB.pdf",
+      "anonymous_http_status": 200,
+      "bytes": 12784,
+      "sha256": "3f442d45cb53f8faeaabd61b89639680b0185f65fe33f0519121b0c147e8721e"
+    },
+    {
+      "path": "Electronics/netlist.csv",
+      "anonymous_http_status": 200,
+      "bytes": 18602,
+      "sha256": "5ddd802873d80c1b59b9157cec3f31e9c2cf4cabea6c1f59b251bac94417826c"
+    },
+    {
+      "path": "Electronics/wiring_schedule.csv",
+      "anonymous_http_status": 200,
+      "bytes": 2966,
+      "sha256": "fc890597f37c8fda25d5b4e3e66a56d816b44ac0857ff7b85dfd2b585e651af8"
     },
     {
       "path": "Firmware/NODI/NODI.ino",
@@ -71,5 +137,5 @@
       "sha256": "922cef0827b3e7bce3602f8758880988470c45de20d9d51e885c9dd2e92818e9"
     }
   ],
-  "notes": "Every tracked remote file matched the local Git tree; selected CAD, STL, PDFs, firmware and media also downloaded anonymously with identical SHA256 hashes. This is publication verification, not hardware validation."
+  "notes": "Every tracked remote file matched the local Git tree; selected CAD, STL, joint model, KiCad sheets, wiring PDFs, firmware and media also downloaded anonymously with identical SHA256 hashes. This is publication verification, not hardware validation."
 }
